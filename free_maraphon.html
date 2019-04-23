@@ -59,1130 +59,1276 @@
 
 
 			<style>
-				html,
-				body {
-					height: 100%;
-				}
-				.page_wrapper {
-					display: flex;
-					flex-direction: column;
-					height: 100%;
-				}
-				.page_content {
-					flex: 1 0 auto;
-				}
+			html,
+			body {
+				height: 100%;
+			}
+			.page_wrapper {
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+			}
+			.page_content {
+				flex: 1 0 auto;
+			}
 
-				body {
-					margin: 0;
-					font-family: 'Roboto', sans-serif;	
-					width:100%;
-					overflow-x:hidden;
+			body {
+				margin: 0;
+				font-family: 'Roboto', sans-serif;	
+				width:100%;
+				overflow-x:hidden;
 
-				}
+			}
 
-				.header {
-					font-family: 'Roboto', sans-serif;	
-					position:relative;
-					z-index: 9999;		
-				}
-				.header__nav-bar {
-					height: 72px;
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					padding:9px 0;
-					padding: 0 48px;
-					background-color: #252525;
-				}
-				.header__inner-nav-bar {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					height: 80px;
-					padding: 0 48px;
-					box-shadow: 0 13px 24px -5px rgba(0, 0, 0, 0.09);
-					background-color: #ffffff;
-				}
-				.header__nav-bar__logo img {
-					width: 268px;
-					height: 57px;
-					object-fit: contain;
-				}
-				.header__nav-bar__navs,
-				.header__inner-nav-bar__navs{
-					color:#fff;
-					list-style: none;
-					width:888px;
-					padding:0;
-					display: flex;
-					justify-content: space-between;
-				}
-				.header__nav-bar__navs-item,
-				.header__inner-nav-bar__navs-item {
-					display: inline-block;
-					text-transform: uppercase;
-					font-family: 'Roboto', sans-serif;	
-					font-size: 14px;
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: normal;
-					letter-spacing: 1px;
-					color: inherit;
-					position: relative;
-				}
-				.header__nav-bar__login-button{
-					width: 115px;
-					height: 48px;
-					border-radius: 28px;
-					background-color: #535353;
-					text-align: center;
-				}
-				.header__nav-bar__login-button__text {
-					text-transform: uppercase;
-					font-family: 'Roboto', sans-serif;	
-					font-size: 14px;
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: normal;
-					letter-spacing: 1px;
-					color: #ffffff;
-					display: inline-block;
-					margin: 16px 0;
-				}
-				.header__nav-bar__cart-block-link {
-					display: flex;
-				}
-				.header__nav-bar__cart-block__cart-icon{
-					width: 18px;
-					height: 18px;
-					margin-right:16px;
-				}
-				.header__nav-bar__cart-block__cart-text,
-				.header__nav-bar__cart-block__items-counter {
-					text-transform: uppercase;
-					font-family: 'Roboto', sans-serif;	
-					font-size: 16px;
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: normal;
-					letter-spacing: normal;
-					color: #000000;
-					padding: 0 2px;
-				}
-				.header__nav-bar__navs-item__link,
-				.header__inner-nav-bar__navs-item__link,
-				.header__nav-bar__cart-block-link{
-					text-decoration:none;
-					color: inherit;
-				}
-				.header__inner-nav-bar__navs-item__link:not(.inner-nav-bar__navs-item__link--active):hover {
-					color: #2f2f2f;
-				}
-				.header__inner-nav-bar__navs-item__link:not(.inner-nav-bar__navs-item__link--active):hover:before  {
-					display: block;
-					positon: absolute;
-					content:'';
-					width: 100%;
-					height: 8px;
-					background-color: #00b1e9;
-					position: absolute;
-					bottom: -31px;
-				}
-				.header__inner-nav-bar__navs--black-text{
-					color: #777777;
-				}
-				.nav-bar__navs-item__link--active {
-					color: #52d5ff;
-				}
-				.inner-nav-bar__navs-item__link--active{
-					width: 144px;
-					height: 48px;
-					border-radius: 28px;
-					background-color: #00b1e9;
-					color: #fff;
-					padding: 14px 28px;
-				}
-			</style>
+			.header {
+				font-family: 'Roboto', sans-serif;	
+				position:relative;
+				z-index: 9999;		
+			}
+			.header__nav-bar {
+				height: 72px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding:9px 0;
+				padding: 0 48px;
+				background-color: #252525;
+			}
+			.header__inner-nav-bar {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 80px;
+				padding: 0 48px;
+				box-shadow: 0 13px 24px -5px rgba(0, 0, 0, 0.09);
+				background-color: #ffffff;
+			}
+			.header__nav-bar__logo img {
+				width: 268px;
+				height: 57px;
+				object-fit: contain;
+			}
+			.header__nav-bar__navs,
+			.header__inner-nav-bar__navs{
+				color:#fff;
+				list-style: none;
+				width:888px;
+				padding:0;
+				display: flex;
+				justify-content: space-between;
+			}
+			.header__nav-bar__navs-item,
+			.header__inner-nav-bar__navs-item {
+				display: inline-block;
+				text-transform: uppercase;
+				font-family: 'Roboto', sans-serif;	
+				font-size: 14px;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: 1px;
+				color: inherit;
+				position: relative;
+			}
+			.header__nav-bar__login-button{
+				width: 115px;
+				height: 48px;
+				border-radius: 28px;
+				background-color: #535353;
+				text-align: center;
+			}
+			.header__nav-bar__login-button__text {
+				text-transform: uppercase;
+				font-family: 'Roboto', sans-serif;	
+				font-size: 14px;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: 1px;
+				color: #ffffff;
+				display: inline-block;
+				margin: 16px 0;
+			}
+			.header__nav-bar__cart-block-link {
+				display: flex;
+			}
+			.header__nav-bar__cart-block__cart-icon{
+				width: 18px;
+				height: 18px;
+				margin-right:16px;
+			}
+			.header__nav-bar__cart-block__cart-text,
+			.header__nav-bar__cart-block__items-counter {
+				text-transform: uppercase;
+				font-family: 'Roboto', sans-serif;	
+				font-size: 16px;
+				font-weight: bold;
+				font-style: normal;
+				font-stretch: normal;
+				line-height: normal;
+				letter-spacing: normal;
+				color: #000000;
+				padding: 0 2px;
+			}
+			.header__nav-bar__navs-item__link,
+			.header__inner-nav-bar__navs-item__link,
+			.header__nav-bar__cart-block-link{
+				text-decoration:none;
+				color: inherit;
+			}
+			.header__inner-nav-bar__navs-item__link:not(.inner-nav-bar__navs-item__link--active):hover {
+				color: #2f2f2f;
+			}
+			.header__inner-nav-bar__navs-item__link:not(.inner-nav-bar__navs-item__link--active):hover:before  {
+				display: block;
+				positon: absolute;
+				content:'';
+				width: 100%;
+				height: 8px;
+				background-color: #00b1e9;
+				position: absolute;
+				bottom: -31px;
+			}
+			.header__inner-nav-bar__navs--black-text{
+				color: #777777;
+			}
+			.nav-bar__navs-item__link--active {
+				color: #52d5ff;
+			}
+			.inner-nav-bar__navs-item__link--active{
+				width: 144px;
+				height: 48px;
+				border-radius: 28px;
+				background-color: #00b1e9;
+				color: #fff;
+				padding: 14px 28px;
+			}
+		</style>
 
-			<!-- end of header block -->
+		<!-- end of header block -->
 
-			<!-- aside block -->
-			<div class="aside-block">
-				<div class="aside-block__shedule">
-					<p class="aside-block__shedule-text">График работы</p>
-					<img src="assets/calendar.svg" alt="calendar" class="aside-block__shedule-logo">
-				</div>
-				<div class="aside-block__icons">
-					<a href="#" class="aside-block__icons_link"><img src="assets/vk.svg" alt="" class="aside-block__icons-item"></a>
-					<a href="#" class="aside-block__icons_link"><img src="assets/ytb.svg" alt="" class="aside-block__icons-item"></a>
-					<a href="#" class="aside-block__icons_link"><img src="assets/inst.svg" alt="" class="aside-block__icons-item"></a>
-				</div>
+		<!-- aside block -->
+		<div class="aside-block">
+			<div class="aside-block__shedule">
+				<p class="aside-block__shedule-text">График работы</p>
+				<img src="assets/calendar.svg" alt="calendar" class="aside-block__shedule-logo">
 			</div>
+			<div class="aside-block__icons">
+				<a href="#" class="aside-block__icons_link"><img src="assets/vk.svg" alt="" class="aside-block__icons-item"></a>
+				<a href="#" class="aside-block__icons_link"><img src="assets/ytb.svg" alt="" class="aside-block__icons-item"></a>
+				<a href="#" class="aside-block__icons_link"><img src="assets/inst.svg" alt="" class="aside-block__icons-item"></a>
+			</div>
+		</div>
 
-			<style>
-				.aside-block {
-					margin-top: 185px;
-					height:279px;
-					position: fixed;
-					left: -69px;
-					display: flex;
-					flex-flow: column nowrap;
-					justify-content: space-between;
-					z-index:9999;
+		<style>
+		.aside-block {
+			margin-top: 185px;
+			height:279px;
+			position: fixed;
+			left: -69px;
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+			z-index:9999;
 
-				}
-				.aside-block__shedule {
-					display: flex;
-					width: 192px;
-					justify-content: space-around;
-					transform: rotate(90deg);
-					background-color: #f7f7fb;
+		}
+		.aside-block__shedule {
+			display: flex;
+			width: 192px;
+			justify-content: space-around;
+			transform: rotate(90deg);
+			background-color: #f7f7fb;
 
-				}
-				.aside-block__shedule-text {
-					font-family: 'Roboto', sans-serif;	
+		}
+		.aside-block__shedule-text {
+			font-family: 'Roboto', sans-serif;	
 
-				}
-				.aside-block__shedule-logo {
-					transform: rotate(-90deg);
-				}
-				.aside-block__icons {
-					display: flex;
-					flex-flow: column nowrap;
-					justify-content: space-around;
+		}
+		.aside-block__shedule-logo {
+			transform: rotate(-90deg);
+		}
+		.aside-block__icons {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-around;
 
-					text-align:center;
-				}
-				.aside-block__icons_link:hover .aside-block__icons-item {
-					fill:#fce57e;
-				}
-			</style>
-			<!-- end of aside block -->
-			<!-- upSlider -->
-			<div class="up-block">
-				<div class="up-slider-wrapper">
-					<div class="up-slider owl-theme">
-						<div class="owl-carousel__up-up-slider-item">
-							<div class="owl-carousel__up-slider-item__slider-content">
-								<p class="owl-carousel__up-slider-item__name">старт 13 марта</p>
-								<p class="owl-carousel__up-slider-item__slider-content__promo-title">Бесплатный марафон
-								#RAKAMAKAFON7</p> 
-								<p class="owl-carousel__up-slider-item__slider-content__slogan">Супер курс тренировок и питания, направленный 
-								на результат. Преображение за две недели – это реально! </p>
-								<div class="owl-carousel__up-slider__content_bottom">
-									<div class="owl-carousel__slider-item-button">
-										<span class="owl-carousel__slider-item-button__text">Участвовать</span>
-									</div>
-								</div>
+			text-align:center;
+		}
+		.aside-block__icons_link:hover .aside-block__icons-item {
+			fill:#fce57e;
+		}
+	</style>
+	<!-- end of aside block -->
+	<!-- upSlider -->
+	<div class="up-block">
+		<div class="up-slider-wrapper">
+			<div class="up-slider owl-theme">
+				<div class="owl-carousel__up-up-slider-item">
+					<div class="owl-carousel__up-slider-item__slider-content">
+						<p class="owl-carousel__up-slider-item__name">старт 13 марта</p>
+						<p class="owl-carousel__up-slider-item__slider-content__promo-title">Бесплатный марафон
+						#RAKAMAKAFON7</p> 
+						<p class="owl-carousel__up-slider-item__slider-content__slogan">Супер курс тренировок и питания, направленный 
+						на результат. Преображение за две недели – это реально! </p>
+						<div class="owl-carousel__up-slider__content_bottom">
+							<div class="owl-carousel__slider-item-button">
+								<span class="owl-carousel__slider-item-button__text">Участвовать</span>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="img-wrapper">
-					<img src="assets/maraphon.jpg" alt="">
-				</div>
 			</div>
-			<style>
-				.up-block {
-					display: flex;
-					height: 500px;
-					overflow: hidden;
-				}
-				.up-slider-wrapper{
-					width:50%;
-				}
-				.owl-carousel__up-slider-item__slider-content {
-					padding: 82px 0 0 160px;
-				}
-				.owl-carousel__up-slider-item__name {
-					text-transform: uppercase;
-					width: 170px;
-					height: 27px;
-					font-size: 16px;
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: normal;
-					letter-spacing: 2px;
-					position: relative;
-				}
-				.owl-carousel__up-slider-item__name:after{
-					content: '';
-					display: block;
-					width: 100%;
-					height: 16px;
-					background-color: #e7ff6a;
-					position: absolute;
-					z-index: -1;
-					bottom: 3px;
-				}
-				.owl-carousel__up-slider-item__slider-content__promo-title{
-					width: 470px;
-					font-size: 42px;
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: 1.14;
-					letter-spacing: normal;
-					margin: 0;
-				}
-				.owl-carousel__up-slider-item__slider-content__slogan{
-					width: 421px;
-					font-size: 18px;
-					font-weight: normal;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: normal;
-					letter-spacing: normal;
-				}
-				.owl-carousel__slider-item-button {
-					border-radius: 32px;
-					width: 168px;
-					height: 64px;
-					background-color: #e7ff6a;
+		</div>
+		<div class="img-wrapper">
+			<img src="assets/maraphon.jpg" alt="">
+		</div>
+	</div>
+	<style>
+	.up-block {
+		display: flex;
+		height: 500px;
+		overflow: hidden;
+	}
+	.up-slider-wrapper{
+		width:50%;
+	}
+	.owl-carousel__up-slider-item__slider-content {
+		padding: 82px 0 0 160px;
+	}
+	.owl-carousel__up-slider-item__name {
+		text-transform: uppercase;
+		width: 170px;
+		height: 27px;
+		font-size: 16px;
+		font-weight: bold;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 2px;
+		position: relative;
+	}
+	.owl-carousel__up-slider-item__name:after{
+		content: '';
+		display: block;
+		width: 100%;
+		height: 16px;
+		background-color: #e7ff6a;
+		position: absolute;
+		z-index: -1;
+		bottom: 3px;
+	}
+	.owl-carousel__up-slider-item__slider-content__promo-title{
+		width: 470px;
+		font-size: 42px;
+		font-weight: bold;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: 1.14;
+		letter-spacing: normal;
+		margin: 0;
+	}
+	.owl-carousel__up-slider-item__slider-content__slogan{
+		width: 421px;
+		font-size: 18px;
+		font-weight: normal;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+	}
+	.owl-carousel__slider-item-button {
+		border-radius: 32px;
+		width: 168px;
+		height: 64px;
+		background-color: #e7ff6a;
 
-					text-align: center;
-				}
-				.owl-carousel__slider-item-button__text {
-					font-size: 18px;
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: normal;
-					letter-spacing: 0.9px;
-					text-align: center;
-					margin: 21px 0;
-					display: inline-block;
-				}
-				.owl-carousel.up-slider .owl-nav .owl-prev {
-					top: 40px;
-					left: 160px;
-					width: 0;
-					background: transparent;
-				}
-				.owl-carousel.up-slider .owl-nav .owl-next {
-					top: 40px;
-					left: 200px;
-					width: 0;
-					background: transparent;
-				}
-				.img-wrapper {
-					width: 50%;
-				}
-				.img-wrapper img {
-					width: 100%;
-				}
-			</style>
-			<!-- end of up slider -->
-			<!-- how to start block -->
-			<div class="how-start-block">	
-				<div class="how-start-block__title">Как начать</div>
-				<div class="how-start-block__desc">Тебя ждут 14 дней убойных тренировок, полезных советов и подарков, нужно только пройти 3 простых шага</div>
-				<div class="how-start-block__content">
-					<div class="how-start-block__item">
-						<div class="how-start-block__item__number">1</div>
-						<div class="how-start-wprapper-block">
-							<div class="how-start-block__item__title">Подпишись</div>
-							<div class="how-start-block__item__desc">на мой канал RAKAMAKAFIT life в Telegram, или перейди <a class="how-start-block__item__desc__link" href="#">по ссылке</a>
-
-							</div>
-							<a class="how-start-block__help-link" href="#">Не получилось пройти по ссылке?</a>
-						</div>
-					</div>
-					<div class="how-start-block__item">
-						<div class="how-start-block__item__number">2</div>
-						<div class="how-start-wprapper-block">
-							<div class="how-start-block__item__title">Дождись</div>
-							<div class="how-start-block__item__desc">объявления старта марафона</div>
-						</div>
-					</div>
-					<div class="how-start-block__item">
-						<div class="how-start-block__item__number">3</div>
-						<div class="how-start-wprapper-block">
-							<div class="how-start-block__item__title">Оставь</div>
-							<div class="how-start-block__item__desc">свой e-mail для получения подарков по окончанию марафона</div>	
-						</div>
-					</div>
+		text-align: center;
+	}
+	.owl-carousel__slider-item-button__text {
+		font-size: 18px;
+		font-weight: bold;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 0.9px;
+		text-align: center;
+		margin: 21px 0;
+		display: inline-block;
+	}
+	.owl-carousel.up-slider .owl-nav .owl-prev {
+		top: 40px;
+		left: 160px;
+		width: 0;
+		background: transparent;
+	}
+	.owl-carousel.up-slider .owl-nav .owl-next {
+		top: 40px;
+		left: 200px;
+		width: 0;
+		background: transparent;
+	}
+	.img-wrapper {
+		width: 50%;
+	}
+	.img-wrapper img {
+		width: 100%;
+	}
+</style>
+<!-- end of up slider -->
+<!-- how to start block -->
+<div class="how-start-block">	
+	<div class="how-start-block__title">Как начать</div>
+	<div class="how-start-block__desc">Тебя ждут 14 дней убойных тренировок, полезных советов и подарков, нужно только пройти 3 простых шага</div>
+	<div class="how-start-block__content">
+		<div class="how-start-block__item">
+			<div class="how-start-block__item__number">1</div>
+			<div class="how-start-wprapper-block">
+				<div class="how-start-block__item__title">Подпишись</div>
+				<div class="how-start-block__item__desc">на мой канал RAKAMAKAFIT life в Telegram, или перейди <a class="how-start-block__item__desc__link" href="#">по ссылке</a>
 
 				</div>
-
+				<a class="how-start-block__help-link" href="#">Не получилось пройти по ссылке?</a>
 			</div>
-			<style>	
-				.how-start-block {
-					padding-top: 51px;
-					height: 487px;
-					background-color: #f7f7fb;
-				}
-				.how-start-block__title {
-					width: 212px;
-					height: 52px;
-					font-family: 'FranklinGothicDemi', sans-serif;
-					font-size: 42px;
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: 1.24;
-					letter-spacing: normal;
-					text-align: center;
-					color: #000000;
-					margin: 0 auto;
-				}
-				.how-start-block__desc {
-					width: 549px;
-					height: 52px;
-					font-family: 'Roboto', sans-serif;
-					font-size: 16px;
-					font-weight: 400;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: 1.63;
-					letter-spacing: normal;
-					text-align: center;
-					color: #000000;
-					margin: 16px auto 51px;
-				}
-				.how-start-block__content {
-					display: flex;
-					justify-content: space-around;
-					margin-top: 51px;
-				}
-				.how-start-block__item {
-					width: 346px;
-					position: relative;
-				}
-				.how-start-block__item__number {
-					width: 84px;
-					height: 182px;
-					/* font-family: BebasNeue;*/
-					font-size: 212px;
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: 0.86;
-					letter-spacing: normal;
-					color: #e7ff6a;
-					position: relative;
-					z-index: 1;
-				}
-				.how-start-wprapper-block {
-					position: absolute;
-					z-index: 2;
-					top: 86px;
-				}
-				.how-start-block__item__title{
-					width: 127px;
-					height: 40px;
-					font-family: 'FranklinGothicDemi', sans-serif;
-					font-size: 32px;
-					font-weight: normal;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: 1.25;
-					letter-spacing: normal;
-					color: #000000;
-
-				}
-				.how-start-block__item__desc {
-					width: 346px;
-					height: 64px;
-					font-family: Roboto;
-					font-size: 16px;
-					font-weight: normal;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: 1.63;
-					letter-spacing: normal;
-					color: #000000;
-					margin-top: 10px;
-				}
-				.how-start-block__help-link {
-					width: 259px;
-					height: 19px;
-					font-family: Roboto;
-					font-size: 16px;
-					font-weight: normal;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: normal;
-					letter-spacing: normal;
-					color: #e31377;
-					border-bottom: 1px dashed #e31377;
-					text-decoration: none;
-					display: inline-block;
-					margin-top:20px;
-				}
-			</style>
-			<!-- end-of-how-to-start-block -->
-			<!--in-the-know-form-block -->
-			<div class="in-the-know-form-block">
-				<div class="in-the-know-form-block__title">Подарки всем участницам #Rakamakafon</div>
-				<div class="in-the-know-form-block__desc">Оставь свой e-mail прямо сейчас и получи подарки по окончанию марафона!</div>
-				<form class="in-the-know-form-block__form" action="#">
-					<div class="in-the-know-form-block__form__input-wrapper">
-						<label name="name">
-							<input class="in-the-know-form-block__form__input" type="text" required pattern="[A-Za-zА-Яа-яЁё]" placeholder='Имя'>
-						</label>
-						<label name="mail">
-							<input class="in-the-know-form-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
-						</label>
-						<button class="in-the-know-form-block__form__submit" type="submit">получить</button>
-					</div>
-					<div class="in-the-know-form-block__form__input-checkbox-wrapper">			
-						<input  class="in-the-know-form-block__form__checkbox"  type="checkbox" name="" id="in-the-know-form-checkbox">
-						<label for="in-the-know-form-checkbox"></label>
-						<p class="in-the-know-form-block__form__checkbox-desc">Я согласен с обработкой персональных данных</p>
-					</div>
-				</form>
+		</div>
+		<div class="how-start-block__item">
+			<div class="how-start-block__item__number">2</div>
+			<div class="how-start-wprapper-block">
+				<div class="how-start-block__item__title">Дождись</div>
+				<div class="how-start-block__item__desc">объявления старта марафона</div>
 			</div>
-			<style>
-				.in-the-know-form-block {
-					background: url('assets/promoForm-bg-blue.svg');
-					background-size: 100% 100%;
-					background-color: #beeafc;
-					height:409px;
-				}
-				.in-the-know-form-block__title {
-					width: 825px;
-					font-size: 42px;
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: 1.24;
-					letter-spacing: normal;
-					text-align: center;
-					color: #000000;
-					margin: 0 auto;
-					padding-top: 62px;
-				}
-				.in-the-know-form-block__desc{
-					width: 658px;
-					min-height:88px;
-					margin: 20px auto 0;
-					font-size: 16px;
-					font-weight: normal;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: 1.63;
-					letter-spacing: normal;
-					text-align: center;
-					color: #000000;
-				}
-				.in-the-know-form-block__title_underline-block {
-					position: relative;
-					z-index: 2;
-				}
-				.in-the-know-form-block__title_underline-block:after{
-					content: '';
-					display: block;
-					width: 100%;
-					height: 16px;
-					background-color: #fff;
-					position: absolute;
-					z-index: -1;
-					top: 35px;
-				}
-				.in-the-know-form-block__form {
-					width: 890px;
-					margin: 0 auto;
+		</div>
+		<div class="how-start-block__item">
+			<div class="how-start-block__item__number">3</div>
+			<div class="how-start-wprapper-block">
+				<div class="how-start-block__item__title">Оставь</div>
+				<div class="how-start-block__item__desc">свой e-mail для получения подарков по окончанию марафона</div>	
+			</div>
+		</div>
 
-				}
-				.in-the-know-form-block__form__input-wrapper {
-					display: flex;
-					justify-content: space-between;
-				}
-				.in-the-know-form-block__form__input-checkbox-wrapper {
-					width: 428px;
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-				}
-				.in-the-know-form-block__form__input{
-					width: 299px;
-					height: 56px;
-					border-radius: 4px;
-					background-color: #ffffff;
-					border: none;
-					outline: none;
-					padding: 0 0 0 23px;
-					font-size: 16px;
-
-				}
-				.in-the-know-form-block__form__submit{
-					border-radius: 32px;
-					width: 207px;
-					height: 56px;
-					background-color: #e31377;
-					text-align: center;
-					border: none;
-					font-size: 18px;
-					font-weight: normal;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: normal;
-					letter-spacing: 0.9px;
-					text-align: center;
-					color: #ffffff;
-					cursor: pointer;
-				}
-				.in-the-know-form-block__form__checkbox {
-					width:24px;
-					height: 24px;
-				}
-				.in-the-know-form-block__form__checkbox-desc{
-					width: 388px;
-					font-size: 16px;
-					font-weight: normal;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: 1.75;
-					letter-spacing: normal;
-					color: #111111;
-				}
-				.in-the-know-form-block__form__checkbox {
-					display: none;
-				}
-				.-block__form__checkbox + label {
-					display: block;
-					position: relative;
-					margin-bottom: 20px;
-					width: 24px;
-					height: 24px;
-					border-radius: 4px;
-					cursor: pointer;
-					-webkit-user-select: none;
-					-moz-user-select: none;
-					-ms-user-select: none;
-				}
-				.in-the-know-form-block__form__checkbox + label:before {
-					content: '';
-					display: block;
-					width: 24px;
-					height: 24px;
-					background-color: #fff;
-					border-radius: 4px;
-				}
-
-				.in-the-know-form-block__form__checkbox:checked + label:before {
-					background: url(assets/checked.svg) no-repeat;
-					background-size: 20px 16px;
-					background-position: center center;
-					background-color: #fff;
-					border-radius: 4px;
-					width: 24px;
-					height: 24px;
-				}
-			</style>
-			<!-- end of in-the-know-form -->
-			<!-- Hello-block -->
-			<div class="hello-block">
-				<div class="hello-block__content">
-<div class="hello-block__content__up-items">
-	<div class="hello-block__content__item">
-		<div class="hello-block__content__item__logo"><img src="assets/heart-pulse.svg" alt=""></div>
-		<div class="hello-block__content__title">Тренировки</div>
-		<div class="hello-block__content__desc">3-4 раза в неделю на канале Telegram.
-	С любым оборудованием (бутылка с водой, гантели, собственный вес)</div>
 	</div>
-	<div class="hello-block__content__item">
-		<div class="hello-block__content__item__logo"><img src="assets/table.svg" alt=""></div>
-		<div class="hello-block__content__title">Полезности</div>
-		<div class="hello-block__content__desc">Статьи по личностному росту, мотивации, правильному питанию и техникам тренировок, меню с рецептами</div>
-	</div>
-	<div class="hello-block__content__item">
-		<div class="hello-block__content__item__logo"><img src="assets/chat.svg" alt=""></div>
-		<div class="hello-block__content__title">Поддержка</div>
-		<div class="hello-block__content__desc">Вебинары и чаты с Настей лично</div>
+
+</div>
+<style>	
+.how-start-block {
+	padding-top: 51px;
+	height: 487px;
+	background-color: #f7f7fb;
+}
+.how-start-block__title {
+	width: 212px;
+	height: 52px;
+	font-family: 'FranklinGothicDemi', sans-serif;
+	font-size: 42px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.24;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+	margin: 0 auto;
+}
+.how-start-block__desc {
+	width: 549px;
+	height: 52px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+	margin: 16px auto 51px;
+}
+.how-start-block__content {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 51px;
+}
+.how-start-block__item {
+	width: 346px;
+	position: relative;
+}
+.how-start-block__item__number {
+	width: 84px;
+	height: 182px;
+	/* font-family: BebasNeue;*/
+	font-size: 212px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 0.86;
+	letter-spacing: normal;
+	color: #e7ff6a;
+	position: relative;
+	z-index: 1;
+}
+.how-start-wprapper-block {
+	position: absolute;
+	z-index: 2;
+	top: 86px;
+}
+.how-start-block__item__title{
+	width: 127px;
+	height: 40px;
+	font-family: 'FranklinGothicDemi', sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	letter-spacing: normal;
+	color: #000000;
+
+}
+.how-start-block__item__desc {
+	width: 346px;
+	height: 64px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	color: #000000;
+	margin-top: 10px;
+}
+.how-start-block__help-link {
+	width: 259px;
+	height: 19px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #e31377;
+	border-bottom: 1px dashed #e31377;
+	text-decoration: none;
+	display: inline-block;
+	margin-top:20px;
+}
+</style>
+<!-- end-of-how-to-start-block -->
+<!--in-the-know-form-block -->
+<div class="in-the-know-form-block">
+	<div class="in-the-know-form-block__title">Подарки всем участницам <span class="underline-block">#RAKAMAFON</span></div>
+	<div class="in-the-know-form-block__desc">Оставь свой e-mail прямо сейчас и получи подарки по окончанию марафона!</div>
+	<form class="in-the-know-form-block__form" action="#">
+		<div class="in-the-know-form-block__form__input-wrapper">
+			<label name="name">
+				<input class="in-the-know-form-block__form__input" type="text" required pattern="[A-Za-zА-Яа-яЁё]" placeholder='Имя'>
+			</label>
+			<label name="mail">
+				<input class="in-the-know-form-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
+			</label>
+			<button class="in-the-know-form-block__form__submit" type="submit">получить</button>
+		</div>
+		<div class="in-the-know-form-block__form__input-checkbox-wrapper">			
+			<input  class="in-the-know-form-block__form__checkbox"  type="checkbox" name="" id="in-the-know-form-checkbox">
+			<label for="in-the-know-form-checkbox"></label>
+			<p class="in-the-know-form-block__form__checkbox-desc">Я согласен с обработкой персональных данных</p>
+		</div>
+	</form>
+</div>
+<style>
+.in-the-know-form-block {
+	background: url('assets/promoForm-bg-blue.svg');
+	background-size: 100% 100%;
+	background-color: #beeafc;
+	height:409px;
+}
+.in-the-know-form-block__title {
+	width: 785px;
+	font-size: 42px;
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.24;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+	margin: 0 auto;
+	padding-top: 62px;
+}
+.in-the-know-form-block__desc{
+	width: 658px;
+	min-height:88px;
+	margin: 20px auto 0;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+}
+.in-the-know-form-block__title_underline-block {
+	position: relative;
+	z-index: 2;
+}
+.in-the-know-form-block__title_underline-block:after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 16px;
+	background-color: #fff;
+	position: absolute;
+	z-index: -1;
+	top: 35px;
+}
+.in-the-know-form-block__form {
+	width: 890px;
+	margin: 0 auto;
+
+}
+.in-the-know-form-block__form__input-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+.in-the-know-form-block__form__input-checkbox-wrapper {
+	width: 428px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.in-the-know-form-block__form__input{
+	width: 299px;
+	height: 56px;
+	border-radius: 4px;
+	background-color: #ffffff;
+	border: none;
+	outline: none;
+	padding: 0 0 0 23px;
+	font-size: 16px;
+
+}
+.in-the-know-form-block__form__submit{
+	border-radius: 32px;
+	width: 207px;
+	height: 56px;
+	background-color: #e31377;
+	text-align: center;
+	border: none;
+	font-size: 18px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.9px;
+	text-align: center;
+	color: #ffffff;
+	cursor: pointer;
+}
+.in-the-know-form-block__form__checkbox {
+	width:24px;
+	height: 24px;
+}
+.in-the-know-form-block__form__checkbox-desc{
+	width: 388px;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	color: #111111;
+}
+.in-the-know-form-block__form__checkbox {
+	display: none;
+}
+.in-the-know-form-block__form__checkbox + label {
+	display: block;
+	position: relative;
+	width: 24px;
+	height: 24px;
+	border-radius: 4px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+.in-the-know-form-block__form__checkbox + label:before {
+	content: '';
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+
+.in-the-know-form-block__form__checkbox:checked + label:before {
+	background: url(assets/checked.svg) no-repeat;
+	background-size: 20px 16px;
+	background-position: center center;
+	background-color: #fff;
+	border-radius: 4px;
+	width: 24px;
+	height: 24px;
+}
+.underline-block:after {
+	height: 16px;
+	background-color: #fff;
+	bottom: -1px;
+}
+</style>
+<!-- end of in-the-know-form -->
+<!-- Hello-block -->
+<div class="hello-block">
+	<div class="hello-block__content">
+		<div class="hello-block__content__up-items">
+			<div class="hello-block__content__item">
+				<div class="hello-block__content__item__logo"><img src="assets/heart-pulse.svg" alt=""></div>
+				<div class="hello-block__content__title">Тренировки</div>
+				<div class="hello-block__content__desc">3-4 раза в неделю на канале Telegram.
+				С любым оборудованием (бутылка с водой, гантели, собственный вес)</div>
+			</div>
+			<div class="hello-block__content__item">
+				<div class="hello-block__content__item__logo"><img src="assets/table.svg" alt=""></div>
+				<div class="hello-block__content__title">Полезности</div>
+				<div class="hello-block__content__desc">Статьи по личностному росту, мотивации, правильному питанию и техникам тренировок, меню с рецептами</div>
+			</div>
+			<div class="hello-block__content__item">
+				<div class="hello-block__content__item__logo"><img src="assets/chat.svg" alt=""></div>
+				<div class="hello-block__content__title">Поддержка</div>
+				<div class="hello-block__content__desc">Вебинары и чаты с Настей лично</div>
+			</div>
+		</div>
+		<div class="hello-block__content__hello">
+			<div class="hello-block__content__hello__img">
+				<img src="assets/hello-img.jpg" alt="">
+			</div>
+			
+			<div class="hello-block__content__hello__desc">
+				<div class="hello-block__content__hello__desc__title">
+				<p class="hello-block__content__hello__desc__title__main">Я - Настя #Rakamakafit</p>
+				<p class="hello-block__content__hello__desc__title__slogan">Твой тренер фитнес марафона #RAKAMAKAFON</p>
+			</div>
+			<div class="hello-block__content__hello__text">
+					<p>Если ты хочешь скинуть лишние килограммы, не только с пользой, но и весело провести время в компании единомышленниц — присоединяйся! Это уже 7-й поток моего бесплатного фитнес марафона!</p>
+				<p>На завтра откладывать можно сколько угодно, и оправданий найдется масса, и дел поважнее. НО сейчас у тебя есть реальный шанс: я дам тебе пинок под зад. Ты войдешь в новый ритм под моим руководством: меню, тренировки, мотивация – тебе не нужно думать, просто повторяй за мной и всеми участницами марафона трансформации тела. И все это абсолютно бесплатно.</p>
+				<div class="hello-block__content__hello__text__link-wrapper">
+					<a class="hello-block__content__hello__text__link" href="#" class="link">Читай мой блог в <span class="underline-block">инстаграмме</span></a>
+					<img src="assets/hello-block-inst.svg" alt="">
+				</div>
+
+				<div class="hello-block__content__hello__button">
+								<span class="hello-block__content__hello__button__text">Принять участие в марафоне</span>
+						
+			</div>
+			</div>
+		</div>
 	</div>
 </div>
-					<div class="hello-block__content__hello">
-						<div class="hello-block__content__hello__img"><img src="assets/hello-img.jpg" alt=""></div>
-						<div class="hello-block__content__hello__desc">
-							<p>Если ты хочешь скинуть лишние килограммы, не только с пользой, но и весело провести время в компании единомышленниц — присоединяйся! Это уже 7-й поток моего бесплатного фитнес марафона!
 
-На завтра откладывать можно сколько угодно, и оправданий найдется масса, и дел поважнее. НО сейчас у тебя есть реальный шанс: я дам тебе пинок под зад. Ты войдешь в новый ритм под моим руководством: меню, тренировки, мотивация – тебе не нужно думать, просто повторяй за мной и всеми участницами марафона трансформации тела. И все это абсолютно бесплатно.</p>
-						<a href="" class="link">Читай мой блог в инстаграмме</a>
-						<button>Принять участие в марафоне</button>
-					</div>
-					</div>
-				</div>
-			</div>
+<style>
+.hello-block__content {
+	margin: 78px 0 111px 0;
+}
+.hello-block__content__up-items {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	margin-bottom: 119px;
+}
+.hello-block__content__item {
+	width: 384px;
+}
+.hello-block__content__title {
+	width: 173px;
+	height: 40px;
+	font-family: 'FranklinGothicDemi', sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	letter-spacing: normal;
+	color: #000000;
+	position: relative;
+	z-index: 1;
+	margin-top: 47px;
+}
+.hello-block__content__title:after{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 16px;
+	background-color: #e7ff6a;
+	position: absolute;
+	z-index: -1;
+	bottom: -2px;
+}
+.hello-block__content__desc {
+	width: 384px;
+	height: 96px;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	color: #000000;
+	margin-top: 17px;
+}
+.hello-block__content__hello {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.hello-block__content__hello p {
+	margin: 0;
 
-			<style>
-				.hello-block__content__up-items {
-					display: flex;
-					align-items: center;
-					justify-content: space-around;
-				}
-				.hello-block__content__hello {
-					display: flex;
-					align-items: center;
-					justify-content: space-around;
-				}
-			</style>
-			<!-- end of Hello-block -->
-			<!-- FAQ block -->
-			<div class="faq-block">
-				<div class="faq-block__left-block">
-					<div class="faq-block__left-block__title">F.A.Q</div>
-					<div class="faq-block__left-block__arrow"><img src="assets/faq-arrow.svg" alt=""></div>
-				</div>
-				<div class="faq-block__right-block">
-					<div class="faq-block__right-block__desc">Кликни, чтобы узнать ответы на часто задаваемые вопросы</div>
-				</div>
-			</div>
-			<style>
-				.faq-block {
-					height: 112px;
-					background-color: #e7ff6a;
-					padding: 30px 0;
-					display: flex;
-					justify-content: space-around;
-					align-items:center;
-				}
-				.faq-block__left-block {
-					width: 192px;
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-
-				}
-				.faq-block__left-block__title{
-					  width: 96px;
-  height: 52px;
+}
+.hello-block__content__hello .hello-block__content__hello__img,
+.hello-block__content__hello .hello-block__content__hello__desc
+ {
+	width: 50%;
+}
+.hello-block__content__hello .hello-block__content__hello__desc {
+	height: 601px;
+}
+.hello-block__content__hello__img img {
+	display: block;
+	margin: 0 auto;
+}
+.hello-block__content__hello__desc__title {
+	margin-bottom: 49px;
+}
+.hello-block__content__hello__desc__title__main {
+	  width: 550px;
+  height: 46px;
   font-family: 'FranklinGothicDemi', sans-serif;
-  font-size: 42px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.24;
-  letter-spacing: normal;
-  text-align: center;
-  color: #000000;
-				}
-				.faq-block__right-block__desc {
-					  width: 459px;
-  height: 20px;
-  opacity: 0.45;
-  font-family: Roboto;
-  font-size: 16px;
+  font-size: 32px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
   letter-spacing: normal;
   color: #000000;
-				}
-			</style>
-			<!-- end of FAQ block -->
-			<!-- bottom-slider-block -->
-			<div class="bottom-slider-block">
-				<div class="bottom-slider-block__slider-header">
-					<div class="bottom-slider-block__slider-header_top-content">
-						<div class="bottom-slider-block__slider-header__left-block">
-							<p class="bottom-slider-block__slider-header__left-block__slogan">стань частью <span class="promo-train-block__title_underline-block-up">@rakamaka.fit</span></p>
-							<img class="bottom-slider-block__slider-header__left-block__logo" src="assets/bottom-slider-inst.svg" alt="">
-						</div>
-						<div class="bottom-slider-block__slider-header__right-block">
-							<div class="bottom-slider-block__slogan-button-wrapper">
-								<p class="bottom-slider-block__slider-header__right-block__slogan">Фото счастливых клиентов RAKAMAKAFIT
-								и участниц марафона трансформации тела RAKAMAKAFON</p>
-							</div>			
-						</div>
-					</div>
-					<img class="bottom-slider-block____slider-header__right-block_img" src="assets/before-after.svg" alt="">
-				</div>
-				<div class="bottom-slider-block__slider-footer"></div>
-				<div class="bottom-slider-block__slider-wrapper">
-					<div class="slick-slider">
-						<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
-						<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
-						<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
-						<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
-						<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
-						<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
-						<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
-						<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
-						<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
-						<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
-					</div>
-					<div class="bottom-slider-nav-buttons"></div>
-				</div>
-			</div>
-
-
-
-
-			<style>
-				.bottom-slider-block {
-					position:relative;
-				}
-				.bottom-slider-block__slider-header {
-					height: 430px;
-
-					background-color: #f7f7fb;
-					padding-top: 92px;
-				}
-				.bottom-slider-block__slider-header_top-content {
-					display: flex;
-					justify-content: space-between;
-					align-items:center;
-					height:72px;
-					width: 100%;
-
-				}
-				.bottom-slider-block__slider-header__left-block {
-					display: flex;
-					width: 411px;
-					height: 56px;
-					justify-content: space-between;
-					align-items: center;
-					margin-left: 60px;
-
-				}
-				.bottom-slider-block__slider-header__left-block__slogan {
-					height: 14px;
-					font-size: 12px;
-					font-family: 'Roboto', sans-serif;	
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: normal;
-					letter-spacing: 3px;
-					color: #000000;
-					margin:0;
-					text-transform: uppercase;
-				}
-				.bottom-slider-block__slider-header__left-block__logo {
-					width: 56px;
-					height: 56px;
-				}
-				.bottom-slider-block__slogan-button-wrapper {
-					display: flex;
-					justify-content: space-between;
-					align-items: center;
-					margin-right: 60px;
-				}
-				.bottom-slider-block__slider-header__right-block__slogan {
-					width: 443px;
-					height: 72px;
-					opacity: 0.75;
-					font-size: 18px;
-					font-weight: bold;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: 1.33;
-					letter-spacing: normal;
-					color: #000000;
-					margin:0;
-				}
-				.bottom-slider-block____slider-header__right-block__slogan-button {
-					border-radius: 32px;
-					width: 207px;
-					height: 56px;
-					background-color: #e7ff6a;
-					text-align: center;
-					border: none;
-					font-size: 18px;
-					font-weight: normal;
-					font-style: normal;
-					font-stretch: normal;
-					line-height: normal;
-					letter-spacing: 0.9px;
-					text-align: center;
-					color: #000;
-					cursor: pointer;
-				}
-				.bottom-slider-block____slider-header__right-block_img {
-					margin-top:44px;
-					float:right;
-				}
-				.bottom-slider-block__slider-footer {
-					height: 343px;
-					background-color: #353535;
-				}
-
-				.bottom-slider-block__slider-wrapper {
-					position: absolute;
-					z-index: 999;
-					height: 549px;
-					bottom: 132px;
-					width: 100%;
-				}
-				.bottom-slider-block__slider-wrapper .slick-track .slick-slide.slick-current.slick-active {
-					width: 549px;
-					height: 549px;
-					/*animation: scale 1s ease-in-out forwards;*/
-					animation-delay: 1s;
-				}
-				.bottom-slider-block__slider-wrapper .slick-slide {
-					width:322px;
-					height: 322px;
-
-				}
-				.bottom-slider-block__slider-wrapper .slick-slide img {
-					width: inherit;
-				}
-				.bottom-slider-nav-buttons {
-					position: absolute;
-					right: 32.7%;
-					width: 88px;
-					display:flex;
-					justify-content: space-between;
-				}
-				.bottom-slider-nav-buttons img {
-					cursor:pointer;
-				}
-				.slick-slider .slick-track {
-					display: flex;
-					align-items: center;
-				}
-				.slick-slide {
-					width: 322px;
-					padding: 0 15px;
-				} 
-				.bottom-slider-block__slider-wrapper .slick-list {
-					/*	padding: 0 110px;*/
-				}
-				@keyframes scale {
-					from {
-						width: 322px;
-
-					}
-					to{
-						width: 549px;
-
-					}
-				}
-			</style>
-			<script>
-				$(document).ready(function(){
-					$('.owl-carousel.up-slider').owlCarousel({
-						items:1,
-						lazyLoad:true,
-						loop:true,
-						margin:10,
-						dots: false,
-						nav:true,
-						navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
-					});
-
-					$('.owl-carousel.middle-slider').owlCarousel({
-						items:1,
-						lazyLoad:true,
-						loop:true,
-						margin:10,
-						dots: true,
-						nav:true,
-						navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
-					});
-
-					$('.owl-carousel.bottom-slider').owlCarousel({
-						items:5,
-						stagePadding: 60,
-						lazyLoad:true,
-						loop:true,
-						autoplay:true,
-						margin:10,
-						dots: false,
-						nav:true,
-						navText: [`<img src="assets/arrow-white-left.svg">`,`<img src="assets/arrow-white-right.svg">`]
-					});
-
-					$('.slick-slider').slick({
-						slidesToShow:3,
-						slidesToScroll: 1,
-						arrows: true,
-						appendArrows: $('.bottom-slider-nav-buttons'),
-						prevArrow: `<img src="assets/arrow-white-left.svg">`,
-						nextArrow: `<img src="assets/arrow-white-right.svg">`,
-						swipe:true,
-						draggable: true,
-						variableWidth: true,
-						easing: 'ease-in-out',
-						cssEase: 'ease-in-out',
-						autoplay: true
-					});
-				});
-			</script>
-			<!-- end of bottom-slider-block  -->
-			<!-- footer -->
-		</div>
-		<footer class="footer">
-			<div class="footer__footer-wrapper">
-				<div class="footer__line"></div>
-				<div class="footer__nav">
-					<div class="footer__nav__logo">
-						<img src="assets/logo-footer.png" alt="">
-					</div>
-					<div class="footer__nav-bar-block">
-						<ul class="footer__nav-bar__navs">
-							<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Фитнес ленты</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Эспандеры</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Фитбол</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Наборы</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Питание</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Дневник тренировок</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Программа тренировок</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer__footer-credits">
-					<div class="footer__footer-credits__icons">
-						<a href="#"><img src="assets/footer-inst.svg" alt=""></a>
-						<a href="#"><img src="assets/footer-ytb.svg" alt=""></a>
-						<a href="#"><img src="assets/footer-vk.svg" alt=""></a>
-					</div>
-					<div class="footer__footer-credits__official-info">			
-						<ul>
-							<li><a href="#">Доставка и оплата</a></li>
-							<li><a href="#">Полезная информация</a></li>
-							<li><a href="#">О компании</a></li>
-							<li><a href="#">Контакты</a></li>
-						</ul>
-					</div>
-					<div class="footer__footer-credits__phones">
-						<ul>
-							<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
-							<li><nobr><a href="tel:88001234573 ">8 (800) 123 45 73 </a></nobr></li>
-							<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
-						</ul>
-					</div>
-					<div class="footer__footer-credits__requisites">
-						ИП Чирченко А.И. 119261, <br>
-						Москва, Ленинский проспект 85 <br>	
-						ИНН 770970317833 / <br>
-						ОГРНИП 316774600448261		
-					</div>
-				</div>
-				<div class="footer__brand">
-					© 2019. RAKAMAKAFIT
-				</div>
-			</div>
-		</footer>
+}
+.hello-block__content__hello__desc__title__slogan{
+	  width: 543px;
+  height: 26px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: #a9a9a9;
+}
+.hello-block__content__hello__text   {
+  width: 549px;
+  height: 291px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: #000000;
+}
+.hello-block__content__hello__text p {
+		margin-bottom: 40px;
+}
+.hello-block__content__hello__text__link-wrapper {
+	display: flex;
+	align-items: center;
+	width: 350px;
+	justify-content: space-between;
+}
+	.hello-block__content__hello__button {
+		border-radius: 32px;
+		width: 350px;
+		height: 64px;
+		background-color: #e7ff6a;
+margin-top: 49px;
+		text-align: center;
+	}
+	.hello-block__content__hello__button__text {
+		font-size: 18px;
+		font-weight: bold;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 0.9px;
+		text-align: center;
+		margin: 21px 0;
+		display: inline-block;
+	}
+</style>
+<!-- end of Hello-block -->
+<!-- FAQ block -->
+<div class="faq-block">
+	<div class="faq-block__left-block">
+		<div class="faq-block__left-block__title">F.A.Q</div>
+		<div class="faq-block__left-block__arrow"><img src="assets/faq-arrow.svg" alt=""></div>
 	</div>
-	<style>
-		.footer{
-			flex: 0 0 auto;
-			background-color: #353535;
-			min-height: 304px;
-			color: #fff;
-		}
-		.footer__footer-wrapper{
-			width:95%;
-			margin: 0 auto;
-		}
-		.footer__line {
-			width:100%;
-			height: 2px;
-			background-color: #979797;
-			opacity: 0.5;
-		}
-		.footer__nav {
-			margin-top: 26px;
-			display: flex;
-			justify-content: space-between;
-		}
-		.footer__nav-bar {
-			height: 72px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding:9px 0;
-			padding: 0 48px;
-			background-color: #252525;
-		}
-		.footer__inner-nav-bar {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			height: 80px;
-			padding: 0 48px;
-			box-shadow: 0 13px 24px -5px rgba(0, 0, 0, 0.09);
-			background-color: #ffffff;
-		}
-		.footer__nav-bar__logo img {
-			width: 268px;
-			height: 57px;
-			object-fit: contain;
-		}
-		.footer__nav-bar__navs,
-		.footer__inner-nav-bar__navs{
-			color:#fff;
-			list-style: none;
-			width: 73vw;
-			padding:0;
-			display: flex;
-			justify-content: space-between;
-		}
-		.footer__nav-bar__navs-item,
-		.footer__inner-nav-bar__navs-item {
-			display: inline-block;
-			text-transform: uppercase;
-			font-family: 'Roboto', sans-serif;	
-			font-size: 16px;
-			font-weight: bold;
-			font-style: normal;
-			font-stretch: normal;
-			line-height: normal;
-			letter-spacing: 1px;
-			color: inherit;
-			position: relative;
-		}
-		.footer__footer-credits {
-			margin-top: 68px;
-			display: flex;
-			justify-content: space-between;
-			align-items: flex-start;
-		}
-		.footer__footer-credits__official-info ul,
-		.footer__footer-credits__phones ul{
-			list-style: none;
-			margin: 0;
-		}
-		.footer__footer-credits__official-info ul li,
-		.footer__footer-credits__phones ul li{
-			padding: 4px 0;
-		}
-		.footer__footer-credits__phones a,
-		.footer__footer-credits__official-info a {
-			text-decoration: none;
-			color: #fff;
-		}
-		.footer__footer-credits__icons {
-			width: 150px;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-		}
-		.footer__footer-credits__requisites {
-			width: 321px;
-			height: 112px;
-			opacity: 0.45;
-			font-size: 16px;
-			font-weight: normal;
-			font-style: normal;
-			font-stretch: normal;
-			line-height: 1.75;
-			letter-spacing: normal;
-			color: #ffffff;
-		}
-		.footer__brand {
-			width: 200px;
-			height: 28px;
-			opacity: 0.45;
-			font-size: 16px;
-			font-weight: normal;
-			font-style: normal;
-			font-stretch: normal;
-			line-height: 1.75;
-			letter-spacing: normal;
-			color: #ffffff;
-			margin-bottom: 37px;
-		}
-	</style>
-	<!-- end of footer -->
+	<div class="faq-block__right-block">
+		<div class="faq-block__right-block__desc">Кликни, чтобы узнать ответы на часто задаваемые вопросы</div>
+	</div>
+</div>
+<style>
+.faq-block {
+	height: 112px;
+	background-color: #e7ff6a;
+	padding: 30px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+}
+.faq-block__left-block {
+	width: 192px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+.faq-block__left-block__title{
+	width: 96px;
+	height: 52px;
+	font-family: 'FranklinGothicDemi', sans-serif;
+	font-size: 42px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.24;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+}
+.faq-block__right-block__desc {
+	width: 459px;
+	height: 20px;
+	opacity: 0.45;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	letter-spacing: normal;
+	color: #000000;
+}
+</style>
+<!-- end of FAQ block -->
+<!-- bottom-slider-block -->
+<div class="bottom-slider-block">
+	<div class="bottom-slider-block__slider-header">
+		<div class="bottom-slider-block__slider-header_top-content">
+			<div class="bottom-slider-block__slider-header__left-block">
+				<p class="bottom-slider-block__slider-header__left-block__slogan">стань частью <span class="promo-train-block__title_underline-block-up">@rakamaka.fit</span></p>
+				<img class="bottom-slider-block__slider-header__left-block__logo" src="assets/bottom-slider-inst.svg" alt="">
+			</div>
+			<div class="bottom-slider-block__slider-header__right-block">
+				<div class="bottom-slider-block__slogan-button-wrapper">
+					<p class="bottom-slider-block__slider-header__right-block__slogan">Фото счастливых клиентов RAKAMAKAFIT
+					и участниц марафона трансформации тела RAKAMAKAFON</p>
+				</div>			
+			</div>
+		</div>
+		<img class="bottom-slider-block____slider-header__right-block_img" src="assets/before-after.svg" alt="">
+	</div>
+	<div class="bottom-slider-block__slider-footer"></div>
+	<div class="bottom-slider-block__slider-wrapper">
+		<div class="slick-slider">
+			<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+			<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+			<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+			<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+			<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+			<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+			<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+			<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+			<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+			<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+		</div>
+		<div class="bottom-slider-nav-buttons"></div>
+	</div>
+</div>
+
+
+
+
+<style>
+.bottom-slider-block {
+	position:relative;
+}
+.bottom-slider-block__slider-header {
+	height: 430px;
+
+	background-color: #f7f7fb;
+	padding-top: 92px;
+}
+.bottom-slider-block__slider-header_top-content {
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	height:72px;
+	width: 100%;
+
+}
+.bottom-slider-block__slider-header__left-block {
+	display: flex;
+	width: 411px;
+	height: 56px;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 60px;
+
+}
+.bottom-slider-block__slider-header__left-block__slogan {
+	height: 14px;
+	font-size: 12px;
+	font-family: 'Roboto', sans-serif;	
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 3px;
+	color: #000000;
+	margin:0;
+	text-transform: uppercase;
+}
+.bottom-slider-block__slider-header__left-block__logo {
+	width: 56px;
+	height: 56px;
+}
+.bottom-slider-block__slogan-button-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 60px;
+}
+.bottom-slider-block__slider-header__right-block__slogan {
+	width: 443px;
+	height: 72px;
+	opacity: 0.75;
+	font-size: 18px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.33;
+	letter-spacing: normal;
+	color: #000000;
+	margin:0;
+}
+.bottom-slider-block____slider-header__right-block__slogan-button {
+	border-radius: 32px;
+	width: 207px;
+	height: 56px;
+	background-color: #e7ff6a;
+	text-align: center;
+	border: none;
+	font-size: 18px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.9px;
+	text-align: center;
+	color: #000;
+	cursor: pointer;
+}
+.bottom-slider-block____slider-header__right-block_img {
+	margin-top:44px;
+	float:right;
+}
+.bottom-slider-block__slider-footer {
+	height: 343px;
+	background-color: #353535;
+}
+
+.bottom-slider-block__slider-wrapper {
+	position: absolute;
+	z-index: 999;
+	height: 549px;
+	bottom: 132px;
+	width: 100%;
+}
+.bottom-slider-block__slider-wrapper .slick-track .slick-slide.slick-current.slick-active {
+	width: 549px;
+	height: 549px;
+	/*animation: scale 1s ease-in-out forwards;*/
+	animation-delay: 1s;
+}
+.bottom-slider-block__slider-wrapper .slick-slide {
+	width:322px;
+	height: 322px;
+
+}
+.bottom-slider-block__slider-wrapper .slick-slide img {
+	width: inherit;
+}
+.bottom-slider-nav-buttons {
+	position: absolute;
+	right: 32.7%;
+	width: 88px;
+	display:flex;
+	justify-content: space-between;
+}
+.bottom-slider-nav-buttons img {
+	cursor:pointer;
+}
+.slick-slider .slick-track {
+	display: flex;
+	align-items: center;
+}
+.slick-slide {
+	width: 322px;
+	padding: 0 15px;
+} 
+.bottom-slider-block__slider-wrapper .slick-list {
+	/*	padding: 0 110px;*/
+}
+@keyframes scale {
+	from {
+		width: 322px;
+
+	}
+	to{
+		width: 549px;
+
+	}
+}
+</style>
+<script>
+	$(document).ready(function(){
+		$('.owl-carousel.up-slider').owlCarousel({
+			items:1,
+			lazyLoad:true,
+			loop:true,
+			margin:10,
+			dots: false,
+			nav:true,
+			navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
+		});
+
+		$('.owl-carousel.middle-slider').owlCarousel({
+			items:1,
+			lazyLoad:true,
+			loop:true,
+			margin:10,
+			dots: true,
+			nav:true,
+			navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
+		});
+
+		$('.owl-carousel.bottom-slider').owlCarousel({
+			items:5,
+			stagePadding: 60,
+			lazyLoad:true,
+			loop:true,
+			autoplay:true,
+			margin:10,
+			dots: false,
+			nav:true,
+			navText: [`<img src="assets/arrow-white-left.svg">`,`<img src="assets/arrow-white-right.svg">`]
+		});
+
+		$('.slick-slider').slick({
+			slidesToShow:3,
+			slidesToScroll: 1,
+			arrows: true,
+			appendArrows: $('.bottom-slider-nav-buttons'),
+			prevArrow: `<img src="assets/arrow-white-left.svg">`,
+			nextArrow: `<img src="assets/arrow-white-right.svg">`,
+			swipe:true,
+			draggable: true,
+			variableWidth: true,
+			easing: 'ease-in-out',
+			cssEase: 'ease-in-out',
+			autoplay: true
+		});
+	});
+</script>
+<!-- end of bottom-slider-block  -->
+<!-- footer -->
+</div>
+<footer class="footer">
+	<div class="footer__footer-wrapper">
+		<div class="footer__line"></div>
+		<div class="footer__nav">
+			<div class="footer__nav__logo">
+				<img src="assets/logo-footer.png" alt="">
+			</div>
+			<div class="footer__nav-bar-block">
+				<ul class="footer__nav-bar__navs">
+					<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Фитнес ленты</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Эспандеры</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Фитбол</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Наборы</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Питание</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Дневник тренировок</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Программа тренировок</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer__footer-credits">
+			<div class="footer__footer-credits__icons">
+				<a href="#"><img src="assets/footer-inst.svg" alt=""></a>
+				<a href="#"><img src="assets/footer-ytb.svg" alt=""></a>
+				<a href="#"><img src="assets/footer-vk.svg" alt=""></a>
+			</div>
+			<div class="footer__footer-credits__official-info">			
+				<ul>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Полезная информация</a></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="footer__footer-credits__phones">
+				<ul>
+					<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
+					<li><nobr><a href="tel:88001234573 ">8 (800) 123 45 73 </a></nobr></li>
+					<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
+				</ul>
+			</div>
+			<div class="footer__footer-credits__requisites">
+				ИП Чирченко А.И. 119261, <br>
+				Москва, Ленинский проспект 85 <br>	
+				ИНН 770970317833 / <br>
+				ОГРНИП 316774600448261		
+			</div>
+		</div>
+		<div class="footer__brand">
+			© 2019. RAKAMAKAFIT
+		</div>
+	</div>
+</footer>
+</div>
+<style>
+.footer{
+	flex: 0 0 auto;
+	background-color: #353535;
+	min-height: 304px;
+	color: #fff;
+}
+.footer__footer-wrapper{
+	width:95%;
+	margin: 0 auto;
+}
+.footer__line {
+	width:100%;
+	height: 2px;
+	background-color: #979797;
+	opacity: 0.5;
+}
+.footer__nav {
+	margin-top: 26px;
+	display: flex;
+	justify-content: space-between;
+}
+.footer__nav-bar {
+	height: 72px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding:9px 0;
+	padding: 0 48px;
+	background-color: #252525;
+}
+.footer__inner-nav-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	padding: 0 48px;
+	box-shadow: 0 13px 24px -5px rgba(0, 0, 0, 0.09);
+	background-color: #ffffff;
+}
+.footer__nav-bar__logo img {
+	width: 268px;
+	height: 57px;
+	object-fit: contain;
+}
+.footer__nav-bar__navs,
+.footer__inner-nav-bar__navs{
+	color:#fff;
+	list-style: none;
+	width: 73vw;
+	padding:0;
+	display: flex;
+	justify-content: space-between;
+}
+.footer__nav-bar__navs-item,
+.footer__inner-nav-bar__navs-item {
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;	
+	font-size: 16px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 1px;
+	color: inherit;
+	position: relative;
+}
+.footer__footer-credits {
+	margin-top: 68px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+.footer__footer-credits__official-info ul,
+.footer__footer-credits__phones ul{
+	list-style: none;
+	margin: 0;
+}
+.footer__footer-credits__official-info ul li,
+.footer__footer-credits__phones ul li{
+	padding: 4px 0;
+}
+.footer__footer-credits__phones a,
+.footer__footer-credits__official-info a {
+	text-decoration: none;
+	color: #fff;
+}
+.footer__footer-credits__icons {
+	width: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.footer__footer-credits__requisites {
+	width: 321px;
+	height: 112px;
+	opacity: 0.45;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	color: #ffffff;
+}
+.footer__brand {
+	width: 200px;
+	height: 28px;
+	opacity: 0.45;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.75;
+	letter-spacing: normal;
+	color: #ffffff;
+	margin-bottom: 37px;
+}
+</style>
+<!-- end of footer -->
 </body>
 </html>
