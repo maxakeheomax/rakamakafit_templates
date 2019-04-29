@@ -1154,6 +1154,7 @@ a {
 
 .bottom-slider-block {
 	position:relative;
+	margin-bottom:-2px;
 }
 .bottom-slider-block__slider-header {
 	height: 430px;
@@ -1303,11 +1304,12 @@ a {
 	color: #fff;
 }
 .footer__footer-wrapper{
-	padding: 0 55px;
+	width: 1345px;
 	margin: 0 auto;
 }
 .footer__line {
-	width:100%;
+	width:95%;
+	margin: 0 auto;
 	height: 2px;
 	background-color: #979797;
 	opacity: 0.5;
