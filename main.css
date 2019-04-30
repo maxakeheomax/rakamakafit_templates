@@ -486,7 +486,6 @@ a {
 .special-offer-block__title__name {
 	font-family:'FranklinGothicDemi', sans-serif;
 	text-transform: uppercase;
-	width: 273px;
 	font-size: 24px;
 	font-style: normal;
 	font-stretch: normal;
@@ -525,6 +524,9 @@ a {
 }
 .special-offer-block__item {
 	width: 320px;
+	display: flex;
+flex-flow: column nowrap;
+justify-content: space-between;
 }
 .special-offer-block__item__title {
 	font-family:'FranklinGothicDemi', sans-serif;
@@ -1296,6 +1298,152 @@ a {
 	}
 }
 /*end of bottom-slider-block */
+/*how-to-start-block */
+.how-start-block {
+	padding-top: 51px;
+	height: 487px;
+	background-color: #f7f7fb;
+}
+.how-start-block__title {
+	height: 52px;
+	font-family: 'FranklinGothicDemi', sans-serif;
+	font-size: 42px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.24;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+	margin: 0 auto;
+}
+.how-start-block__desc {
+	width: 549px;
+	height: 52px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+	margin: 16px auto 51px;
+}
+.how-start-block__content {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 51px;
+}
+.how-start-block__item {
+	width: 346px;
+	position: relative;
+}
+.how-start-block__item__number {
+	width: 84px;
+	height: 182px;
+	/* font-family: BebasNeue;*/
+	font-size: 212px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 0.86;
+	letter-spacing: normal;
+	color: #e7ff6a;
+	position: relative;
+	z-index: 1;
+}
+.how-start-wprapper-block {
+	position: absolute;
+	z-index: 2;
+	top: 86px;
+}
+.how-start-block__item__title{
+	font-family: 'FranklinGothicDemi', sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	letter-spacing: normal;
+	color: #000000;
+
+}
+.how-start-block__item__desc {
+	width: 346px;
+	height: 64px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	color: #000000;
+	margin-top: 10px;
+}
+.how-start-block__help-link {
+	width: 259px;
+	height: 19px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #e31377;
+	border-bottom: 1px dashed #e31377;
+	text-decoration: none;
+	display: inline-block;
+	margin-top:20px;
+}
+
+/*end-of-how-to-start-block */
+ /*FAQ block*/
+.faq-block {
+	background-color: #e7ff6a;
+	padding: 30px 0;
+	display: flex;
+	justify-content: space-around;
+	align-items:center;
+}
+.faq-block__left-block {
+	width: 192px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+.faq-block__left-block__title{
+	width: 96px;
+	height: 52px;
+	font-family: 'FranklinGothicDemi', sans-serif;
+	font-size: 42px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.24;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+}
+.faq-block__right-block__desc {
+	width: 459px;
+	height: 20px;
+	opacity: 0.45;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	letter-spacing: normal;
+	color: #000000;
+}
+
+ /*end of FAQ block*/
 /*end of footer */
 .footer{
 	flex: 0 0 auto;
