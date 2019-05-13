@@ -525,8 +525,8 @@ a {
 .special-offer-block__item {
 	width: 320px;
 	display: flex;
-flex-flow: column nowrap;
-justify-content: space-between;
+	flex-flow: column nowrap;
+	justify-content: space-between;
 }
 .special-offer-block__item__title {
 	font-family:'FranklinGothicDemi', sans-serif;
@@ -1260,7 +1260,7 @@ justify-content: space-between;
 .bottom-slider-block__slider-wrapper .slick-track .slick-slide.slick-current.slick-active {
 	width: 549px;
 	height: 549px;
-	animation-delay: 1s;
+	transform: translateX(10px);
 }
 .bottom-slider-block__slider-wrapper .slick-slide {
 	width:322px;
@@ -1284,6 +1284,7 @@ justify-content: space-between;
 .slick-slider .slick-track {
 	display: flex;
 	align-items: center;
+	transition: .8s;
 }
 .slick-slide {
 	width: 322px;
@@ -1401,7 +1402,7 @@ justify-content: space-between;
 }
 
 /*end-of-how-to-start-block */
- /*FAQ block*/
+/*FAQ block*/
 .faq-block {
 	background-color: #e7ff6a;
 	padding: 30px 0;
@@ -1443,7 +1444,7 @@ justify-content: space-between;
 	color: #000000;
 }
 
- /*end of FAQ block*/
+/*end of FAQ block*/
 /*end of footer */
 .footer{
 	flex: 0 0 auto;

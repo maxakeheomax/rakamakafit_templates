@@ -398,20 +398,21 @@
 			margin:10,
 			dots: true,
 			nav:true,
+			smartSpeed: 800,
 			navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
 		});
 
-		$('.owl-carousel.bottom-slider').owlCarousel({
-			items:5,
-			stagePadding: 60,
-			lazyLoad:true,
-			loop:true,
-			autoplay:true,
-			margin:10,
-			dots: false,
-			nav:true,
-			navText: [`<img src="assets/arrow-white-left.svg">`,`<img src="assets/arrow-white-right.svg">`]
-		});
+		// $('.owl-carousel.bottom-slider').owlCarousel({
+		// 	items:5,
+		// 	stagePadding: 60,
+		// 	lazyLoad:true,
+		// 	loop:true,
+		// 	autoplay:true,
+		// 	margin:10,
+		// 	dots: false,
+		// 	nav:true,
+		// 	navText: [`<img src="assets/arrow-white-left.svg">`,`<img src="assets/arrow-white-right.svg">`]
+		// });
 
 		$('.slick-slider').slick({
 			slidesToShow:3,
@@ -422,6 +423,7 @@
 			nextArrow: `<img src="assets/arrow-white-right.svg">`,
 			swipe:true,
 			draggable: true,
+			speed: 400,
 			variableWidth: true,
 			easing: 'ease-in-out',
 			cssEase: 'ease-in-out',
