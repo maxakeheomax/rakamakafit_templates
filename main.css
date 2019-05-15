@@ -210,6 +210,9 @@ a {
 	color: #fff;
 	padding: 14px 28px;
 }
+.breadcrumbs-content {
+	display: flex;
+}
 
 /*aside block */
 .aside-block {
@@ -1248,6 +1251,13 @@ a {
 	background: url('assets/ipad-02.jpg') no-repeat;
 	background-color: #ffd2d7;
 }
+.left-side.promo-train-block__slider-item {
+	height: 520px;
+	background: url('assets/ipad-green-bg.jpg') no-repeat;
+	background-color: #e7ff6a;
+	margin-top: 52px;
+	padding-left: 152px;
+}
 .blue-bg.promo-train-block__slider-item {
 	height: 533px;
 	background: url('assets/five-weeks-bg.jpg') no-repeat;
@@ -1257,6 +1267,11 @@ a {
 	width: 50%;
 	float: right;
 	margin-top: 58px;
+}
+.left-side .promo-train-block__slider-item__slider-content {
+	width: 50%;
+	float: left;
+	margin-top: 44px;
 }
 .blue-bg .promo-train-block__slider-item__slider-content {
 	margin-top: 24px;
@@ -1272,7 +1287,9 @@ a {
 	color: #000000;
 	margin-left: 10px;
 }
-.blue-bg .promo-train-block__slider-item__slider-content__slogan {
+.blue-bg .promo-train-block__slider-item__slider-content__slogan,
+.left-side .promo-train-block__slider-item__slider-content__slogan
+ {
 	font-family: 'FranklinGothicDemi', sans-serif;
 	font-size: 42px;
 	font-weight: normal;
@@ -1302,6 +1319,9 @@ a {
 	z-index: 2;
 	box-shadow: inset 0 -14px 0px 0 #e7ff6a;
 }
+.left-side .promo-train-block__title_underline-block-up {
+	box-shadow: inset 0 -14px 0px 0 #fff;
+}
 .promo-train-block__slider-item__slider-content__dicription{
 	width: 475px;
 	height: auto;
@@ -1323,8 +1343,14 @@ a {
 	align-items: center;
 	margin-left: 10px;
 }
+.left-side .promo-train-block__slider__content_bottom {
+	margin-top: 32px;
+}
 .blue-bg .promo-train-block__slider__content_bottom{
 	margin-top: 40px;
+}
+.left-side .promo-train-block__slider-item-button{
+	background-color: #e31377;
 }
 .promo-train-block__slider-item-button {
 	border-radius: 32px;
@@ -1345,6 +1371,9 @@ a {
 	color: #000000;
 	margin: 25px 0;
 	display: inline-block;
+}
+.left-side .promo-train-block__slider-item-button__text {
+	color:#fff;
 }
 .promo-train-block__slider-item-more__text {
 	text-transform:uppercase;
@@ -1693,6 +1722,7 @@ a {
 	height: 439px;
 	background-color: #f7f7fb;
 }
+
 .white-bg.how-start-block {
 	background-color: #fff;
 }
