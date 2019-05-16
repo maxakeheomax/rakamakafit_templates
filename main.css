@@ -710,7 +710,7 @@ a {
 	background-color: #fbfbfd;;
 }
 .bootstrap-box * {
-box-sizing: border-box;
+	box-sizing: border-box;
 }
 .special-offer-block{
 	margin: 76px 161px 98px;
@@ -789,6 +789,12 @@ box-sizing: border-box;
 }
 .bootstrap-box .special-offer-block__item{
 	margin-bottom: 106px;
+}
+.bootstrap-box .special-offer-block__item .special-offer-block__item__title,
+.bootstrap-box .special-offer-block__item .special-offer-block__item__desc,
+.bootstrap-box .special-offer-block__item .special-offer-block__item__prices
+{
+	max-width: 320px;
 }
 .bootstrap-box .special-offer-block__item img{
 	width: 320px;
@@ -1429,6 +1435,14 @@ box-sizing: border-box;
 	background: url('assets/ipad-02.jpg') no-repeat;
 	background-color: #ffd2d7;
 }
+.personal-programm.promo-train-block__slider-item{
+	height: 345px;
+	background: url('assets/personal-programm.jpg') no-repeat;
+	background-color: #ffd2d8;
+	width: 100%;
+	max-width: 1346px;
+	margin: 39px auto;
+}
 .tapes.promo-train-block__slider-item {
 	background: url('assets/slider-bg.jpg') no-repeat;
 	background-color: #beeafc;
@@ -1467,6 +1481,12 @@ box-sizing: border-box;
 	float: left;
 	margin-top: 44px;
 }
+.personal-programm .promo-train-block__slider-item__slider-content  {
+	width: 50%;
+	float: left;
+	margin-top: 18px;
+	margin-left: 54px;
+}
 .blue-bg .promo-train-block__slider-item__slider-content {
 	margin-top: 24px;
 }
@@ -1486,6 +1506,7 @@ box-sizing: border-box;
 	color: #000000;
 	margin: 0 0 0 6px;
 }
+
 .promo-train-block__slider-item__slider-content__promo-title.active {
 	position:relative;
 	z-index: 2;
@@ -1511,7 +1532,18 @@ box-sizing: border-box;
 	color: #000000;
 	margin-left: 10px;
 }
-
+.personal-programm .promo-train-block__slider-item__slider-content__slogan {
+	width: 590px;
+	font-family: 'FranklinGothicDemi', sans-serif;
+	font-size: 42px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.14;
+	letter-spacing: normal;
+	color: #000000;
+	margin-bottom: 38px;
+}
 .blue-bg .promo-train-block__slider-item__slider-content__slogan,
 .left-side .promo-train-block__slider-item__slider-content__slogan
 {
@@ -1555,7 +1587,8 @@ box-sizing: border-box;
 	z-index: 2;
 	box-shadow: inset 0 -14px 0px 0 #e7ff6a;
 }
-.left-side .promo-train-block__title_underline-block-up {
+.left-side .promo-train-block__title_underline-block-up,
+.personal-programm  .promo-train-block__title_underline-block-up{
 	box-shadow: inset 0 -14px 0px 0 #fff;
 }
 .promo-train-block__slider-item__slider-content__dicription{
@@ -1600,6 +1633,13 @@ box-sizing: border-box;
 .promo-train-block__slider-item-button {
 	border-radius: 32px;
 	width: 184px;
+	height: 64px;
+	background-color: #e7ff6a;
+	text-align: center;
+}
+.personal-programm .promo-train-block__slider-item-button {
+	border-radius: 32px;
+	width: 167px;
 	height: 64px;
 	background-color: #e7ff6a;
 	text-align: center;
@@ -1661,11 +1701,15 @@ box-sizing: border-box;
 
 /*end of promo-train-block */
 /*in-the-know-form */
+
 .in-the-know-form-block {
 	background: url('assets/promoForm-bg-blue.svg');
 	background-size: 100% 100%;
 	background-color: #beeafc;
 	height:390px;
+}
+.big-height-in-the-know-block {
+	height:408px;
 }
 .in-the-know-form-block__title {
 	font-family: 'FranklinGothicDemi', sans-serif;
@@ -2221,7 +2265,110 @@ box-sizing: border-box;
 	padding: 0 10px;
 }
 /*end of exercises-promo-block*/
+/*exercises-list-block*/
+.exercises-list-block * {
+	box-sizing:border-box;
+}
+.exercises-list-block {
+	margin-top: 73px;
+	margin-bottom: 84px;
+}
+.exercises-list-block__item {
+	padding: 0 115px;
+}
+.exercises-list-block__item-title {
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #000000;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	max-width: 450px;
+	margin: -1px 0 0 -4px;
+	max-width: 450px;
+}
+.exercises-list-block__item-title span{
+		box-shadow: inset 0 -16px 0 0 #e7ff6a;
+}
+/*.exercises-list-block__item-title::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 16px;
+	background-color: #e7ff6a;
+	position: absolute;
+	z-index: -1;
+	bottom: -4px;
+	right: 0;
+}*/
+.exercises-list-block__exercises-list {
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 18px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.67;
+	letter-spacing: normal;
+	color: #000000;
+	list-style: none;
+	margin: 22px -4px;
+	padding: 0;
+	flex-flow: column nowrap;
+	display: inline-flex;
+}
+.exercises-list-block__exercises-list li {
+	position: relative;
+	cursor: pointer;
+}
+.exercises-list-block__exercises-list li:hover span {
+	box-shadow: 0 8px 0 0 #e7ff6a;
+}
+.exercises-list-block__row:first-child {
+	margin-bottom: 68px;
+}
+/*end of exercises-list-block*/
+/*CEO-text-block*/
+.ceo-text-block {
+	height: 586px;
+	background-color: #f7f7fb;
+}
+.ceo-text-block__content {
+	width: 100%;
+	max-width: 780px;
+	padding: 87px 0 0 274px;
+}
+.ceo-text-block__title {
+	  font-family: 'FranklinGothicDemi',sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+.ceo-text-block__text {
+	  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: #000000;
+}
+.ceo-text-block__text p {
+	margin-top: 26px;
+}
+/*end of CEO-text-block*/
 /*footer */
+.footer-padding-top {
+	padding-top: 30px;
+}
 .footer{
 	flex: 0 0 auto;
 	background-color: #353535;
