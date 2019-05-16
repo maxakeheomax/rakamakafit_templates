@@ -2356,6 +2356,26 @@ a {
 	margin-top: 26px;
 }
 /*end of CEO-text-block*/
+/*personal offer block */
+.personal-offer-block {
+	height: 400px;
+	max-width: 1346px;
+
+}
+.personal-offer-block * {
+	box-sizing: border-box;
+}
+.personal-offer-block__left-side {
+	background: url('assets/tapes-up-block-left.jpg') no-repeat;
+	background-size: cover;
+	height: 400px;
+}
+.personal-offer-block__right-side {
+	background: url('assets/tapes-up-block-right.jpg') no-repeat;
+	background-size: cover;
+	height: 400px;
+}
+/*end of personal offer block */
 /*footer */
 .footer-padding-top {
 	padding-top: 30px;
