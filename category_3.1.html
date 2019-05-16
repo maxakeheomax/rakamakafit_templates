@@ -3,12 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>RAKAMAKAFIT</title>
+	<link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="libs/owl.carousel2/dist/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="libs/owl.carousel2/dist/assets/owl.theme.default.min.css">
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick-theme.css">
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
-	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" href="main.css">
 	<script src="libs/jquery.min.js"></script>
 	<script src="libs/owl.carousel2/dist/owl.carousel.min.js"></script>
 	<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
@@ -40,10 +41,12 @@
 					<div class="header__inner-nav-bar-block">
 						<ul class="header__inner-nav-bar__navs header__inner-nav-bar__navs--black-text">
 							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link inner-nav-bar__navs-item__link--active">Все товары</a></li>
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Программа тренировок</a></li>
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Бесплатный марафон</a></li>
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Упражения</a></li>
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Статьи</a></li>
+														<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Фитнес ленты</a></li>
+							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Эспандеры</a></li>
+							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Фитбол</a></li>
+							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Наборы</a></li>
+							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Питание</a></li>
+							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Дневник тренировок</a></li>
 						</ul>			
 					</div>
 					<div class="header__nav-bar__cart-block">
@@ -81,7 +84,9 @@
 				<span class="promo-train-block__slider-item-button__text">Подробнее</span>
 			</div>
 			<div class="promo-train-block__slider-item-more">
-				<span class="promo-train-block__slider-item-more__text">Смотреть видео тренировок</span>
+				<a href="#">
+
+					<span class="promo-train-block__slider-item-more__text"><img src="assets/ytb-color.svg" alt="">Смотреть видео тренировок</span></a>
 			</div>
 		</div>
 	</div>
@@ -91,7 +96,7 @@
 	<div class="owl-carousel__slider-item" style="background: url('assets/mixit-copy.jpg');background-size: 100% 100%; ">
 		<div class="owl-carousel__slider-item__slider-content">
 			<p class="owl-carousel__slider-item__slider-content__promo-title">Холодное антицеллюлитное обертывание 
-в подарок</p> 
+<span class="promo-form-block__title_underline-block">в подарок</span></p> 
 			
 			<p class="owl-carousel__slider-item__slider-content__dicription">при покупке одного из наборов Rakamakafit</p>
 		</div>
@@ -99,7 +104,7 @@
 <div class="owl-carousel__slider-item" style="background: url('assets/mixit-copy.jpg');background-size: 100% 100%; ">
 		<div class="owl-carousel__slider-item__slider-content">
 			<p class="owl-carousel__slider-item__slider-content__promo-title">Холодное антицеллюлитное обертывание 
-в подарок</p> 
+<span class="promo-form-block__title_underline-block">в подарок</span></p> 
 			
 			<p class="owl-carousel__slider-item__slider-content__dicription">при покупке одного из наборов Rakamakafit</p>
 		</div>
@@ -107,42 +112,43 @@
 <div class="owl-carousel__slider-item" style="background: url('assets/mixit-copy.jpg');background-size: 100% 100%; ">
 		<div class="owl-carousel__slider-item__slider-content">
 			<p class="owl-carousel__slider-item__slider-content__promo-title">Холодное антицеллюлитное обертывание 
-в подарок</p> 
+<span class="promo-form-block__title_underline-block">в подарок</span></p> 
 			
 			<p class="owl-carousel__slider-item__slider-content__dicription">при покупке одного из наборов Rakamakafit</p>
 		</div>
 	</div>
 </div>
 <!-- special offer -->
-<div class="training special-offer-block">
+<div class="bootstrap-box special-offer-block">
 	<div class="special-offer-block__title">
 		<p class="special-offer-block__title__name">Вместе дешевле</p>
-		<div class="special-offer-block__title__link-to-all">все</div>
 	</div>
-	<div class="special-offer-block__items">
-		<div class="special-offer-block__item">
-			<img src="assets/offer-1.jpg" alt="">
-			<div class="special-offer-block__item__title"><p>Персональная 5-недельная программа тренировок и питания RAKAMAKAFIT ONLINE</p></div>
-
+	<div class="container-fluid special-offer-block__items">
+	<div class="row special-offer-block__items__row">
+			<div class="col-md-4 special-offer-block__item">
+			<img src="assets/offer-3.jpg" alt="">
+			<div class="special-offer-block__item__title">Новогодний набор с лентами</div>
+			<div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
 			<div class="special-offer-block__item__prices">
 				<div class="special-offer-block__item__price">5980 ₽</div>
 				<div class="special-offer-block__item__old-price">7980 ₽</div>
 				<div class="special-offer--block__item-cart"><span class="special-offer--block__item-cart-button__text">в корзину</span></div>
 			</div>
 		</div>
-		<div class="special-offer-block__item">
+		<div class="col-md-4  special-offer-block__item">
 			<img src="assets/offer-2.jpg" alt="">
-			<div class="special-offer-block__item__title"><p>Набор эспандеров + персональная 5-недельная программа тренировок и питания RAKAMAKAFIT ONLINE</p></div>
+			<div class="special-offer-block__item__title">Новогодний набор с эспандерами и лентами</div>
+			<div class="special-offer-block__item__desc">Комплексный анализ ситуации разнородно синхронизирует эмпирический контент</div>
 			<div class="special-offer-block__item__prices">
 				<div class="special-offer-block__item__price">7980 ₽</div>
 				<div class="special-offer-block__item__old-price"></div>
 				<div class="special-offer--block__item-cart"><span class="special-offer--block__item-cart-button__text">в корзину</span></div>
 			</div>
 		</div>
-		<div class="special-offer-block__item">
-			<img src="assets/offer-3.jpg" alt="">
-			<div class="special-offer-block__item__title"><p>Набор эспандеры + ленты + гриф + персональная 5-недельная программа тренировок и питания RAKAMAKAFIT ONLINE</p></div>
-
+		<div class="col-md-4 special-offer-block__item">
+			<img src="assets/offer-1.jpg" alt="">
+			<div class="special-offer-block__item__title">Новогодний набор с эспандерами, лентами и грифом</div>
+			<div class="special-offer-block__item__desc">Взаимодействие корпорации и клиента спонтанно нейтрализует нишевый проект</div>
 			<div class="special-offer-block__item__prices">
 				<div class="special-offer-block__item__price">5980 ₽</div>
 				<div class="special-offer-block__item__old-price"></div>
@@ -150,31 +156,59 @@
 			</div>
 		</div>
 	</div>
+	<div class="row special-offer-block__items__row">
+			<div class="col-md-4 special-offer-block__item">
+			<img src="assets/offer-3.jpg" alt="">
+			<div class="special-offer-block__item__title">Новогодний набор с лентами</div>
+			<div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
+			<div class="special-offer-block__item__prices">
+				<div class="special-offer-block__item__price">5980 ₽</div>
+				<div class="special-offer-block__item__old-price">7980 ₽</div>
+				<div class="special-offer--block__item-cart"><span class="special-offer--block__item-cart-button__text">в корзину</span></div>
+			</div>
+		</div>
+		<div class="col-md-4  special-offer-block__item">
+			<img src="assets/offer-2.jpg" alt="">
+			<div class="special-offer-block__item__title">Новогодний набор с эспандерами и лентами</div>
+			<div class="special-offer-block__item__desc">Комплексный анализ ситуации разнородно синхронизирует эмпирический контент</div>
+			<div class="special-offer-block__item__prices">
+				<div class="special-offer-block__item__price">5980 ₽</div>
+				<div class="special-offer-block__item__old-price"></div>
+				<div class="special-offer--block__item-cart"><span class="special-offer--block__item-cart-button__text">в корзину</span></div>
+			</div>
+		</div>
+	</div>
+	</div>
 </div>
+<!-- end of special offer -->
 
 <!-- exercises-promo-block -->
-<div class="exercises-promo-block">
-	<div class="exercises-promo-block__left-side">
-		<div class="title">Упражнения с фитнес лентами</div>
-		<div class="desc">Мы собрали для тебя примеры самых убойных упражений с фитнес лентами на любую группу мышц</div>
-		<div class="promo-train-block__slider-item-button">
-				<span class="promo-train-block__slider-item-button__text">Примеры упражнений</span>
-			</div>
-	</div>
-	<div class="exercises-promo-block__right-side">
-		<div class="img-block">
-			<img src="assets/exercises-promo.jpg" alt="">
+<div class="container-fluid exercises-promo-block">
+<div class="row xercises-promo-block_row">
+	<div class="col-md-6 exercises-promo-block__left-side">
+		<div class="exercises-promo-block__left-side__title">Упражнения с фитнес лентами</div>
+		<div class="exercises-promo-block__left-side__desc">Мы собрали для тебя примеры самых убойных упражений с фитнес лентами на любую группу мышц</div>
+		<div class="exercises-promo-block__left-side__button">
+			<span class="exercises-promo-block__left-side__button__text">примеры упражнений</span>
 		</div>
-		<div class="tabs">
+	</div>
+	<div class="col-md-6 exercises-promo-block__right-side">
+		<div class="img-block">
+			<img  class="img-block__eye-button"src="assets/eye-button.svg" alt="">
+			<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+					<div class="exercises-promo-block__right-side__tabs">
 			<ul>
 				<li>спина</li>
 				<li>ягодицы</li>
-				<li>Руки</li>
+				<li>руки</li>
 				<li>плечи</li>
 				<li>ноги</li>
 			</ul>
 		</div>
+		</div>
+
 	</div>
+</div>
 </div>
 <!--in-the-know-form-block -->
 <div class="in-the-know-form-block">
@@ -197,6 +231,8 @@
 		</div>
 	</form>
 </div>
+
+<!-- bottom-slider-block -->
 <div class="before-after bottom-slider-block">
 	<div class="bottom-slider-block__slider-header">
 		<div class="bottom-slider-block__slider-header_top-content">
