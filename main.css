@@ -341,7 +341,7 @@ a {
 /*up slider*/
 .up-block {
 	display: flex;
-	height: 500px;
+	min-height: 500px;
 }
 .up-slider-wrapper{
 	width:50%;
