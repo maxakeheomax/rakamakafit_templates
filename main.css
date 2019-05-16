@@ -507,6 +507,9 @@ a {
 	float: right;
 	margin-top: 67px;
 }
+.mixit .owl-carousel__slider-item__slider-content p {
+	margin: 0;
+}
 .mixit .owl-carousel__slider-item__slider-content {
 	width: 50%;
 	margin-top: 0;
