@@ -498,10 +498,19 @@ a {
 .owl-carousel__slider-item {
 	height: 500px;
 }
+.mixit ,
+.mixit .owl-carousel__slider-item {
+	height: 200px;
+}
 .owl-carousel__slider-item__slider-content {
 	width: 49%;
 	float: right;
 	margin-top: 67px;
+}
+.mixit .owl-carousel__slider-item__slider-content {
+	width: 50%;
+	margin-top: 0;
+	float: none;
 }
 .owl-carousel__slider-item__slider-content__promo-title {
 	text-transform: uppercase;
@@ -526,6 +535,26 @@ a {
 	position: relative;
 	z-index: 2;
 }
+.mixit .owl-carousel__slider-item__slider-content__promo-title{
+	font-family:'FranklinGothicDemi', sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	letter-spacing: normal;
+	color: #000000;
+}
+.mixit .owl-carousel__slider-item__slider-content__promo-title.underlin-block {
+	content:'';
+	display: block;
+	width: 100%;
+	height: 16px;
+	background-color: #e7ff6a;
+	position: absolute;
+	z-index: -1;
+	bottom: -2px;
+}
 .owl-carousel__slider-item__slider-content__slogan:after{
 	content:'';
 	display: block;
@@ -547,6 +576,15 @@ a {
 	letter-spacing: normal;
 	color: #000000;
 	margin-bottom: 28px;
+}
+.mixit .owl-carousel__slider-item__slider-content__dicription{
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.5;
+	letter-spacing: normal;
+	color: #000000;
 }
 .owl-carousel__slider-item-button {
 	border-radius: 32px;
@@ -606,6 +644,10 @@ a {
 	background-color: transparent!important;
 	background-color: #fff!important;
 }
+.mixit .middle-slider .owl-nav .owl-prev {
+	top: 50%;
+	transform: translateY(-50%);
+}
 .middle-slider .owl-nav .owl-next {
 	right: 43px;
 	top: 43.6%;
@@ -615,6 +657,10 @@ a {
 	border-radius:50%!important;
 	background-color: transparent!important;
 	background-color: #fff!important;
+}
+.mixit .middle-slider .owl-nav .owl-next {
+	top: 50%;
+	transform: translateY(-50%);
 }
 .owl-nav img {
 	margin: 21px 0;
@@ -1342,6 +1388,10 @@ a {
 	background: url('assets/ipad-02.jpg') no-repeat;
 	background-color: #ffd2d7;
 }
+.tapes.promo-train-block__slider-item {
+	background: url('assets/slider-bg.jpg') no-repeat;
+	background-color: #beeafc;
+}
 .left-side.promo-train-block__slider-item {
 	height: 520px;
 	background: url('assets/ipad-green-bg.jpg') no-repeat;
@@ -1359,6 +1409,13 @@ a {
 	float: right;
 	margin-top: 58px;
 }
+.tapes .promo-train-block__slider-item__slider-content {
+	width: 50%;
+	float: right;
+	margin-top: 58px;
+	max-width: 546px;
+	margin-right: 20px;
+}
 .left-side .promo-train-block__slider-item__slider-content {
 	width: 50%;
 	float: left;
@@ -1366,6 +1423,20 @@ a {
 }
 .blue-bg .promo-train-block__slider-item__slider-content {
 	margin-top: 24px;
+}
+.promo-train-block__slider-item__slider-content-tabs {
+	display: flex;
+	justify-content: space-between;
+}
+.promo-train-block__slider-item__slider-content__promo-title .active:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 16px;
+	background-color: #fff;
+	position: absolute;
+	z-index: -1;
+	top: 35px;
 }
 .promo-train-block__slider-item__slider-content__promo-title {
 	text-transform: uppercase;
@@ -1380,7 +1451,7 @@ a {
 }
 .blue-bg .promo-train-block__slider-item__slider-content__slogan,
 .left-side .promo-train-block__slider-item__slider-content__slogan
- {
+{
 	font-family: 'FranklinGothicDemi', sans-serif;
 	font-size: 42px;
 	font-weight: normal;
