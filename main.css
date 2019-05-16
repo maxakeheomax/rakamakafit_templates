@@ -715,6 +715,10 @@ a {
 .special-offer-block{
 	margin: 76px 161px 98px;
 }
+.pop_exercises.special-offer-block{
+	padding: 76px 161px 98px;
+	margin:0;
+}
 .bootstrap-box.special-offer-block{
 	margin: 76px 161px 105px;
 }
@@ -2293,7 +2297,7 @@ a {
 	max-width: 450px;
 }
 .exercises-list-block__item-title span{
-		box-shadow: inset 0 -16px 0 0 #e7ff6a;
+	box-shadow: inset 0 -16px 0 0 #e7ff6a;
 }
 
 .exercises-list-block__exercises-list {
@@ -2323,9 +2327,13 @@ a {
 }
 /*end of exercises-list-block*/
 /*CEO-text-block*/
+
 .ceo-text-block {
 	height: 586px;
 	background-color: #f7f7fb;
+}
+.white-bg {
+	background-color: #fff;
 }
 .ceo-text-block__content {
 	width: 100%;
@@ -2334,23 +2342,23 @@ a {
 	margin: 0 auto;
 }
 .ceo-text-block__title {
-	  font-family: 'FranklinGothicDemi',sans-serif;
-  font-size: 32px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #000000;
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #000000;
 }
 .ceo-text-block__text {
-	  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.63;
-  letter-spacing: normal;
-  color: #000000;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	color: #000000;
 }
 .ceo-text-block__text p {
 	margin-top: 26px;
@@ -2360,22 +2368,274 @@ a {
 .personal-offer-block {
 	height: 400px;
 	max-width: 1346px;
-
+	margin: 0 auto 69px;
 }
 .personal-offer-block * {
 	box-sizing: border-box;
+}
+.personal-offer-block__row{
+	display: flex;
+	justify-content: space-between;
 }
 .personal-offer-block__left-side {
 	background: url('assets/tapes-up-block-left.jpg') no-repeat;
 	background-size: cover;
 	height: 400px;
+	width:890px;
 }
 .personal-offer-block__right-side {
 	background: url('assets/tapes-up-block-right.jpg') no-repeat;
 	background-size: cover;
 	height: 400px;
+	width: 406px;
+	position: relative;
+}
+.personal-offer-block__left-side__slogan {
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 42px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.24;
+	letter-spacing: normal;
+	color: #000000;
+	width: 490px;
+	position: relative;
+	left: 342px;
+	top: 44px;
+}
+.personal-offer-block__right-side__slogan{
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.19;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+	position: absolute;
+bottom: 108px;
+
+}
+.personal-offer-block__right-side__button {
+	width: 213px;
+	height: 64px;
+	border-radius: 32px;
+	background-color: #e1fa61;
+	text-align: center;
+	text-transform: uppercase;
+	position: absolute;
+bottom: 22px;
+left: 24%;
+right: 24%;
+}
+.personal-offer-block__left-side__button {
+	width: 167px;
+	height: 64px;
+	border-radius: 32px;
+	background-color: #e1fa61;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	right: -341px;
+	top: 85px;
+}
+.personal-offer-block__right-side__button__text {
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.9px;
+	text-align: center;
+	color: #000000;
+	margin: 24px 0;
+	display: inline-block;
+}
+.personal-offer-block__left-side__button__text {
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.9px;
+	text-align: center;
+	color: #000000;
+	margin: 24px 0;
+	display: inline-block;
 }
 /*end of personal offer block */
+/*delivery-block*/
+.delivery-block {
+	background-color: #ededf2;
+	height:291px;
+	padding-top: 45px;
+}
+.delivery-block__title{
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 3px;
+	color: #000000;
+	text-align: center;
+
+}
+.delivery-block__content img {
+	display: block;
+	margin: 46px auto 0;
+}
+/*end of delivery-block*/
+/*difference-block*/
+.difference-block {
+	margin-bottom: 290px;
+}
+.difference-block__title{
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 38px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #000000;
+	width: 100%;
+	max-width: 890px;
+	margin: 0 auto 46px;
+}
+.difference-block__content {
+	width: 100%;
+	max-width: 890px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+/*end of difference-block*/
+/*exercises-tabs-block*/
+.exercises-tabs-block{
+	width: 100%;
+	max-width: 1346px;
+	margin:0 auto;
+}
+.exercises-tabs-block__title{
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 42px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.24;
+	letter-spacing: normal;
+	color: #000000;
+}
+.exercises-tabs-block__tabs {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 38px;
+	margin-bottom: 110px;
+
+}
+.exercises-tabs-block__tabs__item {
+	width: 205px;
+	height:96px;
+}
+.exercises-tabs-block__tabs__item p {
+	text-align: center;
+	margin:15% 0;
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.5;
+	letter-spacing: normal;
+	text-align: center;
+	color: #ffffff;
+}
+.hands{
+	background: url('assets/hands.jpg') no-repeat;
+	background-size: cover; 
+}
+.press{
+	background: url('assets/press.jpg') no-repeat;
+	background-size: cover; 
+}
+.butts{
+	background: url('assets/butts.jpg') no-repeat;
+	background-size: cover; 
+}
+.feet{
+	background: url('assets/feet.jpg') no-repeat;
+	background-size: cover; 
+}
+.backbone{
+	background: url('assets/backbone.jpg') no-repeat;
+	background-size: cover; 
+}
+.chest{
+	background: url('assets/chest.jpg') no-repeat;
+	background-size: cover; 	
+}
+
+/*end of exercises-tabs-block*/
+/*exercise-demos-list-block */
+.exercise-demos-list-block  {
+	width: 100%;
+	max-width:1120px;
+	margin:0 auto 37px;
+	display: flex;
+}
+.exercise-demos-list-block__right-side{
+	margin-left: 76px;
+}
+.exercise-demos-list-block__right-side__title {
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 28px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1;
+	letter-spacing: normal;
+	color: #000000;
+}
+.exercise-demos-list-block__right-side__desc {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	color: #000000;
+	margin-top: 20px;
+	width: 100%;
+	max-width: 600px;
+}
+
+.exercise-demos-list-block__right-side__button {
+	  width: 126px;
+  height: 48px;
+  border-radius: 32px;
+  background-color: #e7ff6a;
+  text-align:center;
+  text-transform: uppercase;
+  margin-top: 18px;
+}
+.exercise-demos-list-block__right-side__button__text{
+	  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  text-align: center;
+  color: #000000;
+  display: inline-block;
+  margin: 18px 0;
+
+}
+/*end of exercise-demos-list-block */
 /*footer */
 .footer-padding-top {
 	padding-top: 30px;
