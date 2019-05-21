@@ -2735,6 +2735,9 @@ a {
 	justify-content: space-between;
 	margin: 0 99px 0 44px;
 }
+.discount.product-block {
+	justify-content: flex-start;
+}
 .product-block__product-slider {
 	display: flex;
 }
