@@ -832,6 +832,9 @@ a {
 .training .special-offer-block__item {
 	justify-content: flex-start;
 }
+.article.special-offer-block__item {
+	margin-bottom: 60px;
+}
 .training .special-offer-block__item__title{
 	padding: 21px 0 12px 0;
 	height: 72px;
@@ -2887,6 +2890,7 @@ a {
 	line-height: 1.14;
 	letter-spacing: normal;
 	color: #000000;
+	margin: 41px 0;
 }
 .article-title-block__slogan p {
 	font-family: Roboto;
@@ -2905,7 +2909,7 @@ a {
 	width: 120px;
 	height: 16px;
 	background-color: #e7ff6a;
-	margin: 0 auto;
+	margin: 50px auto 32px;
 }
 /*end of block-separation*/
 /* article-main-block*/
@@ -2929,6 +2933,7 @@ a {
 	line-height: 1.25;
 	letter-spacing: normal;
 	color: #000000;
+	margin-top: 70px;
 }
 .article-main-block_item__title {
 	font-family: 'FranklinGothicDemi',sans-serif;
@@ -2939,6 +2944,11 @@ a {
 	line-height: normal;
 	letter-spacing: 2px;
 	color: #000000;
+	margin-bottom: 18px
+}
+
+.article-main-block__item {
+	margin-top: 40px;
 }
 .article-main-block_item__text {
 	font-size: 16px;
@@ -2957,9 +2967,13 @@ a {
 	line-height: 1.63;
 	letter-spacing: normal;
 	color: #000000;
+	margin-top: 70px;
 }
 /*end of  article-main-block*/
 /*feedback-block*/
+.feedback-block {
+	margin: 84px 0 107px 0;
+}
 .feedback-block__title{
 	font-family: 'FranklinGothicDemi',sans-serif;
 	font-size: 28px;
@@ -2968,8 +2982,13 @@ a {
 	font-stretch: normal;
 	line-height: 1.29;
 	letter-spacing: normal;
-	text-align: center;
 	color: #000000;
+}
+.feedback-block__social-buttons {
+	width: 167px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 32px;
 }
 /*end of feedback-block*/
 /*article-navigation-block*/
@@ -2996,6 +3015,7 @@ a {
 	line-height: 1.25;
 	letter-spacing: normal;
 	color: #000000;
+	margin:84px 0 32px 0;
 }
 /*end of same articles block*/
 
