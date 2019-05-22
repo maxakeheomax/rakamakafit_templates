@@ -79,20 +79,17 @@
 					</div>
 				</div>
 				<div class="product-block__description">
-					<div class="desc-block">
-						<div class="product-block__description__title">Набор латексных фитнес лент</div>
-						<div class="product-block__description__desc">Легко брать с собой,  комбинировать друг с другом и прорабатывать все группы мышц. С резинками Rakamakafit из натурального латекса заниматься дома или на свежем воздухе можно в любую минуту.</div>
-						<div class="discount_block">
-							<p>акция</p>
-							<div class="round-block">15%</div>
+					<div class="product-block__description__up-block">
+						<div class="desc-block">
+							<div class="product-block__description__title">Набор латексных фитнес лент</div>
+							<div class="product-block__description__desc">Легко брать с собой,  комбинировать друг с другом и прорабатывать все группы мышц. С резинками Rakamakafit из натурального латекса заниматься дома или на свежем воздухе можно в любую минуту.</div>				
+							<div class="product-block__description-item-more">
+							</div>
 						</div>
-						<div class="product-block__description-item-more">
-							<a href="#">
-								<span class="product-block__description-more__text">
-									<img src="assets/ytb-color.svg" alt="">Смотреть видео тренировок
-								</span>
-							</a>
-						</div>
+							<div class="discount_block">
+								<p>акция</p>
+								<div class="round-block"><span> - 15%</span></div>
+							</div>
 					</div>
 
 					<div class="button-block">
@@ -102,29 +99,34 @@
 						</div>
 						<div class="product-block__description__buttons">
 							<div class="product-block__description__buy-in-click"><span class="product-block__description__buy-in-click__text">купить</span></div>
-							<div class="discount-timer">
-								<div>
+							<div id="clockdiv" class="discount-timer">
+								<div class="discount-timer__item">
 									<span class="days"></span>
 									<div class="smalltext">Дни</div>
 								</div>
-								<div>
+								<span>:</span>
+								<div class="discount-timer__item">
 									<span class="hours"></span>
 									<div class="smalltext">Часы</div>
 								</div>
-								<div>
+								<span>:</span>
+								<div class="discount-timer__item">
 									<span class="minutes"></span>
 									<div class="smalltext">Минуты</div>
 								</div>
-								<div>
+								<span>:</span>
+								<div class="discount-timer__item">
 									<span class="seconds"></span>
 									<div class="smalltext">Секунды</div>
 								</div>
 							</div>
+							<div class="discount-timer-slogan">до окончания акции</div>
 						</div>
 						<p class="product-block__description__credit_link"><a href="#">Купить в рассрочку <img src="assets/nav-arrow-right.svg"></a></p>
 					</div>
 				</div>
 			</div>
+			
 			<!-- end of product block -->
 			<!-- advantages-block -->
 			<div class="advantages-block">
@@ -279,6 +281,47 @@
 			navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
 		});
 
+	function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor((t / 1000) % 60);
+  var minutes = Math.floor((t / 1000 / 60) % 60);
+  var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+  var days = Math.floor(t / (1000 * 60 * 60 * 24));
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
+}
+ 
+function initializeClock(id, endtime) {
+  var clock = document.getElementById(id);
+  var daysSpan = clock.querySelector('.days');
+  var hoursSpan = clock.querySelector('.hours');
+  var minutesSpan = clock.querySelector('.minutes');
+  var secondsSpan = clock.querySelector('.seconds');
+ 
+  function updateClock() {
+    var t = getTimeRemaining(endtime);
+ 
+    daysSpan.innerHTML = t.days;
+    hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+    minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+ 
+    if (t.total <= 0) {
+      clearInterval(timeinterval);
+    }
+  }
+ 
+  updateClock();
+  var timeinterval = setInterval(updateClock, 1000);
+}
+ 
+var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
+initializeClock('clockdiv', deadline);
 	</script>
 </body>
 </html>
