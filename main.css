@@ -226,6 +226,9 @@ a {
 .breadcrumbs__item {
 	padding: 0 23px;
 }
+.breadcrumbs__item.active {
+	color:#000000;
+}
 /*up-hello-block*/
 .up-hello-block {
 	height: 362px;
@@ -2855,6 +2858,148 @@ a {
 	color: #e31377;
 }
 /*end-of-product-block*/
+.article-page-content {
+	padding: 0 49px 0 46px;
+	display:flex;
+	justify-content: space-between;
+}
+.article-left-column {
+	width: 100%;
+	max-width: 891px;
+}
+.article-right-column {
+	width: 100%;
+	max-width: 320px;
+}
+/*article title block*/
+.article-title-block,
+.article-main-block,
+.feedback-block {
+	width: 100%;
+	max-width: 766px;
+}
+.article-title-block__title {
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 42px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.14;
+	letter-spacing: normal;
+	color: #000000;
+}
+.article-title-block__slogan p {
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*end of article title block*/
+/*block-separation*/
+
+.block-separation {
+	width: 120px;
+	height: 16px;
+	background-color: #e7ff6a;
+	margin: 0 auto;
+}
+/*end of block-separation*/
+/* article-main-block*/
+.article-main-block__slogan {
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 28px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.29;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+}
+.article-main-block__title {
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	letter-spacing: normal;
+	color: #000000;
+}
+.article-main-block_item__title {
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 2px;
+	color: #000000;
+}
+.article-main-block_item__text {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	color: #000000;
+}
+.article-main-block__conclusion {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*end of  article-main-block*/
+/*feedback-block*/
+.feedback-block__title{
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 28px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.29;
+	letter-spacing: normal;
+	text-align: center;
+	color: #000000;
+}
+/*end of feedback-block*/
+/*article-navigation-block*/
+.article-navigation-block__title{ 
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	letter-spacing: normal;
+	color: #000000;
+}
+
+/*end of article-navigation-block*/
+
+/*same articles block*/
+.same-articles-block__title {
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.25;
+	letter-spacing: normal;
+	color: #000000;
+}
+/*end of same articles block*/
+
+
 /*footer */
 .footer-padding-top {
 	padding-top: 30px;
