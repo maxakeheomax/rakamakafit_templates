@@ -33,9 +33,9 @@
 							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">О компании</a></li>
 						</ul>
 					</div>
-					<div class="header__nav-bar__login-button">
+					<a href="#"><div class="header__nav-bar__login-button">
 						<span class="header__nav-bar__login-button__text">Войти</span>
-					</div>
+					</div></a>
 				</nav>	
 				<nav class="header__inner-nav-bar">
 					<div class="header__inner-nav-bar-block">
@@ -75,7 +75,6 @@
 					<a href="#" class="aside-block__icons_link"><img src="assets/inst.svg" alt="" class="aside-block__icons-item"></a>
 				</div>
 			</div>
-
 
 			<!-- upSlider -->
 			<div class="up-block">
@@ -169,16 +168,16 @@
 			<div class="special-offer-block__title__link-to-all">все</div>
 		</div>
 		<div class="special-offer-block__items">
-<a href="#"><div class="special-offer-block__item">
-		<img src="assets/offer-3.jpg" alt="">
-		<div class="special-offer-block__item__title">Новогодний набор с лентами</div>
-		<div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
-		<div class="special-offer-block__item__prices">
-			<div class="special-offer-block__item__price">5980 ₽</div>
-			<div class="special-offer-block__item__old-price">7980 ₽</div>
-		</div>
-	</div></a>
-		<a href="#">	<div class="special-offer-block__item">
+			<a href="#"><div class="special-offer-block__item">
+				<img src="assets/offer-3.jpg" alt="">
+				<div class="special-offer-block__item__title">Новогодний набор с лентами</div>
+				<div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
+				<div class="special-offer-block__item__prices">
+					<div class="special-offer-block__item__price">5980 ₽</div>
+					<div class="special-offer-block__item__old-price">7980 ₽</div>
+				</div>
+			</div></a>
+			<a href="#">	<div class="special-offer-block__item">
 				<img src="assets/offer-2.jpg" alt="">
 				<div class="special-offer-block__item__title">Новогодний набор с эспандерами и лентами</div>
 				<div class="special-offer-block__item__desc">Комплексный анализ ситуации разнородно синхронизирует эмпирический контент</div>
@@ -187,15 +186,15 @@
 					<div class="special-offer-block__item__old-price"></div>
 				</div>
 			</div></a>
-<a href="#"><div class="special-offer-block__item">
-		<img src="assets/offer-1.jpg" alt="">
-		<div class="special-offer-block__item__title">Новогодний набор с эспандерами, лентами и грифом</div>
-		<div class="special-offer-block__item__desc">Взаимодействие корпорации и клиента спонтанно нейтрализует нишевый проект</div>
-		<div class="special-offer-block__item__prices">
-			<div class="special-offer-block__item__price">5980 ₽</div>
-			<div class="special-offer-block__item__old-price"></div>
-		</div>
-	</div></a>
+			<a href="#"><div class="special-offer-block__item">
+				<img src="assets/offer-1.jpg" alt="">
+				<div class="special-offer-block__item__title">Новогодний набор с эспандерами, лентами и грифом</div>
+				<div class="special-offer-block__item__desc">Взаимодействие корпорации и клиента спонтанно нейтрализует нишевый проект</div>
+				<div class="special-offer-block__item__prices">
+					<div class="special-offer-block__item__price">5980 ₽</div>
+					<div class="special-offer-block__item__old-price"></div>
+				</div>
+			</div></a>
 		</div>
 	</div>
 
@@ -313,12 +312,12 @@
 			<p class="promo-train-block__slider-item__slider-content__slogan">При покупке любого оборудования Rakamakafit - <span class="promo-train-block__title_underline-block-up"> 7-дневный доступ<br> к программе в подарок</span> </p>
 			<p class="promo-train-block__slider-item__slider-content__dicription">Тебя ждет от 4 тренировки в неделю, программа питания на каждый день, мотивационные лекции и статьи, удобное отслеживание результатов.</p>
 			<div class="promo-train-block__slider__content_bottom">
-<a href="#"><div class="promo-train-block__slider-item-button">
-		<span class="promo-train-block__slider-item-button__text">Купить</span>
-	</div></a>
+				<a href="#"><div class="promo-train-block__slider-item-button">
+					<span class="promo-train-block__slider-item-button__text">Купить</span>
+				</div></a>
 				<a href=""><div class="promo-train-block__slider-item-more">
-						<span class="promo-train-block__slider-item-more__text">Подробнее</span>
-					</div></a>
+					<span class="promo-train-block__slider-item-more__text">Подробнее</span>
+				</div></a>
 			</div>
 		</div>
 	</div>
@@ -406,25 +405,33 @@
 			});
 
 
-		$('.slick-slider').slick({
-			slidesToShow:3,
-			slidesToScroll: 1,
-			arrows: true,
-			appendArrows: $('.bottom-slider-nav-buttons'),
-			prevArrow: `<img src="assets/arrow-white-left.svg">`,
-			nextArrow: `<img src="assets/arrow-white-right.svg">`,
-			swipe:true,
-			draggable: true,
-			speed: 400,
-			variableWidth: true,
-			easing: 'ease-in-out',
-			cssEase: 'ease-in-out',
-			autoplay: true
+			$('.slick-slider').slick({
+				slidesToShow:3,
+				slidesToScroll: 1,
+				arrows: true,
+				appendArrows: $('.bottom-slider-nav-buttons'),
+				prevArrow: `<img src="assets/arrow-white-left.svg">`,
+				nextArrow: `<img src="assets/arrow-white-right.svg">`,
+				swipe:true,
+				draggable: true,
+				speed: 400,
+				variableWidth: true,
+				easing: 'ease-in-out',
+				cssEase: 'ease-in-out',
+				autoplay: true
+			});
+				$(window).scroll(function() {
+					if($(window).scrollTop() > 200) {
+						$('.aside-block').fadeOut();
+					}
+					else{
+						$('.aside-block').fadeIn();
+					}
+				});
 		});
-	});
-</script>
-<!-- end of bottom-slider-block  -->
-<!-- footer -->
+	</script>
+	<!-- end of bottom-slider-block  -->
+	<!-- footer -->
 </div>
 <footer class="footer">
 	<div class="footer__line"></div>
