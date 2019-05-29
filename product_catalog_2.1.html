@@ -8,11 +8,13 @@
 	<link rel="stylesheet" href="libs/owl.carousel2/dist/assets/owl.theme.default.min.css">
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick-theme.css">
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
+	<link rel="stylesheet" href="libs/ion.rangeSlider-master/css/ion.rangeSlider.min.css">
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<script src="libs/jquery.min.js"></script>
 	<script src="libs/owl.carousel2/dist/owl.carousel.min.js"></script>
 	<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+	<script src="libs/ion.rangeSlider-master/js/ion.rangeSlider.min.js"></script>
 </head>
 <body>
 	<div class="page_wrapper">
@@ -87,15 +89,15 @@
 
 
 						<!-- exercises-tabs-block -->
-						<div class="exercises-tabs-block">
+						<div class="product-catalog exercises-tabs-block">
 							<div class="exercises-tabs-block__title">Категории товаров</div>
 							<div class="exercises-tabs-block__tabs">
-								<a href="#"><div class="exercises-tabs-block__tabs__item hands"><p>Ленты</p></div></a>	
-								<a href="#"><div class="exercises-tabs-block__tabs__item press"><p>Эспандеры</p></div></a>			
-								<a href="#"><div class="exercises-tabs-block__tabs__item butts"><p>Наборы</p></div></a>			
-								<a href="#"><div class="exercises-tabs-block__tabs__item feet"><p>Гриф</p></div></a>
-								<a href="#"><div class="exercises-tabs-block__tabs__item backbone"><p>Фитбол</p></div></a>
-								<a href="#"><div class="exercises-tabs-block__tabs__item chest"><p>Другое</p></div></a>	
+								<a href="#"><div class="exercises-tabs-block__tabs__item " style="background-image:url('assets/lenti-tubus-copy-3.jpg'); background-size: cover;"><p>Ленты</p></div></a>	
+								<a href="#"><div class="exercises-tabs-block__tabs__item" style="background-image:url('assets/2.jpg');background-size: cover; "><p>Эспандеры</p></div></a>			
+								<a href="#"><div class="exercises-tabs-block__tabs__item " style="background-image:url('assets/lenti-tubus-copy-3.jpg');background-size: cover;"><p>Наборы</p></div></a>			
+								<a href="#"><div class="exercises-tabs-block__tabs__item " style="background-image:url('assets/lenti-tubus-copy-4-grif-01-copy-3-2-copy-mask.jpg');background-size: cover;"><p>Гриф</p></div></a>
+								<a href="#"><div class="exercises-tabs-block__tabs__item " style="background-image:url('assets/fitball-01-copy-2.jpg');background-size: cover;"><p>Фитбол</p></div></a>
+								<a href="#"><div class="exercises-tabs-block__tabs__item " style="background-image:url('assets/ohter.jpg');background-size: cover;"><p>Другое</p></div></a>
 							</ul>
 						</div>
 					</div>
@@ -108,38 +110,49 @@
 					<div class="product_catalog_block">
 						<div class="filters_block">
 							<div class="filters_block-title">Фильтры по параметрам</div>
-							<div class="filters_block__price-filter">
-								<div class="filters_block__price-filter__title">Цена</div>
-							</div>
-							<div class="filters_block__filter">
-								<div class="filters_block__filter__title">Материал</div>
-								<div class="filters_block__filter__item-list"></div>
-							</div>
-							<div class="filters_block__filter">
-								<div class="filters_block__filter__title">Длина, см (по окружности)</div>
-								<div class="filters_block__filter__item-list">
-									<ul>
-										<li><label><input type="checkbox"></label></li>
-										<li><label><input type="checkbox"></label></li>
-										<li><label><input type="checkbox"></label></li>
-										<li><label><input type="checkbox"></label></li>
-									</ul>
-								</div>
-							</div>
-							<div class="filters_block__filter">
-								<div class="filters_block__filter__title">Вес, кг</div>
-								<div class="filters_block__filter__item-list">
-									<ul>
-										<li><label><input type="checkbox"></label></li>
-										<li><label><input type="checkbox"></label></li>
-										<li><label><input type="checkbox"></label></li>
-										<li><label><input type="checkbox"></label></li>
-									</ul>
-								</div>
-							</div>
+<div class="filters__blok__items">
+	<div class="filters_block__filter">
+		<div class="filters_block__filter__title">Цена</div>
+		<div class="filters_block__filter__item-list inline">
+			<input class="valueFrom" type="text" name="" id=""  >
+			<input class="valueTo"type="text" name="" id=""  >
+		</div>
+		<input type="text" class="js-range-slider" name="my_range" value="" />
+	</div>
+	<div class="filters_block__filter width-block">
+		<div class="filters_block__filter__title">Материал</div>
+		<div class="filters_block__filter__item-list">
+			<ul>
+				<li><input id="filter_id-1" type="checkbox"><label for="filter_id-1">100% Латекс</label></li>
+				<li><input id="filter_id-2" type="checkbox"><label  for="filter_id-2">Латекс, полипропилен, неопрен</label></li>
+				<li><input id="filter_id-3" type="checkbox"><label  for="filter_id-3">Латекс, полипропилен</label></li>
+			</ul>
+		</div>
+	</div>
+	<div class="filters_block__filter">
+		<div class="filters_block__filter__title">Длина, см (по окружности)</div>
+		<div class="filters_block__filter__item-list">
+			<ul>
+				<li><input id="filter-2_id-1" type="checkbox"><label for="filter-2_id-1">30</label></li>
+				<li><input id="filter-2_id-2" type="checkbox"><label  for="filter-2_id-2">30 - 60</label></li>
+				<li><input id="filter-2_id-3" type="checkbox"><label  for="filter-2_id-3">64</label></li>
+				<li><input id="filter-2_id-4" type="checkbox"><label  for="filter-2_id-4">74</label></li>
+				<li><input id="filter-2_id-5" type="checkbox"><label  for="filter-2_id-5">84</label></li>
+			</ul>
+		</div>
+	</div>
+	<div class="filters_block__filter">
+		<div class="filters_block__filter__title">Вес, кг</div>
+	
+		<div class="filters_block__filter__item-list inline">
+			<input type="text" name="" id="" pattern="[0-9]+">
+			<input type="text" name="" id="" pattern="[0-9]+">
+		</div>
+	</div>
+</div>
 							<button class="promo-form-block__form__submit" type="submit">показать</button>
 							<div class="reset-filters">
-								<a href="#">Сбросить фильтры</a>
+								<a href="#"><span>Сбросить фильтры</span></a>
 							</div>
 
 
@@ -252,6 +265,28 @@
 							nav:true,
 							navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
 						});
+						$(".js-range-slider").ionRangeSlider({
+							type: "double",
+							min: 0,
+							max: 10000,
+							from: 200,
+							to: 500,
+							grid: false,
+							skin: 'round'
+						});
+							$('.irs-handle.from').mouseup(function() {
+										$('.valueFrom').val($('.irs-from').text());
+							});
+							$('.irs-handle.to').mouseup(function() {
+										$('.valueTo').val($('.irs-to').text());
+							});
+								
+							
+							
+
+
+
+
 					</script>
 					<!-- footer block -->
 				</div>
