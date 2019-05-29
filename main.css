@@ -3235,6 +3235,7 @@ a {
 	line-height: normal;
 	letter-spacing: normal;
 	color: #000000;
+	margin-bottom:26px;
 }
 .catalog__block__tabs__title {
 	padding: 5px;
@@ -3256,11 +3257,14 @@ a {
 }
 .catalog_block .pop-products-block__items {
 	width: 900px;
+	margin-bottom: 20px;
+	margin-top: 0;
 }
 .filters_block__filter .irs-min,
 .filters_block__filter .irs-max,
 .filters_block__filter .irs-from,
-.filters_block__filter .irs-to{
+.filters_block__filter .irs-to,
+.filters_block__filter .irs-single{
 	display: none!important;
 }
 .irs-bar {
