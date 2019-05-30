@@ -743,14 +743,16 @@ a {
 	margin: 76px 161px 105px;
 }
 .training.special-offer-block{
-	margin: 53px 161px 91px;
+	padding: 53px 161px 91px;
+	background-color: #f7f7fb;
+	margin:0;
 }
 .training.special-offer-block__title{
 	margin: 53px 161px 0;
 }
 .articles.special-offer-block{
-	margin: -114px 0 98px;
-	padding:141px 161px 0;
+	margin: -114px 0 0;
+	padding:141px 161px 98px;
 	min-height: 1292px;
 }
 .special-offer-block__title {
@@ -773,7 +775,7 @@ a {
 .special-offer-block__title__name:after{
 	content: '';
 	display: block;
-	width: 104%;
+	width: 100%;
 	height: 16px;
 	background-color: #e7ff6a;
 	position: absolute;
@@ -939,9 +941,10 @@ a {
 /*promo-form-block*/
 .promo-form-block {
 	background: url('assets/promoForm -bg.svg');
-	background-size: 100% 100%;
 	background-color: #e1fa61;
 	height: 394px;
+	background-position-y: -2px;
+	background-size: 100% 101%;
 }
 .gift-to-all.promo-form-block {
 	background: url('assets/gift-to-all-bg.svg');
@@ -952,6 +955,7 @@ a {
 .gift-to-all .promo-form-block__title {
 	width: 520px;
 	padding-top: 51px;
+	font-weight: normal;
 }
 .promo-form-block__title {
 	font-family:'FranklinGothicDemi', sans-serif;
@@ -1261,6 +1265,8 @@ a {
 	width: 36px;
 	height: 36px;
 	right: 0;
+	right: -32px;
+	top: -8px;
 }
 
 
@@ -1330,7 +1336,7 @@ a {
 	width: 50%;
 }
 .hello-block__content__hello .hello-block__content__hello__desc {
-	height: 601px;
+	min-height: 601px;
 }
 .hello-block__content__hello__img img {
 	display: block;
@@ -1341,7 +1347,7 @@ a {
 }
 .hello-block__content__hello__desc__title__main {
 	width: 550px;
-	height: 46px;
+	min-height: 46px;
 	font-family: 'FranklinGothicDemi', sans-serif;
 	font-size: 32px;
 	font-weight: normal;
@@ -1353,7 +1359,7 @@ a {
 }
 .hello-block__content__hello__desc__title__slogan{
 	width: 543px;
-	height: 26px;
+	min-height: 26px;
 	font-family: Roboto;
 	font-size: 16px;
 	font-weight: normal;
@@ -1365,7 +1371,7 @@ a {
 }
 .hello-block__content__hello__text   {
 	width: 549px;
-	height: 291px;
+	min-height: 291px;
 	font-family: Roboto;
 	font-size: 16px;
 	font-weight: normal;
@@ -1486,6 +1492,7 @@ a {
 .blue-bg.promo-train-block__slider-item {
 	height: 533px;
 	background: url('assets/five-weeks-bg.jpg') no-repeat;
+	background-size: cover;
 	background-color: #beeafc;
 }
 .promo-train-block__slider-item__slider-content {
@@ -1529,13 +1536,17 @@ a {
 	letter-spacing: normal;
 	color: #000000;
 	margin: 0 0 0 6px;
-}
 
-.promo-train-block__slider-item__slider-content__promo-title.active {
+}
+.promo-train-block__slider-item__slider-content-tab {
+	opacity: 0.51;
+}
+.promo-train-block__slider-item__slider-content-tab.active {
 	position:relative;
 	z-index: 2;
+	opacity: 1;
 }
-.promo-train-block__slider-item__slider-content__promo-title.active:after {
+.promo-train-block__slider-item__slider-content-tab.active:after {
 	content: '';
 	display: block;
 	width: 100%;
@@ -1722,6 +1733,7 @@ a {
 	line-height: 1.67;
 	letter-spacing: normal;
 	color: #000000;
+	text-align:left;
 }
 
 /*end of promo-train-block */
@@ -1751,7 +1763,7 @@ a {
 	padding-top: 53px;
 }
 .in-the-know-form-block__desc{
-	width: 638px;
+	width: 625px;
 	min-height: 88px;
 	margin: 30px auto 0;
 	font-size: 16px;
@@ -1820,6 +1832,7 @@ a {
 	text-align: center;
 	color: #ffffff;
 	cursor: pointer;
+	text-transform: uppercase;
 }
 .in-the-know-form-block__form__checkbox {
 	width:24px;
@@ -1980,7 +1993,7 @@ a {
 	align-self: flex-start;
 }
 .bottom-slider-block____slider-header__right-block_img {
-	margin-top: -13px;
+	margin-top: 10px;
 	float: right;
 	margin-right: 77px;
 }
@@ -2226,6 +2239,10 @@ a {
 .exercises-promo-block * {
 	box-sizing: border-box;
 }
+.exercises-promo-block__up-container {
+	height:123px;
+	background-color: #fff;
+}
 .exercises-promo-block {
 	min-height: 430px;
 	background-color: #f7f7fb;
@@ -2235,6 +2252,7 @@ a {
 
 }
 .exercises-promo-block__left-side__title {
+	display: inline-block;
 	font-family: 'FranklinGothicDemi', sans-serif;
 	font-size: 32px;
 	font-weight: normal;
@@ -2243,6 +2261,20 @@ a {
 	line-height: normal;
 	letter-spacing: normal;
 	color: #000000;
+	position: relative;
+	z-index:2;
+
+}
+.exercises-promo-block__left-side__title::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 16px;
+	background-color: #e7ff6a;
+	position: absolute;
+	z-index: -1;
+	bottom: -6px;
+	right: 0;
 }
 .exercises-promo-block__left-side__desc{
 	font-size: 16px;
@@ -2308,6 +2340,12 @@ a {
 	color: #000000;
 	padding: 0 10px;
 }
+.exercises-promo-block__right-side__tab.active {
+	position: relative;
+	z-index:2;
+	box-shadow: inset 0 -8px 0 0 #e7ff6a;
+}
+
 /*end of exercises-promo-block*/
 /*exercises-list-block*/
 .exercises-list-block * {
@@ -2522,6 +2560,7 @@ a {
 	letter-spacing: 3px;
 	color: #000000;
 	text-align: center;
+	text-transform: uppercase;
 
 }
 .delivery-block__content img {
@@ -2548,6 +2587,9 @@ a {
 }
 .feedback.difference-block__title {
 	margin-top: 103px;
+}
+.feedback.owl-carousel {
+	margin-bottom: 106px;
 }
 .difference-block__content {
 	width: 100%;
@@ -2833,9 +2875,11 @@ a {
 	line-height: normal;
 	letter-spacing: normal;
 	color: #000000;
+	text-transform: uppercase;
 }
 .product-block__description-more__text img{
 	margin-right: 16px;
+	vertical-align: bottom;
 }
 .product-block__description .desc-block,
 .product-block__description .button-block{
