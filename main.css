@@ -2444,7 +2444,7 @@ a {
 /*end of CEO-text-block*/
 /*personal offer block */
 .personal-offer-block {
-	height: 400px;
+	/* height: 400px; */
 	max-width: 1346px;
 	margin: 0 auto 69px;
 }
@@ -2619,7 +2619,7 @@ a {
 .exercises-tabs-block__tabs {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 38px;
+	margin-top: 28px;
 	margin-bottom: 110px;
 
 }
