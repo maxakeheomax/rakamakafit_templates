@@ -49,8 +49,9 @@ a {
 	bottom: -4px;
 	right: 0;
 }
-
-
+.hidden-block {
+	display: none;
+}
 
 
 /*index page styles*/
@@ -2314,6 +2315,9 @@ a {
 	top: -124px;
 	left: 95px;
 }
+.img-block_img-link img  {
+	transition: .5s;
+}
 .exercises-promo-block__right-side .img-block .img-block__eye-button{
 	position: absolute;
 	right: 24px;
@@ -2338,11 +2342,13 @@ a {
 	text-align: center;
 	color: #000000;
 	padding: 0 10px;
+
 }
 .exercises-promo-block__right-side__tab.active {
 	position: relative;
 	z-index:2;
 	box-shadow: inset 0 -8px 0 0 #e7ff6a;
+	transition: .5s;
 }
 
 /*end of exercises-promo-block*/

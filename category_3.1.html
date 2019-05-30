@@ -197,21 +197,42 @@
 									</div>
 									<div class="col-md-6 exercises-promo-block__right-side">
 										<div class="img-block">
-											<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
-											<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+											<div class="img-block_img-link" id="backbone">
+												<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
+												<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+											</div>
+											<div class="img-block_img-link hidden-block" id="butts">
+												<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
+												<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+											</div>
+											<div class="img-block_img-link hidden-block" id="hands">
+												<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
+												<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+											</div>
+											<div class="img-block_img-link hidden-block" id="shoulders">
+												<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
+												<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+											</div>
+											<div class="img-block_img-link hidden-block" id="feet">
+												<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
+												<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+											</div>
 											<div class="exercises-promo-block__right-side__tabs">
 												<ul>
-													<a class="exercises-promo-block__right-side__tab active" href="#"><li>спина</li></a>
-													<a class="exercises-promo-block__right-side__tab" href="#"><li>ягодицы</li></a>
-													<a class="exercises-promo-block__right-side__tab" href="#"><li>руки</li></a>
-													<a class="exercises-promo-block__right-side__tab" href="#"><li>плечи</li></a>
-													<a class="exercises-promo-block__right-side__tab" href="#"><li>ноги</li></a>
+													<a class="exercises-promo-block__right-side__tab active" id="backbone" href="#"><li>спина</li></a>
+													<a class="exercises-promo-block__right-side__tab" id="butts" href="#"><li>ягодицы</li></a>
+													<a class="exercises-promo-block__right-side__tab" id="hands" href="#"><li>руки</li></a>
+													<a class="exercises-promo-block__right-side__tab" id="shoulders" href="#"><li>плечи</li></a>
+													<a class="exercises-promo-block__right-side__tab" id="feet" href="#"><li>ноги</li></a>
 												</ul>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<script>
+
+							</script>
 							<!--in-the-know-form-block -->
 							<div class="in-the-know-form-block">
 								<div class="in-the-know-form-block__title">Хочешь быть в курсе</div>
@@ -315,6 +336,22 @@
 										easing: 'ease-in-out',
 										cssEase: 'ease-in-out',
 										autoplay: true
+									});
+								});
+								
+								$('.exercises-promo-block__right-side__tab').click(function(e){
+									let a
+									let b = $(this).attr('id');
+									e.preventDefault();
+									$('.exercises-promo-block__right-side__tab').removeClass('active');
+									$(this).addClass('active');
+
+									$('.img-block_img-link').each(function(){
+										a = $(this).attr('id');
+										if(b == a) {
+											$('.img-block_img-link').addClass('hidden-block');
+											$(this).removeClass('hidden-block');
+										}										
 									});
 								});
 							</script>
