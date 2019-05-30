@@ -796,10 +796,10 @@ a {
 .special-offer-block__items {
 	display:  flex;
 	justify-content: space-between;
+	flex-flow: row wrap;
 	margin-top: 34px;
 }
 .bootstrap-box .special-offer-block__items {
-	display:  block;
 	margin: 34px 0 0 0;
 	padding: 0;
 }
@@ -860,11 +860,11 @@ a {
 }
 .special-offer-block__item__prices {
 	display: flex;
+	justify-content: space-between;
 	margin-top: 24px;
 }
 .training .special-offer-block__item__prices {
 	align-items: center;
-	justify-content: space-between;
 	margin-top: 27px;
 }
 .special-offer-block__item__price {
@@ -896,7 +896,7 @@ a {
 	line-height: normal;
 	letter-spacing: normal;
 	color: #b7b7b7;
-	margin-left:41px ;
+	margin-left:-30px ;
 	position: relative;
 }
 .training .special-offer-block__item__old-price{
@@ -1148,6 +1148,7 @@ a {
 }
 .pop-products-block__items {
 	display:  flex;
+	flex-flow: row wrap;
 	justify-content: space-between;
 	margin-top: 30px;
 }
@@ -2590,7 +2591,8 @@ a {
 }
 .exercises-tabs-block__tabs__item p {
 	text-align: center;
-	margin:15% 0;
+	padding:15% 0;
+	margin: 0;
 	font-family: 'FranklinGothicDemi',sans-serif;
 	font-size: 24px;
 	font-weight: normal;
@@ -2606,31 +2608,6 @@ a {
 	margin: 0;
 	padding-top:31px;
 }
-.hands{
-	background: url('assets/hands.jpg') no-repeat;
-	background-size: cover; 
-}
-.press{
-	background: url('assets/press.jpg') no-repeat;
-	background-size: cover; 
-}
-.butts{
-	background: url('assets/butts.jpg') no-repeat;
-	background-size: cover; 
-}
-.feet{
-	background: url('assets/feet.jpg') no-repeat;
-	background-size: cover; 
-}
-.backbone{
-	background: url('assets/backbone.jpg') no-repeat;
-	background-size: cover; 
-}
-.chest{
-	background: url('assets/chest.jpg') no-repeat;
-	background-size: cover; 	
-}
-
 /*end of exercises-tabs-block*/
 /*exercise-demos-list-block */
 .exercise-demos-list-block  {
