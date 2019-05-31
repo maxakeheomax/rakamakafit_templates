@@ -186,11 +186,10 @@
 			<!-- special offer -->
 			<div class=" training special-offer-block__title">
 				<p class="special-offer-block__title__name">Вместе дешевле</p>
-				<div class="special-offer-block__title__link-to-all">все</div>
 			</div>
 			<div class="special-offer owl-carousel middle-slider owl-theme">
 				<div class="owl-carousel__slider-item">
-					<div class="training special-offer-block">
+					<div class="special-offer-block">
 						<div class="special-offer-block__items">
 							<div class="special-offer-block__item">
 								<a href="#"><img src="assets/offer-1.jpg" alt="">
@@ -226,7 +225,7 @@
 						</div>
 					</div>
 					<div class="owl-carousel__slider-item">
-						<div class="training special-offer-block">
+						<div class="special-offer-block">
 							<div class="special-offer-block__items">
 								<div class="special-offer-block__item">
 									<a href="#"><img src="assets/offer-1.jpg" alt="">
@@ -262,7 +261,7 @@
 							</div>
 						</div>
 						<div class="owl-carousel__slider-item">
-							<div class="training special-offer-block">
+							<div class="special-offer-block">
 								<div class="special-offer-block__items">
 									<div class="special-offer-block__item">
 										<a href="#"><img src="assets/offer-1.jpg" alt="">
@@ -337,15 +336,33 @@
 								</div>
 								<div class="col-md-6 exercises-promo-block__right-side">
 									<div class="img-block">
-										<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
-										<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+										<div class="img-block_img-link" id="backbone">
+											<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
+											<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+										</div>
+										<div class="img-block_img-link hidden-block" id="butts">
+											<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
+											<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+										</div>
+										<div class="img-block_img-link hidden-block" id="hands">
+											<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
+											<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+										</div>
+										<div class="img-block_img-link hidden-block" id="shoulders">
+											<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
+											<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+										</div>
+										<div class="img-block_img-link hidden-block" id="feet">
+											<a href="#">	<img  class="img-block__eye-button"src="assets/eye-button.svg" alt=""></a>
+											<img class="img-block__exercise-pic"  src="assets/exercises-promo.jpg" alt="">
+										</div>
 										<div class="exercises-promo-block__right-side__tabs">
 											<ul>
-												<a class="exercises-promo-block__right-side__tab active" href="#"><li>спина</li></a>
-												<a class="exercises-promo-block__right-side__tab" href="#"><li>ягодицы</li></a>
-												<a class="exercises-promo-block__right-side__tab" href="#"><li>руки</li></a>
-												<a class="exercises-promo-block__right-side__tab" href="#"><li>плечи</li></a>
-												<a class="exercises-promo-block__right-side__tab" href="#"><li>ноги</li></a>
+												<a class="exercises-promo-block__right-side__tab active" id="backbone" href="#"><li>спина</li></a>
+												<a class="exercises-promo-block__right-side__tab" id="butts" href="#"><li>ягодицы</li></a>
+												<a class="exercises-promo-block__right-side__tab" id="hands" href="#"><li>руки</li></a>
+												<a class="exercises-promo-block__right-side__tab" id="shoulders" href="#"><li>плечи</li></a>
+												<a class="exercises-promo-block__right-side__tab" id="feet" href="#"><li>ноги</li></a>
 											</ul>
 										</div>
 									</div>
@@ -469,6 +486,25 @@
 						nav:true,
 						navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
 					});
+						function toggleTabs(clickBlock, toggleBlock) {
+								$(clickBlock).click(function(e){
+									let a
+									let b = $(this).attr('id');
+									e.preventDefault();
+
+									$(clickBlock).removeClass('active');
+									$(this).addClass('active');
+
+									$(toggleBlock).each(function(){
+										a = $(this).attr('id');
+										if(b == a) {
+											$(toggleBlock).addClass('hidden-block');
+											$(this).removeClass('hidden-block');
+										}										
+									});
+								});
+							}
+					toggleTabs('.exercises-promo-block__right-side__tab', '.img-block_img-link');
 
 				</script>
 			</body>
