@@ -35,7 +35,7 @@
 					</div>
 					<a href="#"><div class="header__nav-bar__login-button">
 						<span class="header__nav-bar__login-button__text">Войти</span>
-					</div</a>>
+					</div></a>
 				</nav>	
 				<nav class="header__inner-nav-bar">
 					<div class="header__inner-nav-bar-block">
@@ -58,6 +58,9 @@
 					</div>
 				</nav>
 			</header>
+
+
+
 			<!-- end of header block -->
 			<!-- 	breadcrumbs block -->
 			<div class="breadcrumbs">
@@ -285,19 +288,33 @@
 								<img class="bottom-slider-block____slider-header__right-block_img" src="assets/before-after.svg" alt="">
 							</div>
 							<div class="bottom-slider-block__slider-footer"></div>
-							<div class="bottom-slider-block__slider-wrapper">
-								<div class="slick-slider">
+							<div class="bottom-slider-block__slider-wrapper row">
+								<div class="slider-big-view col-5">
 									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
-									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
-									<div><img src="assets/bottom-slider-img-3.jpg" alt=""></div>
 									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
 									<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
 									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
-									<div><img src="assets/bottom-slider-img-3.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
 									<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
 									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
 									<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
 								</div>
+								<div class="slick-slider-tabs col-7">
+									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+									<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+								</div>
+
+
 								<div class="bottom-slider-nav-buttons"></div>
 							</div>
 						</div>
@@ -335,102 +352,109 @@
 									nav:true,
 									navText: [`<img src="assets/arrow-white-left.svg">`,`<img src="assets/arrow-white-right.svg">`]
 								});
-
-								$('.slick-slider').slick({
-									slidesToShow:3,
+								$('.bottom-slider-block__slider-wrapper .slick-slider-tabs').slick({
+									slidesToShow: 3,
 									slidesToScroll: 1,
+									focusOnSelect: true,
+									infinite: true,
 									arrows: true,
 									appendArrows: $('.bottom-slider-nav-buttons'),
 									prevArrow: `<img src="assets/arrow-white-left.svg">`,
 									nextArrow: `<img src="assets/arrow-white-right.svg">`,
-									swipe:true,
-									draggable: true,
+									asNavFor: '.slider-big-view',
 									variableWidth: true,
-									easing: 'ease-in-out',
-									cssEase: 'ease-in-out',
-									autoplay: true
+									autoplay: true,
+									infinite: true
 								});
-							});
 
-							function toggleTabs(clickBlock, toggleBlock) {
-								$(clickBlock).click(function(e){
-									let a
-									let b = $(this).attr('id');
-									e.preventDefault();
+								$('.slider-big-view').slick({
+									slidesToShow: 1,
+									slidesToScroll: 1,
+									fade: true,
+									arrows: false,
+									asNavFor: '.slick-slider-tabs'
+								});
 
-									$(clickBlock).removeClass('active');
-									$(this).addClass('active');
+								function toggleTabs(clickBlock, toggleBlock) {
+									$(clickBlock).click(function(e){
+										let a
+										let b = $(this).attr('id');
+										e.preventDefault();
 
-									$(toggleBlock).each(function(){
-										a = $(this).attr('id');
-										if(b == a) {
-											$(toggleBlock).addClass('hidden-block');
-											$(this).removeClass('hidden-block');
-										}										
+										$(clickBlock).removeClass('active');
+										$(this).addClass('active');
+
+										$(toggleBlock).each(function(){
+											a = $(this).attr('id');
+											if(b == a) {
+												$(toggleBlock).addClass('hidden-block');
+												$(this).removeClass('hidden-block');
+											}										
+										});
 									});
+								}
+								toggleTabs('.exercises-promo-block__right-side__tab', '.img-block_img-link');
+								toggleTabs('.promo-train-block__slider-item__slider-content-tab','.promo-train-block__slider-item__slider-content-tab__content');
 								});
-							}
-							toggleTabs('.exercises-promo-block__right-side__tab', '.img-block_img-link');
-							toggleTabs('.promo-train-block__slider-item__slider-content-tab','.promo-train-block__slider-item__slider-content-tab__content');
-						</script>
-						<!-- end of bottom-slider-block  -->
+							</script>
+							<!-- end of bottom-slider-block  -->
 
-						<!-- footer -->
-					</div>
-					<footer class="footer">
-						<div class="footer__line"></div>
-						<div class="footer__footer-wrapper">
-
-							<div class="footer__nav">
-								<div class="footer__nav__logo">
-									<img src="assets/logo-svg.svg" alt="">
-								</div>
-								<div class="footer__nav-bar-block">
-									<ul class="footer__nav-bar__navs">
-										<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитнес ленты</a></li>
-										<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Эспандеры</a></li>
-										<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитбол</a></li>
-										<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Наборы</a></li>
-										<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Питание</a></li>
-										<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Дневник тренировок</a></li>
-										<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Программа тренировок</a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="footer__footer-credits">
-								<div class="footer__footer-credits__icons">
-									<a href="#"><img src="assets/footer-inst.svg" alt=""></a>
-									<a href="#"><img src="assets/footer-ytb.svg" alt=""></a>
-									<a href="#"><img src="assets/footer-vk.svg" alt=""></a>
-								</div>
-								<div class="footer__footer-credits__official-info">			
-									<ul>
-										<li><a href="#">Доставка и оплата</a></li>
-										<li><a href="#">Полезная информация</a></li>
-										<li><a href="#">О компании</a></li>
-										<li><a href="#">Контакты</a></li>
-									</ul>
-								</div>
-								<div class="footer__footer-credits__phones">
-									<ul>
-										<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
-										<li><nobr><a href="tel:88001234573 ">8 (800) 123 45 73 </a></nobr></li>
-										<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
-									</ul>
-								</div>
-								<div class="footer__footer-credits__requisites">
-									ИП Чирченко А.И. 119261, <br>
-									Москва, Ленинский проспект 85 <br>	
-									ИНН 770970317833 / <br>
-									ОГРНИП 316774600448261		
-								</div>
-							</div>
-							<div class="footer__brand">
-								© 2019. RAKAMAKAFIT
-							</div>
+							<!-- footer -->
 						</div>
-					</footer>
-				</div>
-				<!-- end of footer -->
-			</body>
-			</html>
+						<footer class="footer">
+							<div class="footer__line"></div>
+							<div class="footer__footer-wrapper">
+
+								<div class="footer__nav">
+									<div class="footer__nav__logo">
+										<img src="assets/logo-svg.svg" alt="">
+									</div>
+									<div class="footer__nav-bar-block">
+										<ul class="footer__nav-bar__navs">
+											<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитнес ленты</a></li>
+											<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Эспандеры</a></li>
+											<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитбол</a></li>
+											<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Наборы</a></li>
+											<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Питание</a></li>
+											<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Дневник тренировок</a></li>
+											<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Программа тренировок</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="footer__footer-credits">
+									<div class="footer__footer-credits__icons">
+										<a href="#"><img src="assets/footer-inst.svg" alt=""></a>
+										<a href="#"><img src="assets/footer-ytb.svg" alt=""></a>
+										<a href="#"><img src="assets/footer-vk.svg" alt=""></a>
+									</div>
+									<div class="footer__footer-credits__official-info">			
+										<ul>
+											<li><a href="#">Доставка и оплата</a></li>
+											<li><a href="#">Полезная информация</a></li>
+											<li><a href="#">О компании</a></li>
+											<li><a href="#">Контакты</a></li>
+										</ul>
+									</div>
+									<div class="footer__footer-credits__phones">
+										<ul>
+											<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
+											<li><nobr><a href="tel:88001234573 ">8 (800) 123 45 73 </a></nobr></li>
+											<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
+										</ul>
+									</div>
+									<div class="footer__footer-credits__requisites">
+										ИП Чирченко А.И. 119261, <br>
+										Москва, Ленинский проспект 85 <br>	
+										ИНН 770970317833 / <br>
+										ОГРНИП 316774600448261		
+									</div>
+								</div>
+								<div class="footer__brand">
+									© 2019. RAKAMAKAFIT
+								</div>
+							</div>
+						</footer>
+					</div>
+					<!-- end of footer -->
+				</body>
+				</html>

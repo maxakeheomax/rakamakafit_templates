@@ -168,15 +168,18 @@
 			<div class="special-offer-block__title__link-to-all">все</div>
 		</div>
 		<div class="special-offer-block__items">
-			<a href="#"><div class="special-offer-block__item">
-				<img src="assets/offer-3.jpg" alt="">
-				<div class="special-offer-block__item__title">Новогодний набор с лентами</div>
-				<div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
-				<div class="special-offer-block__item__prices">
-					<div class="special-offer-block__item__price">5980 ₽</div>
-					<div class="special-offer-block__item__old-price">7980 ₽</div>
+			<a href="#">
+				<div class="special-offer-block__item">
+					<img src="assets/offer-3.jpg" alt="">
+					<div class="special-offer-block__item__title">Новогодний набор с лентами</div>
+					<div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
+					<div class="special-offer-block__item__prices">
+						<div class="special-offer-block__item__price">5980 ₽</div>
+						<div class="special-offer-block__item__old-price">7980 ₽</div>
+						<div class="special-offer--block__item-cart"></div>
+					</div>
 				</div>
-			</div></a>
+			</a>
 			<a href="#">	<div class="special-offer-block__item">
 				<img src="assets/offer-2.jpg" alt="">
 				<div class="special-offer-block__item__title">Новогодний набор с эспандерами и лентами</div>
@@ -184,6 +187,7 @@
 				<div class="special-offer-block__item__prices">
 					<div class="special-offer-block__item__price">7980 ₽</div>
 					<div class="special-offer-block__item__old-price"></div>
+					<div class="special-offer--block__item-cart"></div>
 				</div>
 			</div></a>
 			<a href="#"><div class="special-offer-block__item">
@@ -193,6 +197,7 @@
 				<div class="special-offer-block__item__prices">
 					<div class="special-offer-block__item__price">5980 ₽</div>
 					<div class="special-offer-block__item__old-price"></div>
+					<div class="special-offer--block__item-cart"></div>
 				</div>
 			</div></a>
 		</div>
@@ -361,11 +366,11 @@
 					</div>			
 				</div>
 			</div>
-			<a href="" id=""><img class="bottom-slider-block____slider-header__right-block_img" src="assets/bottom-hashtag.svg" alt=""></a>
+			<a href="" id=""><img class="bottom-slider-block____slider-header__right-block_img rakamakafit" src="assets/bottom-hashtag.svg" alt=""></a>
 		</div>
 		<div class="bottom-slider-block__slider-footer"></div>
-		<div class="bottom-slider-block__slider-wrapper">
-			<div class="slick-slider">
+		<div class="bottom-slider-block__slider-wrapper row">
+			<div class="slider-big-view col-5">
 				<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
 				<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
 				<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
@@ -377,12 +382,28 @@
 				<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
 				<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
 			</div>
+			<div class="slick-slider-tabs col-7">
+				<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+				<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+				<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+				<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+				<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+				<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+				<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+				<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+				<div><img src="assets/bottom-slider-img-1.jpg" alt=""></div>
+				<div><img src="assets/bottom-slider-img-2.jpg" alt=""></div>
+			</div>
+			
+
 			<div class="bottom-slider-nav-buttons"></div>
 		</div>
 	</div>
-
 	<script>
+		
 		$(document).ready(function(){
+
+
 			$('.owl-carousel.up-slider').owlCarousel({
 				items:1,
 				lazyLoad:true,
@@ -403,31 +424,46 @@
 				smartSpeed: 800,
 				navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
 			});
-
-
-			$('.slick-slider').slick({
-				slidesToShow:3,
+			$('.bottom-slider-block__slider-wrapper .slick-slider-tabs').slick({
+				slidesToShow: 3,
 				slidesToScroll: 1,
+				focusOnSelect: true,
+				infinite: true,
 				arrows: true,
 				appendArrows: $('.bottom-slider-nav-buttons'),
 				prevArrow: `<img src="assets/arrow-white-left.svg">`,
 				nextArrow: `<img src="assets/arrow-white-right.svg">`,
-				swipe:true,
-				draggable: true,
-				speed: 400,
+				asNavFor: '.slider-big-view',
 				variableWidth: true,
-				easing: 'ease-in-out',
-				cssEase: 'ease-in-out',
-				autoplay: true
+				autoplay: true,
+				infinite: true
 			});
-				$(window).scroll(function() {
-					if($(window).scrollTop() > 200) {
-						$('.aside-block').fadeOut();
-					}
-					else{
-						$('.aside-block').fadeIn();
-					}
-				});
+
+			$('.slider-big-view').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				fade: true,
+				arrows: false,
+				asNavFor: '.slick-slider-tabs'
+			});
+
+			$(window).scroll(function() {
+				if($(window).scrollTop() > 200) {
+					$('.aside-block__shedule *').fadeOut();
+					$('.aside-block__shedule').css({background:'transparent'});
+				}
+				else{
+					$('.aside-block__shedule *').fadeIn();
+					$('.aside-block__shedule').css({background:'#f7f7fb'});	
+				};
+
+				if($(window).scrollTop() >= $('.in-the-know-form-block').offset().top) {
+					$('.aside-block__icons *').fadeOut();
+				}
+				else {
+					$('.aside-block__icons *').fadeIn();
+				}
+			});
 		});
 	</script>
 	<!-- end of bottom-slider-block  -->
