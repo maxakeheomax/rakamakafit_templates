@@ -214,7 +214,7 @@ a {
 }
 .breadcrumbs {
 	margin: 40px 0 42px 21px;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: normal;
 	font-style: normal;
 	font-stretch: normal;
@@ -878,6 +878,9 @@ a {
 	align-items: center;
 	margin-top: 27px;
 }
+.training-slider .special-offer-block__item__prices {
+	margin-top: 0;
+}
 .special-offer-block__item__price {
 	width: 72px;
 	font-size: 22px;
@@ -1398,8 +1401,17 @@ a {
 .hello-block__content__hello__text__link-wrapper {
 	display: flex;
 	align-items: center;
-	width: 350px;
+	width: 390px;
 	justify-content: space-between;
+}
+.hello-block__content__hello__text__link {
+	font-size: 12px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 3px;
+	text-transform: uppercase;
 }
 .hello-block__content__hello__button {
 	border-radius: 32px;
@@ -1462,12 +1474,12 @@ a {
 	padding-top: 61px;
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
 }
 .advantages-block.mini .advantages-block_disc {
 	text-align:left;
 	margin-top: 0;
 	font-size: 16px;
+	margin-left: 16px;
 }
 /*end of advantages block */
 /*promo-train-block */
@@ -2070,6 +2082,7 @@ a {
 }
 .slider-nav-block.slick-slider img {
 	width: 93px!important;
+	outline: none;
 }
 .slider-nav-block .slick-slide  {
 	padding:0 22px 24px 0;
@@ -2249,6 +2262,9 @@ a {
 
 /*end of FAQ block*/
 /*exercises-promo-block*/
+.exercises-promo-block_row {
+	margin: 0;
+}
 .exercises-promo-block * {
 	box-sizing: border-box;
 }
