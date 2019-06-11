@@ -2091,8 +2091,10 @@ a {
 	padding: 0;
 }
 .slick-slide {
-	width: 322px;
-	padding: 0 15px;
+	width: 450px;
+	height: 450px;
+	background-repeat: no-repeat;
+	margin-left: -60px;
 }
 @keyframes scale {
 	from {
@@ -3518,3 +3520,9 @@ a {
 }
 
 /*end of footer */
+.slick-slide {
+	transition: all 1s ease-in-out;
+}
+.slick-slide.slick-current {
+	background-size: 100% !important;
+}
