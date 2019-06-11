@@ -2092,19 +2092,14 @@ a {
 	padding: 0;
 }
 .slick-slide {
-	width: 350px;
-	height: 350px;
+	width: 549px;
+	height: 549px;
 	background-repeat: no-repeat;
-	margin-left: -40px;
+	margin-left: -20px;
 	outline: none;
 }
-@keyframes scale {
-	from {
-		width: 322px;
-	}
-	to{
-		width: 549px;
-	}
+.slick-slide:not(.slick-current) {
+margin-left: -250px;
 }
 /*end of bottom-slider-block */
 /*how-to-start-block */
@@ -3528,9 +3523,10 @@ a {
 .slick-slide.slick-current {
 	background-size: 100% !important;
 	position: relative;
-	/* margin-right: 30px; */
-	/* left: 10px;; */
+	/*margin: 0 130px; */
+	
+	 /*left: 100px; */
 }
 .slick-slide.slick-current + .slick-slide {
-	/* margin-left: -30px; */
+	/*margin-left:-112px;*/
 }

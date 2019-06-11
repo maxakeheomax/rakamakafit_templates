@@ -371,16 +371,16 @@
 		<div class="bottom-slider-block__slider-footer"></div>
 		<div class="bottom-slider-block__slider-wrapper">
 			<div class="slick-slider">
-				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 70%;background-position: center;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 70%;background-position: center;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 70%;background-position: center;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 70%;background-position: center;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 70%;background-position: center;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 70%;background-position: center;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 70%;background-position: center;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 70%;background-position: center;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 70%;background-position: center;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 70%;background-position: center;background-repeat: no-repeat;"></div>
+				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: center;background-repeat: no-repeat;"></div>
+				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: center;background-repeat: no-repeat;"></div>
+				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: center;background-repeat: no-repeat;"></div>
+				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: center;background-repeat: no-repeat;"></div>
+				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: center;background-repeat: no-repeat;"></div>
+				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: center;background-repeat: no-repeat;"></div>
+				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: center;background-repeat: no-repeat;"></div>
+				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: center;background-repeat: no-repeat;"></div>
+				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: center;background-repeat: no-repeat;"></div>
+				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: center;background-repeat: no-repeat;"></div>
 			</div>
 			<div class="bottom-slider-nav-buttons"></div>
 		</div>
@@ -411,7 +411,7 @@
 				navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
 			});
 			$('.slick-slider').slick({
-				slidesToShow:3,
+				slidesToShow:4,
 				slidesToScroll: 1,
 				arrows: true,
 				appendArrows: $('.bottom-slider-nav-buttons'),
@@ -423,7 +423,8 @@
 				variableWidth: true,
 				easing: 'ease-in-out',
 				cssEase: 'ease-in-out',
-				autoplay: true
+				// autoplay: true,
+				infinite: true
 			});
 
 			$(window).scroll(function() {
