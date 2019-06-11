@@ -2035,6 +2035,7 @@ a {
 	height: 549px;
 	bottom: 59px;
 	width: 100%;
+	padding: 0 30px;
 	align-items: center;
 }
 .before-after .bottom-slider-block__slider-wrapper  {
@@ -2091,10 +2092,11 @@ a {
 	padding: 0;
 }
 .slick-slide {
-	width: 450px;
-	height: 450px;
+	width: 350px;
+	height: 350px;
 	background-repeat: no-repeat;
-	margin-left: -60px;
+	margin-left: -40px;
+	outline: none;
 }
 @keyframes scale {
 	from {
@@ -3525,4 +3527,10 @@ a {
 }
 .slick-slide.slick-current {
 	background-size: 100% !important;
+	position: relative;
+	/* margin-right: 30px; */
+	/* left: 10px;; */
+}
+.slick-slide.slick-current + .slick-slide {
+	/* margin-left: -30px; */
 }
