@@ -3377,9 +3377,8 @@ ul li {
 /*banner-block*/
 .banner-block {
 	margin: 23px auto 71px;
-	max-width: 1345px;
 	min-height: 270px;
-	width: 100%;
+	width: 95%;
 	margin-top:0;
 }
 .banner-block h1 {
@@ -3397,30 +3396,100 @@ ul li {
 }
 /*end of banner block*/
 /*text-block*/
-.text-block {
+#text-block {
 	margin-left: 274px;
 	width: 770px;
 	margin-bottom: 63px;
 }
-.public-offer.text-block {
+.center-block {
+	margin: 0 auto 63px!important;
+}
+#text-block .img-container {
+	width: 890px;
+	height:550px;
+	margin-top: 50px;
+	margin-bottom:92px ;
+}
+#text-block h2,
+#public-offer_text-block h2 {
+	font-family: 'FranklinGothicDemi',sans-serif!important;
+	font-size: 28px!important;
+	font-weight: normal!important;
+	font-style: normal!important;
+	font-stretch: normal!important;
+	line-height: 1!important;
+	letter-spacing: normal!important;
+	color: #000000!important;
+	margin-bottom: 24px!important;
+	margin-top: 63px!important;
+} 
+#text-block span {
+	font-size: 16px!important;
+	font-weight: normal!important;
+	font-style: normal!important;
+	font-stretch: normal!important;
+	line-height: 1.63!important;
+	letter-spacing: normal!important;
+	font-family: 'Roboto', sans-serif!important;
+}
+#public-offer_text-block,
+#center-block_text-block {
 	width: 891px;
 	margin: 0 auto 80px;
 }
-.pink-block {
-	margin-left: 274px;
-	width: 770px;
-	margin-bottom: 87px;
-}
-.pink-block h3,
-.bottom-text-block h3 {
-	font-family: 'FranklinGothicDemi',sans-serif;
-	font-size: 16px;
+#public-offer_text-block h2 {
+	display: inline-block
+} 
+#public-offer_text-block ol > li { 
+	list-style-type: none;
+	font-family: 'Roboto', sans-serif!important;
+  font-size: 16px!important;
+  font-weight: normal!important;
+  font-style: normal!important;
+  font-stretch: normal!important;
+  line-height: 1.63!important;
+  letter-spacing: normal!important;
+  color: #000000!important;
+} 
+#public-offer_text-block ol {
+	counter-reset: list1; 
+	padding:0;
+} 
+#public-offer_text-block  ol > li:before {
+	counter-increment: list1; 
+	content: counter(list1) ". "; 
+	font-size:32px;
 	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: normal;
-	letter-spacing: 2px;
-	text-transform: uppercase;
+}
+#public-offer_text-block ol ol { 
+	counter-reset: list2;
+} 
+#public-offer_text-block u {
+	text-decoration: none; 
+	border-bottom: 1px solid
+}
+#public-offer_text-block ol ol > li:before {
+	counter-increment: list2; /* Увеличиваем значение счетчика вложенного списка */
+	content: counter(list1) "." counter(list2) ". "; /* Выводим число */
+	  font-size: 16px!important;
+  font-weight: normal!important;
+}
+#text-block h3,
+.bottom-text-block h3 {
+	font-family: 'FranklinGothicDemi',sans-serif!important;
+	font-size: 16px!important;
+	font-weight: bold!important;
+	font-style: normal!important;
+	font-stretch: normal!important;
+	line-height: normal!important;
+	letter-spacing: 2px!important;
+	text-transform: uppercase!important;
+	margin-top: 107px!important;
+}
+#text-block .big-h,
+#public-offer_text-block h2 {
+	font-size: 32px!important;
+	margin-top: 87px!important;
 }
 .pink-block p {
 	font-size: 16px;
@@ -3430,28 +3499,10 @@ ul li {
 	line-height: 1.63;
 	letter-spacing: normal;
 }
-.text-block h2 {
-	font-family: 'FranklinGothicDemi',sans-serif;
-	font-size: 28px;
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: 1;
-	letter-spacing: normal;
-	color: #000000;
-	margin-bottom: 24px;
-} 
-.text-block p {
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
-	line-height: 1.63;
-	letter-spacing: normal;
-}
-.adress-block {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
+
+#text-block .adress-block {
+	width: 100%;
+	margin-top: 30px;
 }
 .adress-block-side {
 	width: 42%;
@@ -3465,17 +3516,17 @@ ul li {
 	letter-spacing: normal;
 	margin:0;
 }
-.text-block ul li {
-		margin-bottom: 30px;
+#text-block ul li {
+	margin-bottom: 30px!important;
 }
-.text-block ul li:before {
-	display: inline-block;
-	content:'';
-	background-color: #e31377;
-	width: 10px;
-	height: 10px;
-	border-radius:50%;
-	margin-right: 16px;
+#text-block ul li:before {
+	display: inline-block!important;
+	content:''!important;
+	background-color: #e31377!important;
+	width: 10px!important;
+	height: 10px!important;
+	border-radius:50%!important;
+	margin-right: 16px!important;
 }
 
 /*end of text-block*/
@@ -3669,4 +3720,3 @@ ul li {
 }
 
 /*end of footer */
-
