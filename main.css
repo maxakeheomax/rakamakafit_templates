@@ -312,7 +312,7 @@ h2{
 /*aside block */
 .aside-block {
 	position: fixed;
-	left: -147px;
+	left: -138px;
 	top: 405px;
 	display: flex;
 	justify-content: space-between;
@@ -346,12 +346,33 @@ h2{
 .aside-block__icons {
 	display: flex;
 	align-items:center;
+	width: 137px;
+	margin-left: 15px;
+	justify-content: space-between;
 }
 .aside-block__icons_link {
 	padding-left: 16px;
 }
 .aside-block__icons_link img {
 	transform:rotate(270deg);
+}
+.aside-block__icons-item {
+	background-size: 30%;
+	display: block;
+	width: 20px;
+	height: 20px;
+	padding: 10px;
+	transform: rotate(-90deg);
+	border-radius: 50%;
+}
+.aside-block__icons-item.vk:hover {
+	background-color: #4a76a8!important;
+}
+.aside-block__icons-item.ytb:hover  {
+	background-color: #ff0000!important;
+}
+.aside-block__icons-item.inst:hover  {
+	background-color: #090303!important;
 }
 /*end of aside block */
 
