@@ -58,11 +58,7 @@
 					</div>
 				</nav>
 			</header>
-
-
-
 			<!-- end of header block -->
-
 			<!-- aside block -->
 			<div class="aside-block">
 				<div class="aside-block__shedule">
@@ -71,11 +67,11 @@
 				</div>
 				<div class="aside-block__icons">
 					<a href="#" style="background: url(assets/footer-inst.svg)no-repeat center , lightgray ;"class="aside-block__icons-item vk"></a>
-				<a href="#" style="background: url(assets/footer-ytb.svg)no-repeat  center, lightgray;"class="aside-block__icons-item ytb"></a>
-				<a href="#" style="background: url(assets/footer-vk.svg)no-repeat center, lightgray;"class="aside-block__icons-item inst"></a>
-			</div>	
+					<a href="#" style="background: url(assets/footer-ytb.svg)no-repeat  center, lightgray;"class="aside-block__icons-item ytb"></a>
+					<a href="#" style="background: url(assets/footer-vk.svg)no-repeat center, lightgray;"class="aside-block__icons-item inst"></a>
+				</div>	
 			</div>
-	<!-- end of aside block -->
+			<!-- end of aside block -->
 			<!-- upSlider -->
 			<div class="up-block">
 				<div class="up-slider-wrapper">
@@ -335,7 +331,7 @@
 		<form class="in-the-know-form-block__form" action="#">
 			<div class="in-the-know-form-block__form__input-wrapper">
 				<label name="name">
-					<input class="in-the-know-form-block__form__input" type="text" required pattern="[A-Za-zА-Яа-яЁё]" placeholder='Имя'>
+					<input class="in-the-know-form-block__form__input" type="text" required pattern="[A-Za-zА-Яа-яЁё]+" placeholder='Имя'>
 				</label>
 				<label name="mail">
 					<input class="in-the-know-form-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
@@ -444,7 +440,81 @@
 					$('.aside-block__icons *').fadeIn();
 				}
 			});
+
+			($('.pass').next()).click(function(){
+				($(this).prev()).toggleClass('pass-visible');
+				$('.pass').each(function() {
+					if($(this).hasClass('pass-visible')) {
+						$(this).attr('type','text')
+					}
+					else{
+						$(this).attr('type','password');
+					}
+				});
+			});
+
+
+
+
+
+
+
+
+			const form = $('.auth-block-form');
+
+			form.find('.auth-reg__form__input').addClass('empty_field');
+			function checkInput(){
+				form.find('.auth-reg__form__input').each(function(){
+					if($(this).val() != ''){       
+						$(this).removeClass('empty_field');
+					}else {
+						$(this).addClass('empty_field');
+					}
+				});
+			}
+
+			setInterval(function(){
+				checkInput();
+				const sizeEmpty = form.find('.empty_field').length;
+
+				if(sizeEmpty > 0 || !$('#auth-checkbox').prop('checked')){
+					if($('.promo-form-block__form__submit').prop('disabled')){
+						return 
+					} else {
+						$('.promo-form-block__form__submit').attr('disabled','disabled');
+					}
+				} else {
+					$('.promo-form-block__form__submit').removeAttr('disabled');
+				}
+
+			},500);
+
+
+			$('.header__nav-bar__login-button').click(function(){
+				$('.auth-container').slideDown().css({
+					display:'flex'
+				});
+				$('.page_wrapper').css({
+					filter:'blur(5px)',
+					overflow:'hidden'
+
+				})
+			})
+			$('.close-button').click(function(){
+				$('.auth-container').slideUp();
+
+				$('.page_wrapper').css({
+					filter:'none',
+					overflow:'inherit',
+
+				})
+			});
+
 		});
+
+
+
+
 	</script>
 	<!-- end of bottom-slider-block  -->
 	<!-- footer -->
@@ -503,6 +573,88 @@
 	</div>
 </footer>
 </div>
+<!--reg-block -->
+<div class="auth-container">
+	<div class="blur-block"></div>
+	<div class="auth-block">
+		<div class="close-button"></div>
+		<h2>Регистрация</h2>
+		<form class="auth-block-form" action="#">
+			<div class="auth-reg-wrapper">
+				
+				<input id="name" class="auth-reg__form__input" type="text" pattern="[A-Za-zА-Яа-яЁё]+" placeholder='Имя'>
+				<label for="name" name="name"></label>
+				
+				<input id="email" class="auth-reg__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email*' >
+				<label name="mail"></label>
+				
+				<input id="pass" class="auth-reg__form__input pass" type="password"  placeholder='Пароль*'>
+				<label for="pass" name="password"></label>
 
+				
+				<input id="repeat-pass" class="auth-reg__form__input pass" type="password"  placeholder='Повторите пароль*'>
+				<label for="repeat-pass" name="repeat-password"></label>
+
+
+				<div class="promo-form-block__form__input-checkbox-wrapper">			
+					<input  class="promo-form-block__form__checbox"  type="checkbox" name="" id="auth-checkbox" >
+					<label for="auth-checkbox"></label>
+					<p class="promo-form-block__form__checbox-desc">Я согласен с <a href="#">обработкой данных</a></p>
+				</div>
+				<button class="promo-form-block__form__submit" type="submit" disabled>продолжить</button>
+			</div>
+		</form>
+	</div>
+</div>
+<!--reg-block -->
+<!-- greetings-block -->
+<!-- <div class="greetings-container">
+	<div class="blur-block"></div>
+	<div class="greetings-block auth-block">
+		<div class="close-button"></div>
+		<h2>Регистрация прошла успешно!</h2>
+		<span>👋</span>
+		<p>Привет, Капитолина</p>
+		<p>Мы рады, что ты к нам присоединилась! 
+		Начни меняться вместе с нами прямо сейчас!</p>
+		<div class="auth-reg-wrapper">
+			<button class="promo-form-block__form__submit" type="submit">хорошо</button>
+		</div>
+
+	</div>
+</div> -->
+<!-- greetings-block -->
+<!-- reg-block -->
+<!-- <div class="reg-container">
+	<div class="blur-block"></div>
+	<div class="greetings-block auth-block">
+		<div class="close-button"></div>
+		<h2>Вход</h2>
+		<form class="auth-block-form" action="#">
+			<div class="auth-reg-wrapper">
+		<input id="email" class="auth-reg__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email*' >
+		<label name="mail"></label>
+		<input id="pass" class="auth-reg__form__input pass" type="password"  placeholder='Пароль*'>
+		<label for="pass" name="password"></label>
+
+				<div class="promo-form-block__form__input-checkbox-wrapper">			
+					<input  class="promo-form-block__form__checbox"  type="checkbox" name="" id="auth-checkbox" >
+					<label for="auth-checkbox"></label>
+					<p class="promo-form-block__form__checbox-desc">Запомнить меня</a></p>
+				</div>
+				<button class="promo-form-block__form__submit" type="submit" disabled>войти</button>
+</div>
+</form>
+<h2>Первый раз тут?</h2>
+<button class="promo-form-block__form__submit" type="submit" disabled>регистрация</button>
+ <span>Войти с помощью</span>
+ <div class="auth-social-block">
+ 	<div class="auth-social-block-item"></div>
+ 	<div class="auth-social-block-item"></div>
+ 	<div class="auth-social-block-item"></div>
+ </div>
+	</div>
+</div> -->
+<!-- reg-block -->
 </body>
 </html>
