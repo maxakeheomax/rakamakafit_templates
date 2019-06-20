@@ -462,9 +462,9 @@
 
 			const form = $('.auth-block-form');
 
-			form.find('.auth-reg__form__input').addClass('empty_field');
+			form.find('.reg__form__input').addClass('empty_field');
 			function checkInput(){
-				form.find('.auth-reg__form__input').each(function(){
+				form.find('.registration_field').each(function(){
 					if($(this).val() != ''){       
 						$(this).removeClass('empty_field');
 					}else {
@@ -477,12 +477,10 @@
 				checkInput();
 				const sizeEmpty = form.find('.empty_field').length;
 
-				if(sizeEmpty > 0 && !$('#reg-checkbox').prop('checked')){
-					if($('.promo-form-block__form__submit.continue').prop('disabled')){
-						return 
-					} else {
-						$('.promo-form-block__form__submit.continue').attr('disabled','disabled');
-					}
+				if(sizeEmpty > 0 || !$('#reg-checkbox').prop('checked')){
+
+					$('.promo-form-block__form__submit.continue').attr('disabled','disabled');
+					
 				} else {
 					$('.promo-form-block__form__submit.continue').removeAttr('disabled');
 				}
@@ -499,10 +497,10 @@
 
 
 			$('.reg-button').click(function(){
- $('.LogIn-block, .registr-block').toggleClass('hidden-block');
+				$('.LogIn-block, .registr-block').toggleClass('hidden-block');
 			});
 			$('.promo-form-block__form__submit.continue').click(function(){
- $('.registr-block, .greetings-block').toggleClass('hidden-block');
+				$('.registr-block, .greetings-block').toggleClass('hidden-block');
 			});
 
 			function closeAsideForm(click_block) {
@@ -515,7 +513,7 @@
 						$('.registr-block, .greetings-block').addClass('hidden-block');
 						$('.LogIn-block').removeClass('hidden-block');
 
-				},1000);
+					},1000);
 				});
 			}
 
@@ -625,17 +623,17 @@
 			<form class="auth-block-form" action="#">
 				<div class="auth-reg-wrapper">
 					
-					<input id="name" class="auth-reg__form__input" type="text" pattern="[A-Za-zА-Яа-яЁё]+" placeholder='Имя'>
+					<input id="name" class="auth-reg__form__input registration_field" type="text" pattern="[A-Za-zА-Яа-яЁё]+" placeholder='Имя'>
 					<label for="name" name="name"></label>
 					
-					<input id="email" class="auth-reg__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email*' >
+					<input id="email" class="auth-reg__form__input registration_field" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email*' >
 					<label name="mail"></label>
 					
-					<input id="pass" class="auth-reg__form__input pass" type="password"  placeholder='Пароль*'>
+					<input id="pass" class="auth-reg__form__input registration_field pass" type="password"  placeholder='Пароль*'>
 					<label for="pass" name="password"></label>
 
 					
-					<input id="repeat-pass" class="auth-reg__form__input pass" type="password"  placeholder='Повторите пароль*'>
+					<input id="repeat-pass" class="auth-reg__form__input registration_field pass" type="password"  placeholder='Повторите пароль*'>
 					<label for="repeat-pass" name="repeat-password"></label>
 
 
