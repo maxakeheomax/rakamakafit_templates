@@ -477,44 +477,56 @@
 				checkInput();
 				const sizeEmpty = form.find('.empty_field').length;
 
-				if(sizeEmpty > 0 || !$('#auth-checkbox').prop('checked')){
-					if($('.promo-form-block__form__submit').prop('disabled')){
+				if(sizeEmpty > 0 && !$('#reg-checkbox').prop('checked')){
+					if($('.promo-form-block__form__submit.continue').prop('disabled')){
 						return 
 					} else {
-						$('.promo-form-block__form__submit').attr('disabled','disabled');
+						$('.promo-form-block__form__submit.continue').attr('disabled','disabled');
 					}
 				} else {
-					$('.promo-form-block__form__submit').removeAttr('disabled');
+					$('.promo-form-block__form__submit.continue').removeAttr('disabled');
 				}
 
 			},500);
 
 
 			$('.header__nav-bar__login-button').click(function(){
-				$('.auth-container').slideDown().css({
-					display:'flex'
-				});
-				$('.page_wrapper').css({
-					filter:'blur(5px)',
-					overflow:'hidden'
-
-				})
-			})
-			$('.close-button').click(function(){
-				$('.auth-container').slideUp();
-
-				$('.page_wrapper').css({
-					filter:'none',
-					overflow:'inherit',
-
-				})
+				$('body').css('overflow-y','hidden');
+				$('.page_content').css('filter', 'blur(10px)');
+				$('.auth-container').fadeIn().css('display','flex');
+				$('.auth-block').animate({'right': 0},500);
 			});
 
+
+			$('.reg-button').click(function(){
+ $('.LogIn-block, .registr-block').toggleClass('hidden-block');
+			});
+			$('.promo-form-block__form__submit.continue').click(function(){
+ $('.registr-block, .greetings-block').toggleClass('hidden-block');
+			});
+
+			function closeAsideForm(click_block) {
+				$(click_block).click(function(){
+					$('.auth-block').animate({'right': -500},500);
+					$('body').css('overflow-y','inherit');
+					$('.page_content').css('filter', 'none')
+					$('.auth-container').fadeOut();
+					setTimeout(function(){
+						$('.registr-block, .greetings-block').addClass('hidden-block');
+						$('.LogIn-block').removeClass('hidden-block');
+
+				},1000);
+				});
+			}
+
+			closeAsideForm('.close-button');
+			closeAsideForm('.login-block__form__submit');
+
+
+
+
+
 		});
-
-
-
-
 	</script>
 	<!-- end of bottom-slider-block  -->
 	<!-- footer -->
@@ -578,83 +590,82 @@
 	<div class="blur-block"></div>
 	<div class="auth-block">
 		<div class="close-button"></div>
-		<h2>Регистрация</h2>
-		<form class="auth-block-form" action="#">
-			<div class="auth-reg-wrapper">
-				
-				<input id="name" class="auth-reg__form__input" type="text" pattern="[A-Za-zА-Яа-яЁё]+" placeholder='Имя'>
-				<label for="name" name="name"></label>
-				
-				<input id="email" class="auth-reg__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email*' >
-				<label name="mail"></label>
-				
-				<input id="pass" class="auth-reg__form__input pass" type="password"  placeholder='Пароль*'>
-				<label for="pass" name="password"></label>
+		<!--LogIn-block -->
+		<div class="LogIn-block">
+			<h2>Вход</h2>
+			<form class="auth-block-form" action="#">
+				<div class="auth-reg-wrapper login-block">
+					<input id="email" class="auth-reg__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email*' >
+					<label name="mail"></label>
+					<input id="pass" class="auth-reg__form__input pass" type="password"  placeholder='Пароль*'>
+					<label for="pass" name="password"></label>
 
-				
-				<input id="repeat-pass" class="auth-reg__form__input pass" type="password"  placeholder='Повторите пароль*'>
-				<label for="repeat-pass" name="repeat-password"></label>
-
-
-				<div class="promo-form-block__form__input-checkbox-wrapper">			
-					<input  class="promo-form-block__form__checbox"  type="checkbox" name="" id="auth-checkbox" >
-					<label for="auth-checkbox"></label>
-					<p class="promo-form-block__form__checbox-desc">Я согласен с <a href="#">обработкой данных</a></p>
+					<div class="promo-form-block__form__input-checkbox-wrapper">			
+						<input  class="promo-form-block__form__checbox"  type="checkbox" name="" id="auth-checkbox" >
+						<label for="auth-checkbox"></label>
+						<p class="promo-form-block__form__checbox-desc ">Запомнить меня</a></p>
+					</div>
+					<button class="login-block__form__submit" type="submit">войти</button>
 				</div>
-				<button class="promo-form-block__form__submit" type="submit" disabled>продолжить</button>
+			</form>
+			<h2>Первый раз тут?</h2>
+			<button class="reg-button" type="submit">регистрация</button>
+			<p class="login-block__p">Войти с помощью</p>
+			<div class="auth-social-block">
+				<a href="#"><div class="auth-social-block-item"style="background:url(assets/vk-reg-form.svg)no-repeat center;"></div></a>
+				<a href="#"><div class="auth-social-block-item"style="background:url(assets/fb-reg-form.svg)no-repeat center;"></div></a>
+				<a href="#"><div class="auth-social-block-item"style="background:url(assets/ggl-plus-reg-form.svg)no-repeat center;"></div></a>
 			</div>
-		</form>
-	</div>
-</div>
-<!--reg-block -->
-<!-- greetings-block -->
-<!-- <div class="greetings-container">
-	<div class="blur-block"></div>
-	<div class="greetings-block auth-block">
-		<div class="close-button"></div>
-		<h2>Регистрация прошла успешно!</h2>
-		<span>👋</span>
-		<p>Привет, Капитолина</p>
-		<p>Мы рады, что ты к нам присоединилась! 
-		Начни меняться вместе с нами прямо сейчас!</p>
-		<div class="auth-reg-wrapper">
-			<button class="promo-form-block__form__submit" type="submit">хорошо</button>
 		</div>
+		<!--end of LogIn-block -->
 
-	</div>
-</div> -->
-<!-- greetings-block -->
-<!-- reg-block -->
-<!-- <div class="reg-container">
-	<div class="blur-block"></div>
-	<div class="greetings-block auth-block">
-		<div class="close-button"></div>
-		<h2>Вход</h2>
-		<form class="auth-block-form" action="#">
-			<div class="auth-reg-wrapper">
-		<input id="email" class="auth-reg__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email*' >
-		<label name="mail"></label>
-		<input id="pass" class="auth-reg__form__input pass" type="password"  placeholder='Пароль*'>
-		<label for="pass" name="password"></label>
+		<!-- reg-block -->
+		<div class="registr-block hidden-block">
+			<h2>Регистрация</h2> 
+			<form class="auth-block-form" action="#">
+				<div class="auth-reg-wrapper">
+					
+					<input id="name" class="auth-reg__form__input" type="text" pattern="[A-Za-zА-Яа-яЁё]+" placeholder='Имя'>
+					<label for="name" name="name"></label>
+					
+					<input id="email" class="auth-reg__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email*' >
+					<label name="mail"></label>
+					
+					<input id="pass" class="auth-reg__form__input pass" type="password"  placeholder='Пароль*'>
+					<label for="pass" name="password"></label>
 
-				<div class="promo-form-block__form__input-checkbox-wrapper">			
-					<input  class="promo-form-block__form__checbox"  type="checkbox" name="" id="auth-checkbox" >
-					<label for="auth-checkbox"></label>
-					<p class="promo-form-block__form__checbox-desc">Запомнить меня</a></p>
+					
+					<input id="repeat-pass" class="auth-reg__form__input pass" type="password"  placeholder='Повторите пароль*'>
+					<label for="repeat-pass" name="repeat-password"></label>
+
+
+					<div class="promo-form-block__form__input-checkbox-wrapper">			
+						<input  class="promo-form-block__form__checbox"  type="checkbox" name="" id="reg-checkbox" >
+						<label class='big-label' for="reg-checkbox"></label>
+						<p class="promo-form-block__form__checbox-desc">Я согласен с <a href="#">обработкой данных</a></p>
+					</div>
+					<button class="promo-form-block__form__submit continue " type="submit" disabled>продолжить</button>
 				</div>
-				<button class="promo-form-block__form__submit" type="submit" disabled>войти</button>
-</div>
-</form>
-<h2>Первый раз тут?</h2>
-<button class="promo-form-block__form__submit" type="submit" disabled>регистрация</button>
- <span>Войти с помощью</span>
- <div class="auth-social-block">
- 	<div class="auth-social-block-item"></div>
- 	<div class="auth-social-block-item"></div>
- 	<div class="auth-social-block-item"></div>
- </div>
+			</form>
+		</div>
+		<!-- end of reg block -->
+		<!-- greetings-block -->
+
+		<div class="greetings-block hidden-block">
+			<h2>Регистрация прошла успешно!</h2>
+			<span class="hello-icon">👋</span>
+			<div class="up-hello-block__left-side__title">Привет, Капитолина</div>
+			<p class="greetings-block__disc">Мы рады, что ты к нам присоединилась! 
+			Начни меняться вместе с нами прямо сейчас!</p>
+			<div class="auth-reg-wrapper">
+				<button class="login-block__form__submit" type="submit">хорошо</button>
+			</div>
+		</div>
+		<!-- end of greetings-block -->
+
 	</div>
-</div> -->
-<!-- reg-block -->
+</div> 
+
+
 </body>
 </html>
