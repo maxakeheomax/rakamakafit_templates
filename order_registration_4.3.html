@@ -79,116 +79,412 @@
 				</div>
 				<div class="cart-block__content">
 					<div class="cart-block__cart-order-reg-list">
-						<div class="cart-block__cart-items-list__item-wrapper">
+						<div class="cart-block__cart-items-list__item-wrapper list__item-wrapper-product-reg">
 							<div class="cart-block__cart-order-reg-item">	
 								<div class="cart-block__cart-order-reg-item__title-block">
-								<div class="number_title-block">
+									<div class="number_title-block">
 										<div class="cart-block__cart-order-reg-item__title-block__block-number"><p>1</p></div>
-									<div class="cart-block__cart-order-reg-item__title-block__title">Контактные данные</div>
-								</div>
+										<div class="cart-block__cart-order-reg-item__title-block__title">Контактные данные</div>
+									</div>
 									<div class="cart-block__cart-order-reg-item__input-checkbox-wrapper">			
 										<input  class="cart-block__cart-order-reg-item__checbox"  type="checkbox" name="" id="cart-block__cart-order-reg-item-checkbox">
 										<label for="cart-block__cart-order-reg-item-checkbox"></label>
 										<p class="cart-block__cart-order-reg-item__checbox-desc">Заказать как юрлицо</p>
 									</div>
 								</div>
-								<label for="FIO"><input type="text" name="" id="FIO" placeholder='Фамилия Имя Отчество'></label>
-								<label for="email"><input type="email" name="" id="email" pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'></label>
-								<label for="phone"><input type="phone" name="" id="phone"  placeholder="Телефон"></label>
+
+								<div class="text-input full-width">
+									<input type="text" name="" id="FIO" placeholder='Фамилия Имя Отчество'><label class="text-input__label" for="FIO"></label>
+								</div>
+								<div class="input-wrapper">
+									<div class="text-input">
+										<input class="text-input__input" type="email" name="" id="email" pattern="\S+@[a-z]+.[a-z]+"><label class="text-input__label" for="email">Email</label>
+									</div>
+									<div class="text-input">
+										<input class="text-input__input" type="phone" name="" id="phone"  ><label class="text-input__label" for="phone">Телефон</label>
+									</div>
+									
+								</div>
+							</div>							
+						</div>
+						<script>
+							$(document).ready(function(){
+
+								$('.text-input__input').each(function(){
+
+									if($(this).val() !== ""){
+										$(this).closest('.text-input').addClass('focused');
+									}
+									$(this).focus(function(){
+										
+										$(this).closest('.text-input').addClass('focused');
+
+									});
+
+									$(this).blur(function() {
+										if($(this).val() == ""){
+											$(this).closest('.text-input').removeClass('focused');
+										}
+										else{
+											return false
+										}
+									});
+									
+								});
+
+							});
+
+
+						</script>
+						<div class="cart-block__cart-items-list__item-wrapper list__item-wrapper-product-reg ">
+							<div class="cart-block__cart-order-reg-item">	
+								<div class="cart-block__cart-order-reg-item__title-block">
+									<div class="number_title-block">
+										<div class="cart-block__cart-order-reg-item__title-block__block-number"><p>2</p></div>
+										<div class="cart-block__cart-order-reg-item__title-block__title">Способ получения</div>
+									</div>
+								</div>
+
+								<div  class="full-width-block-list">
+									<div id="pickup" class="full-width-block-list-item"> 
+										<div class="left-side">
+											<p class="item-title">Самовывоз</p>
+											<p class="item-desc">Бесплатно</p>
+										</div>
+										<div class="right-side"><p class="item-option">Выбрать<br>  адрес получения</p></div> 
+									</div>
+									<div class="full-width-block-list-item">
+										<div class="left-side">
+											<p class="item-title">Курьерская доставка</p>
+											<p class="item-desc">От 1500 Р</p>
+										</div>
+										<div class="right-side"></div> 
+									</div>
+									<div class="full-width-block-list-item active">
+										<div class="left-side">
+											<p class="item-title">Транспортная компания</p>
+											<p class="item-desc">От 350 Р</p>
+										</div>
+										<div class="right-side"></div> 
+									</div>
+									<div class="full-width-block-list-item">
+										<div class="left-side">
+											<p class="item-title">Почта России</p>
+											<p class="item-desc">В зависимости от адреса</p>
+										</div>
+										<div class="right-side"></div> 
+									</div>
+									
+
+								</div> 
+							</div>							
+						</div>
+						<script>
+							
+							$(document).ready(function(){
+								$('.full-width-block-list-item').each(function(){
+									$(this).click(function(){
+										$('.full-width-block-list-item').removeClass('active');
+										$(this).addClass('active');
+
+
+										if($(this).is('#pickup')) {
+											
+											$('.delivery-fields-block, .pickup-fields-block').toggleClass('hidden-block');
+												
+										}
+										else{
+											$('.pickup-fields-block').addClass('hidden-block');
+											$('.delivery-fields-block').removeClass('hidden-block');
+										}
+									})
+
+								})
+							})
+
+						</script>
+
+						<div id="adress_fields" class="cart-block__cart-items-list__item-wrapper list__item-wrapper-product-reg">
+							<div class="cart-block__cart-order-reg-item">	
+								<div class="cart-block__cart-order-reg-item__title-block">
+									<div class="number_title-block">
+										<div class="cart-block__cart-order-reg-item__title-block__block-number"><p>3</p></div>
+										<div class="cart-block__cart-order-reg-item__title-block__title">Адрес получения</div>
+									</div>
+								</div>								
+								<div class="delivery-fields-block">
+									<div class="input-wrapper">
+										<div class="text-input">
+											<label class="cart-block__cart-order-reg-item__input" for="email"><select placeholder='Страна'>
+												<option value="0">Страна</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option>
+											</select>
+										</label>
+									</div>
+									<div class="text-input">
+										<label class="cart-block__cart-order-reg-item__input" for="email"><select placeholder='Город'>
+											<option value="0">Город</option>
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+										</select>
+									</label>
+								</div>
+
+							</div>
+							
+							<div class="input-wrapper">
+								<div class="text-input quarter">
+									<input class="text-input__input" type="text" name="" id="email"  placeholder=''><label class="text-input__label" for="email">Улица</label>
+								</div>
+
+								<div class="text-input quarter">
+									<input class="text-input__input" type="text" name="" id="phone"  placeholder=""><label class="text-input__label" for="phone">Дом</label>
+								</div>
+
+								<div class="text-input quarter">
+									<input class="text-input__input" type="text" name="" id="email"  placeholder=''><label class="text-input__label" for="email">Квартира/офис</label>
+								</div>
+
+								<div class="text-input quarter">
+									<input class="text-input__input" type="text" name="" id="phone"  placeholder=""><label class="text-input__label" for="email">Индекс</label>
+								</div>
+
 							</div>
 						</div>
 
+						<div class="pickup-fields-block hidden-block">
+							<div class="input-wrapper">
+								<div class="text-input">
+									<input class="text-input__input" type="email" name="" id="email" pattern="\S+@[a-z]+.[a-z]+"><label class="text-input__label" for="email">Страна</label>
+								</div>
+								<div class="text-input">
+									<input class="text-input__input" type="phone" name="" id="phone"  ><label class="text-input__label" for="phone">Город</label>
+								</div>
+
+							</div>
+							<div class="input-wrapper">
+								<div class="text-input quarter">
+									<input class="text-input__input" type="text" name="" id="email"  placeholder=''><label class="text-input__label" for="email">Улица</label>
+								</div>
+
+								<div class="text-input quarter">
+									<input class="text-input__input" type="text" name="" id="phone"  placeholder=""><label class="text-input__label" for="phone">Дом</label>
+								</div>
+
+								<div class="text-input quarter">
+									<input class="text-input__input" type="text" name="" id="email"  placeholder=''><label class="text-input__label" for="email">Квартира/офис</label>
+								</div>
+
+							</div>
+						</div>
+					</div>							
+				</div>
+
+				<div class="cart-block__cart-items-list__item-wrapper list__item-wrapper-product-reg ">
+					<div class="cart-block__cart-order-reg-item">	
+						<div class="cart-block__cart-order-reg-item__title-block">
+							<div class="number_title-block">
+								<div class="cart-block__cart-order-reg-item__title-block__block-number"><p>4</p></div>
+								<div class="cart-block__cart-order-reg-item__title-block__title">Товары в заказе</div>
+							</div>
+						</div>
+
+						<div class="full-width-block-list">
+							<div class="cart-block__cart-items-list__item d-table">	
+								<div class="item__image d-table__cell">						
+									<img src="assets/cart-items-list-img.jpg" alt="">					
+								</div>	
+								<div class="cart-block__item__info d-table__cell">	
+									<a href="	#">Набор латексных фитнес лент</a>
+									<div class="cart-block__item__meta">	160 гр.</div>
+								</div>
+
+								<div class="cart-block__item__price d-table__cell">	
+									<p class='actual-price price'><span>1690</span> Р</p>
+									<p class="old-price price"><span>2210 Р</span> </p>
+									<p class="discount-price price">Скидка <span>520 Р</span></p>
+								</div>
+							</div>
+							<div class="cart-block__cart-items-list__item d-table">	
+								<div class="item__image d-table__cell">						
+									<img src="assets/cart-items-list-img.jpg" alt="">					
+								</div>	
+								<div class="cart-block__item__info d-table__cell">	
+									<a href="	#">Набор латексных фитнес лент</a>
+									<div class="cart-block__item__meta">	160 гр.</div>
+								</div>
+
+								<div class="cart-block__item__price d-table__cell">	
+									<p class='actual-price price'><span>1690</span> Р</p>
+									<p class="old-price price"><span>2210 Р</span> </p>
+									<p class="discount-price price">Скидка <span>520 Р</span></p>
+								</div>
+							</div>
+							<div class="cart-block__cart-items-list__item d-table">	
+								<div class="item__image d-table__cell">						
+									<img src="assets/cart-items-list-img.jpg" alt="">					
+								</div>	
+								<div class="cart-block__item__info d-table__cell">	
+									<a href="	#">Набор латексных фитнес лент</a>
+									<div class="cart-block__item__meta">	160 гр.</div>
+								</div>
+
+								<div class="cart-block__item__price d-table__cell">	
+									<p class='actual-price price'><span>1690</span> Р</p>
+									<p class="old-price price"><span>2210 Р</span> </p>
+									<p class="discount-price price">Скидка <span>520 Р</span></p>
+								</div>
+							</div>
+
+
+							
+						</div> 
+					</div>							
+				</div>
+
+				<div class="cart-block__cart-items-list__item-wrapper list__item-wrapper-product-reg ">
+					<div class="cart-block__cart-order-reg-item">	
+						<div class="cart-block__cart-order-reg-item__title-block">
+							<div class="number_title-block">
+								<div class="cart-block__cart-order-reg-item__title-block__block-number"><p>5</p></div>
+								<div class="cart-block__cart-order-reg-item__title-block__title">Способ оплаты</div>
+							</div>
+						</div>
+
+						<div class="full-width-block-list">
+							<div class="full-width-block-list-item"> 
+								<div class="left-side">
+									<p class="item-title">Картой</p>
+
+								</div>
+
+							</div>
+							<div class="full-width-block-list-item">
+								<div class="left-side">
+									<p class="item-title">Платежной системой</p>
+
+								</div>
+								<div class="right-side"></div> 
+							</div>
+							<div class="full-width-block-list-item">
+								<div class="left-side">
+									<p class="item-title">Наличными при получениями</p>
+
+								</div>
+								<div class="right-side"></div> 
+							</div>
+
+
+
+						</div> 
+					</div>							
+				</div>
+
+			</div>
+			<aside class="cart-block__cart-review">
+				<div class="cart-block__cart-review__cart-items-counter-block">	
+					<p>	В корзине <span class="items-counter">3</span> товара</p>
+				</div>
+				<div class="cart-block__cart-review__price_block">	
+					<div class="cart-block__cart-review__product-price">
+						<p class="cart-block__cart-review__price_name">Стоимость товаров</p>
+						<div class="price b-font"><span>22 800</span>Р</div>
 					</div>
-					<div class="cart-block__cart-review">
-						<div class="cart-block__cart-review__cart-items-counter-block">	
-							<p>	В корзине <span class="items-counter">3</span> товара</p>
-						</div>
-						<div class="cart-block__cart-review__price_block">	
-							<div class="cart-block__cart-review__product-price">
-								<p class="cart-block__cart-review__price_name">Стоимость товаров</p>
-								<div class="price b-font"><span>22 800</span>Р</div>
-							</div>
-							<div class="cart-block__cart-review__discount-block">
-								<p class="cart-block__cart-review__price_name">Скидка</p>
-								<div class="discount-price b-font"><span>520</span>Р</div>
-							</div>
-							<div class="cart-block__cart-review__total-price-block">	
-								<p class="cart-block__cart-review__price_name">Итого к оплате</p>
-								<div class="total-price"><span>22 280</span>Р</div>
-							</div>
-						</div>
-
-						<button class="cart-block__cart-review__button">оформить заказ</button>
-						<p class="product-block__description__credit_link"><a class="how-start-block__help-link" href="#">Купить в рассрочку</a></p>
-						<p class="cart-block__cart-review__info-text">	Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с Условиями, а также с Условиями продажи.</p>
+					<div class="cart-block__cart-review__discount-block">
+						<p class="cart-block__cart-review__price_name">Скидка</p>
+						<div class="discount-price b-font"><span>520</span>Р</div>
+					</div>
+					<div class="cart-block__cart-review__total-price-block">	
+						<p class="cart-block__cart-review__price_name">Итого к оплате</p>
+						<div class="total-price"><span>22 280</span>Р</div>
 					</div>
 				</div>
 
-
-			</div>
-
-
-			<!-- end of cart block -->
-
-
-
-
-
-
-			<!-- footer -->
+				<button class="cart-block__cart-review__button">оформить заказ</button>
+				<p class="product-block__description__credit_link"><a class="how-start-block__help-link" href="#">Купить в рассрочку</a></p>
+				<p class="cart-block__cart-review__info-text">	Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с Условиями, а также с Условиями продажи.</p>
+			</aside>
 		</div>
-		<footer class="footer-padding-top footer">
-			<div class="footer__footer-wrapper">
 
-				<div class="footer__nav">
-					<div class="footer__nav__logo">
-						<img src="assets/logo-svg.svg" alt="">
-					</div>
-					<div class="footer__nav-bar-block">
-						<ul class="footer__nav-bar__navs">
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитнес ленты</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Эспандеры</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитбол</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Наборы</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Питание</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Дневник тренировок</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Программа тренировок</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer__footer-credits">
-					<div class="footer__footer-credits__icons">
-						<a href="#"><img src="assets/footer-inst.svg" alt=""></a>
-						<a href="#"><img src="assets/footer-ytb.svg" alt=""></a>
-						<a href="#"><img src="assets/footer-vk.svg" alt=""></a>
-					</div>
-					<div class="footer__footer-credits__official-info">			
-						<ul>
-							<li><a href="#">Доставка и оплата</a></li>
-							<li><a href="#">Полезная информация</a></li>
-							<li><a href="#">О компании</a></li>
-							<li><a href="#">Контакты</a></li>
-						</ul>
-					</div>
-					<div class="footer__footer-credits__phones">
-						<ul>
-							<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
-							<li><nobr><a href="tel:88001234573 ">8 (800) 123 45 73 </a></nobr></li>
-							<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
-						</ul>
-					</div>
-					<div class="footer__footer-credits__requisites">
-						ИП Чирченко А.И. 119261, <br>
-						Москва, Ленинский проспект 85 <br>	
-						ИНН 770970317833 / <br>
-						ОГРНИП 316774600448261		
-					</div>
-				</div>
-				<div class="footer__brand">
-					© 2019. RAKAMAKAFIT
-				</div>
-			</div>
-		</footer>
+
 	</div>
+
+
+	<!-- end of cart block -->
+
+<script>
+	$(document).ready(function(){
+		if($('.cart-block__cart-review').offset().top){
+			console.log(123);
+			$('.cart-block__cart-review').addClass('scrollable_block');
+		}
+		
+	})
+</script>
+
+
+
+
+	<!-- footer -->
+</div>
+<footer class="footer-padding-top footer">
+	<div class="footer__footer-wrapper">
+
+		<div class="footer__nav">
+			<div class="footer__nav__logo">
+				<img src="assets/logo-svg.svg" alt="">
+			</div>
+			<div class="footer__nav-bar-block">
+				<ul class="footer__nav-bar__navs">
+					<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитнес ленты</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Эспандеры</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитбол</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Наборы</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Питание</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Дневник тренировок</a></li>
+					<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Программа тренировок</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer__footer-credits">
+			<div class="footer__footer-credits__icons">
+				<a href="#"><img src="assets/footer-inst.svg" alt=""></a>
+				<a href="#"><img src="assets/footer-ytb.svg" alt=""></a>
+				<a href="#"><img src="assets/footer-vk.svg" alt=""></a>
+			</div>
+			<div class="footer__footer-credits__official-info">			
+				<ul>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">Полезная информация</a></li>
+					<li><a href="#">О компании</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="footer__footer-credits__phones">
+				<ul>
+					<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
+					<li><nobr><a href="tel:88001234573 ">8 (800) 123 45 73 </a></nobr></li>
+					<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
+				</ul>
+			</div>
+			<div class="footer__footer-credits__requisites">
+				ИП Чирченко А.И. 119261, <br>
+				Москва, Ленинский проспект 85 <br>	
+				ИНН 770970317833 / <br>
+				ОГРНИП 316774600448261		
+			</div>
+		</div>
+		<div class="footer__brand">
+			© 2019. RAKAMAKAFIT
+		</div>
+	</div>
+</footer>
+</div>
+
+
+
 </body>
 </html>
