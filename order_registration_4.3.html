@@ -89,8 +89,9 @@
 									</div>
 									<div class="cart-block__cart-order-reg-item__input-checkbox-wrapper">			
 										<input  class="cart-block__cart-order-reg-item__checbox"  type="checkbox" name="" id="cart-block__cart-order-reg-item-checkbox">
-										<label for="cart-block__cart-order-reg-item-checkbox"></label>
+										<label for="cart-block__cart-order-reg-item-checkbox">
 										<p class="cart-block__cart-order-reg-item__checbox-desc">Заказать как юрлицо</p>
+										</label>
 									</div>
 								</div>
 
@@ -103,7 +104,7 @@
 											<input class="text-input__input" type="email" name="" id="email" pattern="\S+@[a-z]+.[a-z]+"><label class="text-input__label" for="email">Email</label>
 										</div>
 										<div class="text-input">
-											<input class="text-input__input" type="phone" name="" id="phone"  ><label class="text-input__label" for="phone">Телефон</label>
+											<input class="text-input__input" type="text" name="" id="phone"  ><label class="text-input__label" for="phone">Телефон</label>
 										</div>								
 									</div>
 								</div>
@@ -167,7 +168,8 @@
 								<div class="form-fields delivery-fields-block">
 									<div class="input-wrapper">
 										<div class="text-input">
-											<label class="cart-block__cart-order-reg-item__input" for="email"><select placeholder='Страна'>
+											<label class="cart-block__cart-order-reg-item__input">
+												<select placeholder='Страна'>
 												<option value="0">Страна</option>
 												<option value="1">1</option>
 												<option value="2">2</option>
@@ -176,7 +178,8 @@
 										</label>
 									</div>
 									<div class="text-input">
-										<label class="cart-block__cart-order-reg-item__input" for="email"><select placeholder='Город'>
+										<label class="cart-block__cart-order-reg-item__input">
+											<select placeholder='Город'>
 											<option value="0">Город</option>
 											<option value="1">1</option>
 											<option value="2">2</option>
@@ -189,19 +192,19 @@
 							
 							<div class="input-wrapper">
 								<div class="text-input quarter">
-									<input class="text-input__input" type="text" name="" id="email"  placeholder=''><label class="text-input__label" for="email">Улица</label>
+									<input class="text-input__input" type="text" name="street" id="street"  placeholder=''><label class="text-input__label" for="street">Улица</label>
 								</div>
 
 								<div class="text-input quarter">
-									<input class="text-input__input" type="text" name="" id="phone"  placeholder=""><label class="text-input__label" for="phone">Дом</label>
+									<input class="text-input__input" type="text" name="" id="building"  placeholder=""><label class="text-input__label" for="building">Дом</label>
 								</div>
 
 								<div class="text-input quarter">
-									<input class="text-input__input" type="text" name="" id="email"  placeholder=''><label class="text-input__label" for="email">Квартира/офис</label>
+									<input class="text-input__input" type="text" name="" id="room"  placeholder=''><label class="text-input__label" for="room">Квартира/офис</label>
 								</div>
 
 								<div class="text-input quarter">
-									<input class="text-input__input" type="text" name="" id="phone"  placeholder=""><label class="text-input__label" for="email">Индекс</label>
+									<input class="text-input__input" type="text" name="" id="post_index"  placeholder=""><label class="text-input__label" for="post_index">Индекс</label>
 								</div>
 
 							</div>
@@ -210,24 +213,24 @@
 						<div class="form-fields pickup-fields-block hidden-block">
 							<div class="input-wrapper">
 								<div class="text-input">
-									<input class="text-input__input" type="email" name="" id="email" pattern="\S+@[a-z]+.[a-z]+"><label class="text-input__label" for="email">Страна</label>
+									<input class="text-input__input" type="text" name="" id="country"><label class="text-input__label" for="country">Страна</label>
 								</div>
 								<div class="text-input">
-									<input class="text-input__input" type="phone" name="" id="phone"  ><label class="text-input__label" for="phone">Город</label>
+									<input class="text-input__input" type="text" name="" id="city"  ><label class="text-input__label" for="city">Город</label>
 								</div>
 
 							</div>
 							<div class="input-wrapper">
 								<div class="text-input quarter">
-									<input class="text-input__input" type="text" name="" id="email"  placeholder=''><label class="text-input__label" for="email">Улица</label>
+									<input class="text-input__input" type="text" name="" id="street"  placeholder=''><label class="text-input__label" for="street">Улица</label>
 								</div>
 
 								<div class="text-input quarter">
-									<input class="text-input__input" type="text" name="" id="phone"  placeholder=""><label class="text-input__label" for="phone">Дом</label>
+									<input class="text-input__input" type="text" name="" id="building"  placeholder=""><label class="text-input__label" for="building">Дом</label>
 								</div>
 
 								<div class="text-input quarter">
-									<input class="text-input__input" type="text" name="" id="email"  placeholder=''><label class="text-input__label" for="email">Квартира/офис</label>
+									<input class="text-input__input" type="text" name="" id="room"  placeholder=''><label class="text-input__label" for="room">Квартира/офис</label>
 								</div>
 
 							</div>
@@ -362,7 +365,7 @@
 					</div>
 				</div>
 
-				<button class="cart-block__cart-review__button">оформить заказ</button>
+				<button class="cart-block__cart-review__button" disabled="disabled">оформить заказ</button>
 				<p class="product-block__description__credit_link"><a class="how-start-block__help-link" href="#">Купить в рассрочку</a></p>
 				<p class="cart-block__cart-review__info-text">	Нажимая на кнопку, вы подтверждаете своё совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с Условиями, а также с Условиями продажи.</p>
 			</aside>
@@ -376,6 +379,8 @@
 
 	<script>
 		$(document).ready(function(){
+
+			$('.text-input__input').val('');
 
 			$('.text-input__input').each(function(){
 				if($(this).val() !== ""){
@@ -397,6 +402,44 @@
 			const form = $('.form-fields'); 
 			form.not($('.pickup-fields-block')).find('.text-input__input').addClass('empty_field');
 
+			function checkInput(){
+				if($('#pickup').is('.active')) {
+					form.not($('.delivery-fields-block')).find('.text-input__input').each(function(){
+
+						if($(this).val() != ''){       
+							$(this).removeClass('empty_field');
+						}else {
+							$(this).addClass('empty_field');
+						}
+					});
+				} else {
+					form.not($('.pickup-fields-block')).find('.text-input__input').each(function(){
+
+						if($(this).val() != ''){       
+							$(this).removeClass('empty_field');
+						}else {
+							$(this).addClass('empty_field');
+						}
+					});
+
+				}
+			}
+
+			setInterval(function(){
+				checkInput();
+				const sizeEmpty = form.find('.empty_field').length;
+
+				if(sizeEmpty > 0 ){
+
+					$('.cart-block__cart-review__button').attr('disabled','disabled');
+
+				} else {
+					$('.cart-block__cart-review__button').removeAttr('disabled');
+				}
+
+			},500);
+
+
 
 
 
@@ -404,27 +447,27 @@
 
 			$('.full-width-block-list-item').each(function(){
 				$(this).click(function(){
+					if($(this).hasClass('active')) {
+						return false;
+					}
+
 					$('.full-width-block-list-item').removeClass('active');
 					$(this).addClass('active');
-
 					if($(this).is('#pickup')) {				
 						$('.delivery-fields-block, .pickup-fields-block').toggleClass('hidden-block');
-						$('.delivery-fields-block, .pickup-fields-block').find('.text-input__input').toggleClass('empty_field');
+						$('.pickup-fields-block').find('.text-input__input').addClass('empty_field');
+						$('.delivery-fields-block').find('.text-input__input').removeClass('empty_field');
 					}
 					else{
-						$('.pickup-fields-block').addClass('hidden-block');
-						$('.delivery-fields-block').removeClass('hidden-block');
-
+						$('.delivery-fields-block, .pickup-fields-block').toggleClass('hidden-block');
+						$('.pickup-fields-block').find('.text-input__input').removeClass('empty_field');
+						$('.delivery-fields-block').find('.text-input__input').addClass('empty_field');
 					}
+
+						
 				})
 
 			})
-			if($('.full-width-block-list-item').hasClass('.active')){
-				$(this).bind('click',function(){
-					console.log(123)
-					
-				});
-			}
 
 
 			$('.cart-block__cart-review').hcSticky({
@@ -434,59 +477,13 @@
 
 
 
+		});
+	</script>
 
 
 
 
-// $('.delivery-fields-block').find('.text-input__input').removeClass('empty_field');
-// $(this).find('.text-input__input').addClass('empty_field');
-
-
-//  else {
-// 	$('.delivery-fields-block .input-wrapper .text-input').find('.text-input__input').addClass('empty_field');
-// 	$('.pickup-fields-block .input-wrapper .text-input').find('.text-input__input').removeClass('empty_field');
-// };
-
-// 	$('.delivery-fields-block .input-wrapper .text-input').find('.text-input__input').removeClass('empty_field');
-// }else {
-// 	$('.delivery-fields-block .input-wrapper .text-input').find('.text-input__input').addClass('empty_field');
-// 	$('.pickup-fields-block .input-wrapper .text-input').find('.text-input__input').removeClass('empty_field');
-// }
-
-
-// function checkInput(){
-// 	form.find('.text-input__input').each(function(){
-// 	// '.text-input__input'
-
-// 	if($(this).val() != ''){       
-// 		$(this).removeClass('empty_field');
-// 	}else {
-// 		$(this).addClass('empty_field');
-// 	}
-// });
-// }
-
-// setInterval(function(){
-// 	checkInput();
-// 	const sizeEmpty = form.find('.empty_field').length;
-
-// 	if(sizeEmpty > 0 ){
-
-// 		$('.cart-block__cart-review__button').attr('disabled','disabled');
-
-// 	} else {
-// 		$('.cart-block__cart-review__button').removeAttr('disabled');
-// 	}
-
-// },500);
-
-});
-</script>
-
-
-
-
-<!-- footer -->
+	<!-- footer -->
 </div>
 <footer class="footer-padding-top footer">
 	<div class="footer__footer-wrapper">
