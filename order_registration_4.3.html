@@ -13,6 +13,7 @@
 	<script src="libs/jquery.min.js"></script>
 	<script src="libs/owl.carousel2/dist/owl.carousel.min.js"></script>
 	<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+	<script src="libs/hc-sticky-master/docs/hc-sticky.js"></script>
 </head>
 <body>
 	<div class="page_wrapper">
@@ -93,49 +94,23 @@
 									</div>
 								</div>
 
-								<div class="text-input full-width">
-									<input type="text" name="" id="FIO" placeholder='Фамилия Имя Отчество'><label class="text-input__label" for="FIO"></label>
-								</div>
-								<div class="input-wrapper">
-									<div class="text-input">
-										<input class="text-input__input" type="email" name="" id="email" pattern="\S+@[a-z]+.[a-z]+"><label class="text-input__label" for="email">Email</label>
+								<div class="form-fields">
+									<div class="text-input full-width">
+										<input class="text-input__input" type="text" name="" id="FIO" placeholder=''><label class="text-input__label" for="FIO">Фамилия Имя Отчество</label>
 									</div>
-									<div class="text-input">
-										<input class="text-input__input" type="phone" name="" id="phone"  ><label class="text-input__label" for="phone">Телефон</label>
+									<div class="input-wrapper">
+										<div class="text-input">
+											<input class="text-input__input" type="email" name="" id="email" pattern="\S+@[a-z]+.[a-z]+"><label class="text-input__label" for="email">Email</label>
+										</div>
+										<div class="text-input">
+											<input class="text-input__input" type="phone" name="" id="phone"  ><label class="text-input__label" for="phone">Телефон</label>
+										</div>								
 									</div>
-									
 								</div>
+
 							</div>							
 						</div>
-						<script>
-							$(document).ready(function(){
-
-								$('.text-input__input').each(function(){
-
-									if($(this).val() !== ""){
-										$(this).closest('.text-input').addClass('focused');
-									}
-									$(this).focus(function(){
-										
-										$(this).closest('.text-input').addClass('focused');
-
-									});
-
-									$(this).blur(function() {
-										if($(this).val() == ""){
-											$(this).closest('.text-input').removeClass('focused');
-										}
-										else{
-											return false
-										}
-									});
-									
-								});
-
-							});
-
-
-						</script>
+						
 						<div class="cart-block__cart-items-list__item-wrapper list__item-wrapper-product-reg ">
 							<div class="cart-block__cart-order-reg-item">	
 								<div class="cart-block__cart-order-reg-item__title-block">
@@ -160,7 +135,7 @@
 										</div>
 										<div class="right-side"></div> 
 									</div>
-									<div class="full-width-block-list-item active">
+									<div class="full-width-block-list-item">
 										<div class="left-side">
 											<p class="item-title">Транспортная компания</p>
 											<p class="item-desc">От 350 Р</p>
@@ -179,30 +154,7 @@
 								</div> 
 							</div>							
 						</div>
-						<script>
-							
-							$(document).ready(function(){
-								$('.full-width-block-list-item').each(function(){
-									$(this).click(function(){
-										$('.full-width-block-list-item').removeClass('active');
-										$(this).addClass('active');
-
-
-										if($(this).is('#pickup')) {
-											
-											$('.delivery-fields-block, .pickup-fields-block').toggleClass('hidden-block');
-												
-										}
-										else{
-											$('.pickup-fields-block').addClass('hidden-block');
-											$('.delivery-fields-block').removeClass('hidden-block');
-										}
-									})
-
-								})
-							})
-
-						</script>
+						
 
 						<div id="adress_fields" class="cart-block__cart-items-list__item-wrapper list__item-wrapper-product-reg">
 							<div class="cart-block__cart-order-reg-item">	
@@ -212,7 +164,7 @@
 										<div class="cart-block__cart-order-reg-item__title-block__title">Адрес получения</div>
 									</div>
 								</div>								
-								<div class="delivery-fields-block">
+								<div class="form-fields delivery-fields-block">
 									<div class="input-wrapper">
 										<div class="text-input">
 											<label class="cart-block__cart-order-reg-item__input" for="email"><select placeholder='Страна'>
@@ -255,7 +207,7 @@
 							</div>
 						</div>
 
-						<div class="pickup-fields-block hidden-block">
+						<div class="form-fields pickup-fields-block hidden-block">
 							<div class="input-wrapper">
 								<div class="text-input">
 									<input class="text-input__input" type="email" name="" id="email" pattern="\S+@[a-z]+.[a-z]+"><label class="text-input__label" for="email">Страна</label>
@@ -358,23 +310,30 @@
 							<div class="full-width-block-list-item"> 
 								<div class="left-side">
 									<p class="item-title">Картой</p>
-
 								</div>
-
+								<div class="right-side">
+									<div class="icon_block" style="background: url('assets/cash_icon.svg') no-repeat center"></div>
+								</div> 
 							</div>
+
 							<div class="full-width-block-list-item">
 								<div class="left-side">
 									<p class="item-title">Платежной системой</p>
-
 								</div>
-								<div class="right-side"></div> 
+								<div class="right-side">
+									<div class="icon_block" style="background: url('assets/cash_icon.svg')no-repeat center"></div>
+									<div class="icon_block" style="background: url('assets/cash_icon.svg')no-repeat center"></div>
+									<div class="icon_block" style="background: url('assets/cash_icon.svg')no-repeat center"></div>
+								</div> 
 							</div>
+
 							<div class="full-width-block-list-item">
 								<div class="left-side">
 									<p class="item-title">Наличными при получениями</p>
-
 								</div>
-								<div class="right-side"></div> 
+								<div class="right-side">
+									<div class="icon_block" style="background: url('assets/cash_icon.svg')no-repeat center"></div>
+								</div> 
 							</div>
 
 
@@ -415,20 +374,119 @@
 
 	<!-- end of cart block -->
 
-<script>
-	$(document).ready(function(){
-		if($('.cart-block__cart-review').offset().top){
-			console.log(123);
-			$('.cart-block__cart-review').addClass('scrollable_block');
-		}
-		
-	})
+	<script>
+		$(document).ready(function(){
+
+			$('.text-input__input').each(function(){
+				if($(this).val() !== ""){
+					$(this).closest('.text-input').addClass('focused');
+				}
+				$(this).focus(function(){
+					$(this).closest('.text-input').addClass('focused');
+				});
+				$(this).blur(function() {
+					if($(this).val() == ""){
+						$(this).closest('.text-input').removeClass('focused');
+					}
+					else{
+						return false
+					}
+				});
+			});
+
+			const form = $('.form-fields'); 
+			form.not($('.pickup-fields-block')).find('.text-input__input').addClass('empty_field');
+
+
+
+
+
+
+			$('.full-width-block-list-item').each(function(){
+				$(this).click(function(){
+					$('.full-width-block-list-item').removeClass('active');
+					$(this).addClass('active');
+
+					if($(this).is('#pickup')) {				
+						$('.delivery-fields-block, .pickup-fields-block').toggleClass('hidden-block');
+						$('.delivery-fields-block, .pickup-fields-block').find('.text-input__input').toggleClass('empty_field');
+					}
+					else{
+						$('.pickup-fields-block').addClass('hidden-block');
+						$('.delivery-fields-block').removeClass('hidden-block');
+
+					}
+				})
+
+			})
+			if($('.full-width-block-list-item').hasClass('.active')){
+				$(this).bind('click',function(){
+					console.log(123)
+					
+				});
+			}
+
+
+			$('.cart-block__cart-review').hcSticky({
+				top: 200,
+				followScroll: false
+			});
+
+
+
+
+
+
+
+// $('.delivery-fields-block').find('.text-input__input').removeClass('empty_field');
+// $(this).find('.text-input__input').addClass('empty_field');
+
+
+//  else {
+// 	$('.delivery-fields-block .input-wrapper .text-input').find('.text-input__input').addClass('empty_field');
+// 	$('.pickup-fields-block .input-wrapper .text-input').find('.text-input__input').removeClass('empty_field');
+// };
+
+// 	$('.delivery-fields-block .input-wrapper .text-input').find('.text-input__input').removeClass('empty_field');
+// }else {
+// 	$('.delivery-fields-block .input-wrapper .text-input').find('.text-input__input').addClass('empty_field');
+// 	$('.pickup-fields-block .input-wrapper .text-input').find('.text-input__input').removeClass('empty_field');
+// }
+
+
+// function checkInput(){
+// 	form.find('.text-input__input').each(function(){
+// 	// '.text-input__input'
+
+// 	if($(this).val() != ''){       
+// 		$(this).removeClass('empty_field');
+// 	}else {
+// 		$(this).addClass('empty_field');
+// 	}
+// });
+// }
+
+// setInterval(function(){
+// 	checkInput();
+// 	const sizeEmpty = form.find('.empty_field').length;
+
+// 	if(sizeEmpty > 0 ){
+
+// 		$('.cart-block__cart-review__button').attr('disabled','disabled');
+
+// 	} else {
+// 		$('.cart-block__cart-review__button').removeAttr('disabled');
+// 	}
+
+// },500);
+
+});
 </script>
 
 
 
 
-	<!-- footer -->
+<!-- footer -->
 </div>
 <footer class="footer-padding-top footer">
 	<div class="footer__footer-wrapper">

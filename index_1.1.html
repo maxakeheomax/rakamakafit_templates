@@ -460,11 +460,17 @@
 
 
 
-			const form = $('.auth-block-form');
+			const form = $('.auth-block-form'); 
+
+// '.text-input'
 
 			form.find('.reg__form__input').addClass('empty_field');
+// '.text-input__input'
+
 			function checkInput(){
 				form.find('.registration_field').each(function(){
+	// '.text-input__input'
+					
 					if($(this).val() != ''){       
 						$(this).removeClass('empty_field');
 					}else {
@@ -486,6 +492,8 @@
 				}
 
 			},500);
+
+
 
 
 			$('.header__nav-bar__login-button').click(function(){

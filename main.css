@@ -3903,6 +3903,7 @@ h2{
 	width:100%;
 	margin-left:52px;
 	position: relative;
+	margin-block-end: 32px;
 }
 .cart-block p {
 	margin:0;
@@ -3941,15 +3942,18 @@ h2{
 	background-color: #ffffff;
 	min-height: 94px;
 	width: 736px;
-	margin-bottom:24px;
+
+}
+.cart-block__cart-items-list__item-wrapper:not(:last-child) {
+		margin-bottom:24px;
 }
 .cart-block__cart-items-list__item-wrapper.list__item-wrapper-product-reg {
 	width:696px;
 	padding:40px;
 }
-.cart-block__cart-items-list__item-wrapper:last-child {
+/*.cart-block__cart-items-list__item-wrapper:last-child {
 	margin-bottom: 66px;
-}
+}*/
 .cart-block__cart-items-list__item{
 	height: 94px;
 	width:100%;
@@ -4066,8 +4070,8 @@ h2{
 .cart-block__cart-review {
 	width:318px;
 	height: 100%;
+	max-height:390px;
 	background-color: #ffffff;
-	margin-bottom:104px;
 	padding: 39px 33px 50px 50px ;
 }
 .cart-block__cart-review__cart-items-counter-block,
@@ -4204,8 +4208,14 @@ h2{
 	width: 128px;
 }
 .text-input select {
-	padding: 19px 16px;
+	padding: 18px 16px;
 	width: 340px;
+	webkit-appearance: none;
+	 -moz-appearance: none;
+	 appearance: none;
+	 border:solid 1px #d9d9d9;
+
+
 }
 .text-input.full-width,
 .text-input.full-width input {
@@ -4272,6 +4282,7 @@ justify-content: flex-start;
 	padding:24px 25px ;
 	display: flex;
 	justify-content: space-between;
+	align-items:center;
 }
 .full-width-block-list-item.active {
 border: 1px solid #00b1e9;
@@ -4289,7 +4300,7 @@ border: 1px solid #00b1e9;
 	font-stretch: normal;
 	line-height: normal;
 	letter-spacing: normal;
-	margin-bottom: 8px;
+	
 }
 .full-width-block-list-item .item-desc {
 	font-size: 16px;
@@ -4299,6 +4310,7 @@ border: 1px solid #00b1e9;
 	line-height: normal;
 	letter-spacing: normal;
 	color: #6d6d6d;
+	margin-top: 8px;
 }
 .full-width-block-list-item .item-option {
 	font-size: 16px;
@@ -4317,6 +4329,16 @@ border: 1px solid #00b1e9;
 .text-input.focused .text-input__label{
 	top:5px;
 	font-size:12px;
+}
+.full-width-block-list-item .right-side {
+	display: flex;
+	max-width:50%;
+	justify-content:space-between;
+}
+.full-width-block-list-item .right-side .icon_block {
+	width:50px;
+	min-height:30px;
+
 }
 /*end of cart-block*/
 /*footer */
