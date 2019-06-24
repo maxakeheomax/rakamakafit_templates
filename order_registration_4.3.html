@@ -127,7 +127,7 @@
 											<p class="item-title">Самовывоз</p>
 											<p class="item-desc">Бесплатно</p>
 										</div>
-										<div class="right-side"><p class="item-option">Выбрать<br>  адрес получения</p></div> 
+										<div class="right-side"><p class="item-option" id="popUp_call">Выбрать<br>  адрес получения</p></div> 
 									</div>
 									<div class="full-width-block-list-item">
 										<div class="left-side">
@@ -475,6 +475,20 @@
 				followScroll: false
 			});
 
+			$('#popUp_call').click(function(){
+				$('body').css('overflow-y','hidden');
+				$('.page_content').css('filter', 'blur(10px)');
+				$('.pickup_map-popUp').fadeIn();
+			});
+
+			$('.close-button').click(function(){
+				$('body').css('overflow-y','inherit');
+					$('.page_content').css('filter', 'none')
+					$('.pickup_map-popUp').fadeOut();
+			})
+
+			
+
 
 
 		});
@@ -539,7 +553,20 @@
 </footer>
 </div>
 
+<!-- pickup_map-popUp -->
+<div class="pickup_map-popUp hidden-block">
+	<div class="blur-block"></div>
+		<div class="close-button"></div>
+	<div class="left-side">
+		<div class="img-block"></div>
+	</div>
+	<div class="right-side">
+		<div class="map-block"></div>
+	</div>
 
+</div>
+
+<!--end of pickup_map-popUp -->
 
 </body>
 </html>
