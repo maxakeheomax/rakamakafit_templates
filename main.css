@@ -4611,6 +4611,14 @@ h2{
 .thanks-for-order-block .up-hello-block__left-side__title {
 	margin-bottom:25px;
 }
+.thanks-for-order-block p {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+}
 .pop-products.owl-carousel .owl-nav .owl-prev,
 .pop-products.owl-carousel .owl-nav .owl-next {
 	
