@@ -459,7 +459,8 @@
 						$('.delivery-fields-block').find('.text-input__input').removeClass('empty_field');
 					}
 					else{
-						$('.delivery-fields-block, .pickup-fields-block').toggleClass('hidden-block');
+						$('.pickup-fields-block').addClass('hidden-block');
+							$('.delivery-fields-block').removeClass('hidden-block');
 						$('.pickup-fields-block').find('.text-input__input').removeClass('empty_field');
 						$('.delivery-fields-block').find('.text-input__input').addClass('empty_field');
 					}
@@ -478,13 +479,13 @@
 			$('#popUp_call').click(function(){
 				$('body').css('overflow-y','hidden');
 				$('.page_content').css('filter', 'blur(10px)');
-				$('.pickup_map-popUp').fadeIn();
+				$('.popUp').fadeIn();
 			});
 
 			$('.close-button').click(function(){
 				$('body').css('overflow-y','inherit');
 					$('.page_content').css('filter', 'none')
-					$('.pickup_map-popUp').fadeOut();
+					$('.popUp').fadeOut();
 			})
 
 			
@@ -554,15 +555,17 @@
 </div>
 
 <!-- pickup_map-popUp -->
-<div class="pickup_map-popUp hidden-block">
+<div class="popUp pickup_map-popUp hidden-block">
 	<div class="blur-block"></div>
+<div class="wrapper-block">
 		<div class="close-button"></div>
-	<div class="left-side">
-		<div class="img-block"></div>
-	</div>
-	<div class="right-side">
-		<div class="map-block"></div>
-	</div>
+			<div class="left-side">
+				<div class="img-block"></div>
+			</div>
+			<div class="right-side">
+				<div class="map-block"></div>
+			</div>
+		</div>
 
 </div>
 
