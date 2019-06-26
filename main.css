@@ -4672,6 +4672,7 @@ h2{
 	letter-spacing: normal;
 	color: #8f8f8f;
 	padding: 6px 12px 7px 20px;
+	cursor: pointer;
 }
 .map-block__tab.active li{
 	color: #000000;
@@ -4682,9 +4683,14 @@ h2{
 }
 /*end-of map-block*/
 /*contacts-text-block*/
+.contacts h2 {
+	font-size: 28px;
+}
+
 .contacts-tetx-block-row {
 display: flex;
 justify-content: space-between;
+margin-bottom: 40px;
 }
 
 .text-block-item {
@@ -4692,14 +4698,22 @@ max-width: 458px;
 min-width: 309px;
 }
 .text-block-item p {
-	font-size: 24px;
+	font-size: 18px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.5;
   letter-spacing: normal;
+  margin: 0;
 }
 /*end of contacts-text-block */
+/*popUp-gift-block*/
+.popUp-gift .wrapper-block {
+	background: url('assets/popup-gift.png') no-repeat;
+	min-width: 1346px;
+}
+
+/*end of popUp-gift-block*/
 /*footer */
 .footer-padding-top {
 	padding-top: 30px;

@@ -15,12 +15,36 @@
 	<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
+		<!-- popUp-gift-block -->
+				<div class="popUp popUp-gift hidden-block">
+					<div class="blur-block"></div>	
+					<div class="wrapper-block">
+						<div class="close-button"></div>
+						
+					</div>
+				</div>
+
+
+				<script>
+					$('#popUp_call').click(function(){
+						$('body').css('overflow-y','hidden');
+						$('.page_content, .page_wrapper').css('filter', 'blur(10px)');
+						$('.popUp').fadeIn();
+					});
+
+					$('.close-button').click(function(){
+						$('body').css('overflow-y','inherit');
+						$('.page_content, .page_wrapper').css('filter', 'none')
+						$('.popUp').fadeOut();
+					})
+				</script>
+				<!-- end of popUp-gift-block -->
 	<div class="page_wrapper">
 		<div class="page_content">
 			<!-- header block -->
 			<header class="header">
 				<nav class="header__nav-bar">
-					<div class="header__nav-bar__logo">
+					<div class="header__nav-bar__logo" id="popUp_call">
 						<img src="assets/logo-svg.svg" alt="logo" class="header__nav-bar__logo-img">
 					</div>
 					<div class="header__nav-bar-block">
@@ -57,6 +81,7 @@
 						</a>
 					</div>
 				</nav>
+
 			</header>
 			<!-- end of header block -->
 			<!-- aside block -->
