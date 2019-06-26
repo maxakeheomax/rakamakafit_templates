@@ -454,22 +454,12 @@
 			});
 
 
-
-
-
-
-
-
 			const form = $('.auth-block-form'); 
 
-// '.text-input'
-
 			form.find('.reg__form__input').addClass('empty_field');
-// '.text-input__input'
-
 			function checkInput(){
 				form.find('.registration_field').each(function(){
-	// '.text-input__input'
+
 					
 					if($(this).val() != ''){       
 						$(this).removeClass('empty_field');
@@ -527,10 +517,6 @@
 
 			closeAsideForm('.close-button');
 			closeAsideForm('.login-block__form__submit');
-
-
-
-
 
 		});
 	</script>
@@ -659,7 +645,7 @@
 
 		<div class="greetings-block hidden-block">
 			<h2>Регистрация прошла успешно!</h2>
-			<span class="hello-icon">👋</span>
+			<span class="hello-icon" style="background: url('assets/waving-hand-sign.png') no-repeat; background-size:contain; "></span>
 			<div class="up-hello-block__left-side__title">Привет, Капитолина</div>
 			<p class="greetings-block__disc">Мы рады, что ты к нам присоединилась! 
 			Начни меняться вместе с нами прямо сейчас!</p>
