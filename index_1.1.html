@@ -15,30 +15,60 @@
 	<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
-		<!-- popUp-gift-block -->
-				<div class="popUp popUp-gift hidden-block">
-					<div class="blur-block"></div>	
-					<div class="wrapper-block">
-						<div class="close-button"></div>
-						
+	<!-- popUp-gift-block -->
+	<div class="popUp popUp-gift hidden-block">
+		<div class="blur-block"></div>	
+		<div class="wrapper-block">
+
+			<div class="popUp-gift__form-block">
+				<div class="close-button"></div>
+				<div class="promo-form-block__title">Не уходи без подарка!</div>
+				<div class="popUp-gift__form-block_desc">Я хочу подарить тебе книжку с рецептами очень вкусных десертов, которые совершенно не повредят твоей фигуре!</div>
+				<form class="" action="#">
+					<div class="">
+						<label name="mail">
+							<input class="promo-form-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
+						</label>
+						<button class="promo-form-block__form__submit" type="submit">получить</button>
 					</div>
-				</div>
+					<div class="promo-form-block__form__input-checkbox-wrapper">			
+						<input  class="promo-form-block__form__checbox"  type="checkbox" name="" id="promo-checkbox">
+						<label for="promo-checkbox"></label>
+						<p class="promo-form-block__form__checbox-desc">Я согласен с обработкой персональных данных</p>
+					</div>
+				</form>
+			</div>
 
 
-				<script>
-					$('#popUp_call').click(function(){
-						$('body').css('overflow-y','hidden');
-						$('.page_content, .page_wrapper').css('filter', 'blur(10px)');
-						$('.popUp').fadeIn();
-					});
 
-					$('.close-button').click(function(){
-						$('body').css('overflow-y','inherit');
-						$('.page_content, .page_wrapper').css('filter', 'none')
-						$('.popUp').fadeOut();
-					})
-				</script>
-				<!-- end of popUp-gift-block -->
+		</div>
+	</div>
+
+
+	<script>
+		$(document).ready(function(){
+			 function ShowPopUp(delay_time){setInterval(function(){
+				if($('.popUp').css('display') == 'block'){
+					return false
+				}else{						
+					$('body').css('overflow-y','hidden');
+					$('.page_content, .page_wrapper').css('filter', 'blur(10px)');
+					$('.popUp').fadeIn();
+				}
+			}, delay_time);
+			}
+
+ShowPopUp(15000);
+
+			$('.close-button').click(function(){
+				$('body').css('overflow-y','inherit');
+				$('.page_content, .page_wrapper').css('filter', 'none')
+				$('.popUp').fadeOut();
+			});
+		});
+
+	</script>
+	<!-- end of popUp-gift-block -->
 	<div class="page_wrapper">
 		<div class="page_content">
 			<!-- header block -->
