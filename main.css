@@ -4743,13 +4743,35 @@ h2{
 .popUp-gift .promo-form-block__form__checbox + label {
 	border: solid 1px #d9d9d9;
 	width: 25px;
-height: 25px;
+	height: 25px;
 }
 .popUp-gift .close-button {
 	right: -57px;
 	top: -37px;
 }
 /*end of popUp-gift-block*/
+/*personal-cabinet*/
+.personal-cabinet-block {
+	margin-left: 52px;
+}
+.personal-cabinet-block__title {
+	font-family: 'FranklinGothicDemi',sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+}
+.personal-cabinet__navbar li {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 3;
+	letter-spacing: normal;
+}
+/*end of personal-cabinet*/
 /*footer */
 .footer-padding-top {
 	padding-top: 30px;
