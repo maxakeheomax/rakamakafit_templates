@@ -4767,7 +4767,7 @@ h2{
 .personal-cabinet-block__content__page-item {
 	margin-bottom: 57px;
 	background-color: #fff;
-padding: 40px;
+	padding: 40px;
 }
 .orders .personal-cabinet-block__content__page-item {
 	margin-bottom:24px;
@@ -4986,35 +4986,41 @@ padding: 40px;
 	letter-spacing: normal;
 }
 .order_manage_buttons {
-	  cursor: pointer;
-	  width: 40%;
+	cursor: pointer;
+	width: 40%;
 }
 .order_manage_buttons .repeat_button {
 	font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #e31377;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #e31377;
+}
+.order_manage_buttons .repeat_button i {
+	font-size: 13px;
+	vertical-align: middle;
+	position: relative;
+	bottom: 1px;
 }
 .order_manage_buttons .cancel_button {
-	  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #8a8a8a;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #8a8a8a;
 }
 .order-date {
-	  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #8a8a8a;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #8a8a8a;
 }
 .flex-line {
 	display: flex;
