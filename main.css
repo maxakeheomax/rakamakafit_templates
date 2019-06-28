@@ -4926,7 +4926,30 @@ h2{
 .remove-item::after{
 	transform: rotate(-45deg);
 }
-
+.subscribitions .user_adress {
+	font-size: 16px;
+	font-weight: 500;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.38;
+	letter-spacing: normal;
+}
+.subscribitions .user_info {
+	margin-bottom: 24px;
+}
+.unsubscribe {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #8a8a8a;
+	cursor: pointer;
+}
+.subscribitions .personal-cabinet-block__title {
+	margin-bottom: 44px;
+}
 /*end of personal-cabinet*/
 /*footer */
 .footer-padding-top {
