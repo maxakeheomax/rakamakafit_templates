@@ -4956,6 +4956,11 @@ padding: 40px;
 .orders .cart-block__cart-items-list__item.d-table {
 	margin-bottom:28px;
 }
+.orders hr {
+	height:1px;
+	border:none;
+	background-color: #979797;
+}
 .order_info {
 	width: 70%;
 	margin-top: 30px;
