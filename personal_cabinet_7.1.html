@@ -81,7 +81,7 @@
 					<div class="personal-cabinet-block__navbar-block">
 						<div class="personal-cabinet-block__title">Привет, Капитолина!</div>
 						<ul class="personal-cabinet__navbar">
-							<li><a href="#">Мой профиль</a></li>
+							<li><a class="personal-cabinet__navbar_link__active" href="#">Мой профиль</a></li>
 							<li><a href="#">Текущие заказы</a></li>
 							<li><a href="#">История заказов</a></li>
 							<li><a href="#">Подписки</a></li>
@@ -90,99 +90,123 @@
 					<div class="personal-cabinet-block__content__page">
 						<div class="personal-cabinet-block__content__page-item">
 							<div class="personal-cabinet-block__title">Контактные данные</div>
-							<form class="in-the-know-form-block__form" action="#">
-								<div class="in-the-know-form-block__form__input-wrapper">
-									<label class="full-width" name="name">
-										<input class="in-the-know-form-block__form__input" type="text" required  pattern="[A-Za-zА-Яа-яЁё]" placeholder='ФИО'>
-									</label>					
-								</div>
-								<div class="in-the-know-form-block__form__input-wrapper">
-									<label  name="mail">
-										<input class="in-the-know-form-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
-									</label>
-									<label  name="phone">
-										<input class="in-the-know-form-block__form__input " type="text" required  pattern="([+]\d{11}|\d{11})" placeholder='Телефон'>
-									</label>
-								</div>
-									<button class="in-the-know-form-block__form__submit" type="submit">получить прайс</button>
-									<div class="cart-block__cart-order-reg-item__input-checkbox-wrapper">			
-										<input  class="cart-block__cart-order-reg-item__checbox"  type="checkbox" name="" id="cart-block__cart-order-reg-item-checkbox">
-										<label for="cart-block__cart-order-reg-item-checkbox">
-										<p class="cart-block__cart-order-reg-item__checbox-desc">Хочу получать новостную рассылку</p>
-										</label>
+							<div class="personal-cabinet-block__form__input-wrapper">
+								<label class="full-width" name="name">
+									<input class="personal-cabinet-block__form__input full-width" type="text" required  pattern="[A-Za-zА-Яа-яЁё]" placeholder='ФИО'>
+								</label>					
+							</div>
+							<div class="personal-cabinet-block__form__input-wrapper two_fields">
+								<label class="half_width "  name="mail">
+									<input class="personal-cabinet-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
+								</label>
+								<label class="half_width "  name="phone">
+									<input class="personal-cabinet-block__form__input " type="text" required  pattern="([+]\d{11}|\d{11})" placeholder='Телефон'>
+								</label>
+							</div>
+							<button class="personal-cabinet-block__form__submit" type="submit">изменить пароль</button>
+							<div class="cart-block__cart-order-reg-item__input-checkbox-wrapper">			
+								<input  class="cart-block__cart-order-reg-item__checbox"  type="checkbox" name="" id="cart-block__cart-order-reg-item-checkbox">
+								<label for="cart-block__cart-order-reg-item-checkbox">
+									<p class="cart-block__cart-order-reg-item__checbox-desc">Хочу получать новостную рассылку</p>
+								</label>
+							</div>
+						</div>
+
+						<div class="personal-cabinet-block__content__page-item">
+							<div class="personal-cabinet-block__title">Адреса доставки</div>
+							<div class="user_info">
+								<div class="card_item">
+									<div class="user_name">Капиталина Ивановна Константинопольская</div>
+									<p class="user_adress">614112, Россия, Москва, Улица Королева, д. 60, кв. 235</p>
+									<p class="user_phone">+7 (999) 345 67 89</p>	
+								</div>		
+								<div class="remove-item"></div>		
+							</div>
+							</div>
+
+							<div class="personal-cabinet-block__content__page-item">
+								<div class="personal-cabinet-block__title">Карты</div>
+								<div class="user_info">
+									<div class="card_item">
+										<div class="card-info">
+											<p class='user_name card_number'>5536 41** **** 6778</p>
+											<p class="card_date">06/20</p>
+										</div>									
 									</div>
-							</form>
+									<div class="remove-item"></div>
+								</div>						
+								<!-- <button class="personal-cabinet-block__form__submit" type="submit">Добавить карту</button> -->
+							</div>
 
 
 
 						</div>
 					</div>
+
+
+
+
+
+
+
+
 				</div>
-
-
-
-
-
-
-
-
+				<!--end of personal-cabinet block -->
+				<!-- footer -->
 			</div>
-			<!--end of personal-cabinet block -->
-			<!-- footer -->
+			<footer class="footer-padding-top footer">
+				<div class="footer__footer-wrapper">
+
+					<div class="footer__nav">
+						<div class="footer__nav__logo">
+							<img src="assets/logo-svg.svg" alt="">
+						</div>
+						<div class="footer__nav-bar-block">
+							<ul class="footer__nav-bar__navs">
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитнес ленты</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Эспандеры</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитбол</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Наборы</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Питание</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Дневник тренировок</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Программа тренировок</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__footer-credits">
+						<div class="footer__footer-credits__icons">
+							<a href="#"><img src="assets/footer-inst.svg" alt=""></a>
+							<a href="#"><img src="assets/footer-ytb.svg" alt=""></a>
+							<a href="#"><img src="assets/footer-vk.svg" alt=""></a>
+						</div>
+						<div class="footer__footer-credits__official-info">			
+							<ul>
+								<li><a href="#">Доставка и оплата</a></li>
+								<li><a href="#">Полезная информация</a></li>
+								<li><a href="#">О компании</a></li>
+								<li><a href="#">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="footer__footer-credits__phones">
+							<ul>
+								<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
+								<li><nobr><a href="tel:88001234573 ">8 (800) 123 45 73 </a></nobr></li>
+								<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
+							</ul>
+						</div>
+						<div class="footer__footer-credits__requisites">
+							ИП Чирченко А.И. 119261, <br>
+							Москва, Ленинский проспект 85 <br>	
+							ИНН 770970317833 / <br>
+							ОГРНИП 316774600448261		
+						</div>
+					</div>
+					<div class="footer__brand">
+						© 2019. RAKAMAKAFIT
+					</div>
+				</div>
+			</footer>
 		</div>
-		<footer class="footer-padding-top footer">
-			<div class="footer__footer-wrapper">
 
-				<div class="footer__nav">
-					<div class="footer__nav__logo">
-						<img src="assets/logo-svg.svg" alt="">
-					</div>
-					<div class="footer__nav-bar-block">
-						<ul class="footer__nav-bar__navs">
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитнес ленты</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Эспандеры</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитбол</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Наборы</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Питание</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Дневник тренировок</a></li>
-							<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Программа тренировок</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="footer__footer-credits">
-					<div class="footer__footer-credits__icons">
-						<a href="#"><img src="assets/footer-inst.svg" alt=""></a>
-						<a href="#"><img src="assets/footer-ytb.svg" alt=""></a>
-						<a href="#"><img src="assets/footer-vk.svg" alt=""></a>
-					</div>
-					<div class="footer__footer-credits__official-info">			
-						<ul>
-							<li><a href="#">Доставка и оплата</a></li>
-							<li><a href="#">Полезная информация</a></li>
-							<li><a href="#">О компании</a></li>
-							<li><a href="#">Контакты</a></li>
-						</ul>
-					</div>
-					<div class="footer__footer-credits__phones">
-						<ul>
-							<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
-							<li><nobr><a href="tel:88001234573 ">8 (800) 123 45 73 </a></nobr></li>
-							<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
-						</ul>
-					</div>
-					<div class="footer__footer-credits__requisites">
-						ИП Чирченко А.И. 119261, <br>
-						Москва, Ленинский проспект 85 <br>	
-						ИНН 770970317833 / <br>
-						ОГРНИП 316774600448261		
-					</div>
-				</div>
-				<div class="footer__brand">
-					© 2019. RAKAMAKAFIT
-				</div>
-			</div>
-		</footer>
-	</div>
-
-</body>
-</html>
+	</body>
+	</html>
