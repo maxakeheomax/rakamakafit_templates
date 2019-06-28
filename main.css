@@ -89,6 +89,7 @@ h2{
 }
 .bg-lightgray {
 	background-color: #f8f8f8;
+	padding-block-end: 1px;
 }
 .full-width {
 	width:100%;
@@ -3925,6 +3926,95 @@ h2{
 	border: solid 1px #d9d9d9;
 }
 /*end of fake-detection-form*/
+
+/*landing-styles*/
+.content-block {
+	width: 100%;
+	max-width: 663px;
+	margin: 0 auto;
+}
+.content-block h2 {
+	text-align: center;
+}
+.content-block__slogan {
+	font-size: 24px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.5;
+	letter-spacing: normal;
+	text-align: center;
+}
+.content-block__desc {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+	margin-block-end: 86px;
+}
+.order-checked-form {
+	display: flex;
+	position: relative;
+	margin: 24px 0 34px;
+}
+.order-checked-form input{
+	width: 382px;
+	height: 52px;
+	border: solid 1px #d9d9d9;
+	background-color: #ffffff;
+	border-radius: 25px;
+	outline: none;
+	padding: 0 90px 0 40px;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+	color: #909090;
+}
+.order-checked-form button{
+	width: 207px;
+	height: 56px;
+	border-radius: 32px;
+	background-color: #e31377;
+	border:none;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 0.88px;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-family: 'Roboto', sans-serif;
+	position: absolute;
+	right: 0;
+}
+.content-block ol  {
+	margin: 0;
+}
+.content-block ol li {
+	margin-bottom: 30px;
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.63;
+	letter-spacing: normal;
+}
+.trip-terms h2 {
+	padding-top: 52px;
+	width: 100%;
+	max-width: 443px;
+	margin: 0 auto 47px;
+}
+/*end of landing-styles*/
+
+
 /*cart-block*/
 .cart-block {
 	max-width:1220px;
