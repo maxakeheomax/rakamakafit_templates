@@ -4766,6 +4766,11 @@ h2{
 }
 .personal-cabinet-block__content__page-item {
 	margin-bottom: 57px;
+	background-color: #fff;
+padding: 40px;
+}
+.orders .personal-cabinet-block__content__page-item {
+	margin-bottom:24px;
 }
 .personal-cabinet-block__navbar-block{
 	width: 100%;
@@ -4785,9 +4790,7 @@ h2{
 }
 .personal-cabinet-block__content__page{
 	width: 100%;
-	max-width: 696px;
-	padding: 40px 40px 0;
-	background-color: #ffffff;
+	max-width: 776px;
 }
 .personal-cabinet-block__title {
 	font-family: 'FranklinGothicDemi',sans-serif;
@@ -4949,6 +4952,68 @@ h2{
 }
 .subscribitions .personal-cabinet-block__title {
 	margin-bottom: 44px;
+}
+.orders .cart-block__cart-items-list__item.d-table {
+	margin-bottom:28px;
+}
+.order_info {
+	width: 70%;
+	margin-top: 30px;
+}
+.order_param {
+	margin-bottom:40px ;
+}
+.order_param .order__param__name {
+	font-size: 16px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+}
+.order_param .order__param__value {
+	margin: 0;
+	font-size: 18px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: normal;
+}
+.order_manage_buttons {
+	  cursor: pointer;
+	  width: 40%;
+}
+.order_manage_buttons .repeat_button {
+	font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #e31377;
+}
+.order_manage_buttons .cancel_button {
+	  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #8a8a8a;
+}
+.order-date {
+	  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #8a8a8a;
+}
+.flex-line {
+	display: flex;
+	justify-content: space-between;
 }
 /*end of personal-cabinet*/
 /*footer */
