@@ -1,0 +1,190 @@
+@media(max-width:1360px){
+	header,
+	.aside-block{
+		display: none;
+	}
+	.header-mobile{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height:72px;
+		background-color: #000;
+		color:#ffffff;
+		padding: 0 15px;
+	}
+	.header-right-side {
+		display: flex;
+		align-items: center;
+		cursor:pointer;
+	}
+	.header-right-side-item {
+		padding: 14px 16px ;
+	}
+	.burger-menu-icon {
+		margin-left: 16px;
+	}
+	.burger-menu-icon,
+	.burger-menu-icon::after,
+	.burger-menu-icon::before{
+		vertical-align: middle;
+		content: '';
+		display: inline-block;
+		width: 16px;
+		height: 2px;
+		background-color: #ffffff;
+		position:relative;
+		bottom: 1px;
+	}
+	.burger-menu-icon::before {
+		position: absolute;
+		top: -5px;
+
+	}
+	.burger-menu-icon::after {
+		position: absolute;
+		top: 5px;
+	}
+}
+@media(max-width:1024px){
+	.up-block {
+		flex-flow: row wrap;
+	}
+	.up-slider-wrapper{
+		margin-bottom: 30px;
+	}
+	.up-slider-wrapper,
+	.img-wrapper {
+		width: 100%;
+		min-height: 300px;
+	}
+	.owl-carousel__up-slider-item__slider-content {
+		padding: 107px 55px 0;
+		text-align: center;
+	}
+	.owl-carousel__up-slider-item__slider-content__promo-title {
+		width: auto;
+	}
+	.owl-carousel__up-slider-item__slider-content__slogan,
+	.owl-carousel__slider-item__slider-content__dicription,
+	.promo-train-block__slider-item__slider-content__dicription,
+	.owl-carousel__slider-item__slider-content__slogan::after,
+	.special-offer-block__item__desc,
+	.special-offer--block__item-cart,
+	.pop-products-block.desktop {
+		display: none;
+	}
+	.owl-carousel__slider-item-button {
+		margin: auto;
+	}
+	.owl-carousel__slider-item,
+	.promo-train-block__slider-item	{
+		height: 337px;
+		background-position-x: 38%!important;
+		margin: 20px 16px 0;
+	}
+	.owl-carousel__slider-item__slider-content {
+		margin-top: 50px;
+		margin-inline-end: 95px;
+		width: 37%;
+	}
+	.promo-train-block__slider-item__slider-content {
+		margin-top: 50px;
+		margin-inline-end: 35px;
+		width: 45%;
+	}
+	.owl-carousel__slider-item__slider-content__promo-title,
+	.promo-train-block__slider-item__slider-content__promo-title {
+		font-family: 'Roboto', sans-serif;
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: 3px;
+		padding: 0;
+		margin-bottom: 24px;
+	}
+	.owl-carousel__slider-item__slider-content__slogan{
+		font-size: 26px;
+		box-shadow: inset -2px -16px 0 -2px #e7ff6a;
+		display: inline;
+	}
+	.promo-train-block__slider-item__slider-content__slogan {
+		font-size: 26px;
+		display: inline;
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+	.owl-carousel__slider__content_bottom {
+		margin-top: 30px;
+	}
+	.promo-train-block__slider__content_bottom {
+		margin-top: 30px;
+		margin-left:0 ;
+	}
+	.special-offer-block {
+		margin: 20px 16px 64px;
+	}
+	.special-offer-block__title__link-to-all {
+		width: 101px;
+		text-align: center;
+		padding: 16px 0;
+		border-radius: 32px;
+		background-color: #f3f3f3;
+	}
+	.special-offer-block__item {
+		width: 209px;
+	}
+	.special-offer-block__item img {
+		height: 209px;
+	}
+	.special-offer-block__item__title:hover {
+		color: #e31377
+	}
+	.special-offer-block__item__prices {
+		justify-content: 	start;
+	}
+	.special-offer-block__item__old-price {
+		margin-left: 	18px;
+	}
+	.promo-form-block__title {
+		width: auto;
+	}
+	.promo-form-block__form__input-checkbox-wrapper {
+		margin: 1px auto;
+	}
+	.pop-products-block {
+		padding:71px 16px 56px;
+	}
+	.pop-products-block__title {
+		margin-bottom:  24px;
+	}
+	.pop-products-block__title__link-to-all {
+		width: 101px;
+		text-align: center;
+		padding: 16px 0;
+		border-radius: 32px;
+		background-color: #ffffff;
+	}
+	.owl-carousel.slider-tablet  .owl-stage {
+		left: -36px;
+	}
+	.advantages-block {
+		padding:0 16px ;
+	}
+	.in-the-know-form-block {
+		margin: 56px 16px 0;
+	}
+	.in-the-know-form-block__form__input {
+		width: 214px;
+	}
+
+}
+@media(max-width:768px) {
+	.promo-form-block {
+		background: url('assets/promo-form-bg-768.svg') no-repeat;
+		padding: 0 16px;
+		background-position-y: -2px
+	}
+}

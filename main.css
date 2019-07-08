@@ -100,11 +100,22 @@ h2{
 .half_width {
 	width: 338px;
 }
+.button-form-grey {
+	border-radius: 28px;
+  background-color: #535353;
+  margin-left: 16px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+}
 /*index page styles*/
 .header {
 	font-family: 'Roboto', sans-serif;
 	position:relative;
 	height: 152px;
+}
+.header-mobile {
+	display:none;
 }
 .header__nav-bar {
 	height: 72px;
@@ -597,6 +608,7 @@ h2{
 /*up slider*/
 .up-block {
 	display: flex;
+	flex-flow: row nowrap;
 	min-height: 500px;
 }
 .up-slider-wrapper{
@@ -1150,7 +1162,7 @@ h2{
 	margin-top: 0;
 }
 .special-offer-block__item__price {
-	width: 72px;
+	width: 75px;
 	font-size: 22px;
 	font-weight: bold;
 	font-style: normal;
@@ -1782,6 +1794,7 @@ h2{
 	height: 520px;
 	background: url('assets/ipad-02.jpg') no-repeat;
 	background-color: #ffd2d7;
+	background-size: cover;
 }
 .personal-programm.promo-train-block__slider-item{
 	height: 345px;

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>RAKAMAKAFIT</title>
 	<link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="libs/owl.carousel2/dist/assets/owl.carousel.min.css">
@@ -9,6 +10,7 @@
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick-theme.css">
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
 	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="mobile.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<script src="libs/jquery.min.js"></script>
 	<script src="libs/owl.carousel2/dist/owl.carousel.min.js"></script>
@@ -47,7 +49,7 @@
 
 	<script>
 		$(document).ready(function(){
-			 function ShowPopUp(delay_time){setInterval(function(){
+			function ShowPopUp(delay_time){setInterval(function(){
 				if($('.popUp').css('display') == 'block'){
 					return false
 				}else{						
@@ -56,94 +58,93 @@
 					$('.popUp').fadeIn();
 				}
 			}, delay_time);
-			}
+		}
 
-	ShowPopUp(15000);
+	// ShowPopUp(15000);
 
-			$('.close-button').click(function(){
-				$('body').css('overflow-y','inherit');
-				$('.page_content, .page_wrapper').css('filter', 'none')
-				$('.popUp').fadeOut();
-			});
-		});
+	$('.close-button').click(function(){
+		$('body').css('overflow-y','inherit');
+		$('.page_content, .page_wrapper').css('filter', 'none')
+		$('.popUp').fadeOut();
+	});
+});
 
-	</script>
-	<!-- end of popUp-gift-block -->
-	<div class="page_wrapper">
-		<div class="page_content">
-			<!-- header block -->
-			<header class="header">
-				<nav class="header__nav-bar">
-					<div class="header__nav-bar__logo" id="popUp_call">
-						<img src="assets/logo-svg.svg" alt="logo" class="header__nav-bar__logo-img">
-					</div>
-					<div class="header__nav-bar-block">
-						<ul class="header__nav-bar__navs">
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link nav-bar__navs-item__link--active">Оборудование</a></li>
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Тренировки</a></li>
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Оплата</a></li>
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Доставка</a></li>
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Полезная информация</a></li>
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">О компании</a></li>
-						</ul>
-					</div>
-					<a href="#"><div class="header__nav-bar__login-button">
-						<span class="header__nav-bar__login-button__text">Войти</span>
-					</div></a>
-				</nav>	
-				<nav class="header__inner-nav-bar">
-					<div class="header__inner-nav-bar-block">
-						<ul class="header__inner-nav-bar__navs header__inner-nav-bar__navs--black-text">
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link inner-nav-bar__navs-item__link--active">Все товары</a></li>
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Фитнес ленты</a></li>
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Эспандеры</a></li>
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Фитбол</a></li>
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Наборы</a></li>
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Питание</a></li>
-							<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Дневник тренировок</a></li>
-						</ul>			
-					</div>
-					<div class="header__nav-bar__cart-block">
-						<a href="#" class="header__nav-bar__cart-block-link">	
-							<img src="assets/cart.svg" alt="" class="header__nav-bar__cart-block__cart-icon">
-							<span class="header__nav-bar__cart-block__cart-text">корзина</span>
-							<span class="header__nav-bar__cart-block__items-counter">(3)</span>
-						</a>
-					</div>
-				</nav>
-
-			</header>
-			<!-- end of header block -->
-			<!-- aside block -->
-			<div class="aside-block">
-				<div class="aside-block__shedule">
-					<p class="aside-block__shedule-text">График работы</p>
-					<img src="assets/calendar.svg" alt="calendar" class="aside-block__shedule-logo">
+</script>
+<!-- end of popUp-gift-block -->
+<div class="page_wrapper">
+	<div class="page_content">
+		<!-- header block -->
+		<header class="header">
+			<nav class="header__nav-bar">
+				<div class="header__nav-bar__logo" id="popUp_call">
+					<img src="assets/logo-svg.svg" alt="logo" class="header__nav-bar__logo-img">
 				</div>
-				<div class="aside-block__icons">
-					<a href="#" style="background: url(assets/footer-inst.svg)no-repeat center , lightgray ;"class="aside-block__icons-item vk"></a>
-					<a href="#" style="background: url(assets/footer-ytb.svg)no-repeat  center, lightgray;"class="aside-block__icons-item ytb"></a>
-					<a href="#" style="background: url(assets/footer-vk.svg)no-repeat center, lightgray;"class="aside-block__icons-item inst"></a>
-				</div>	
+				<div class="header__nav-bar-block">
+					<ul class="header__nav-bar__navs">
+						<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link nav-bar__navs-item__link--active">Оборудование</a></li>
+						<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Тренировки</a></li>
+						<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Оплата</a></li>
+						<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Доставка</a></li>
+						<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Полезная информация</a></li>
+						<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">О компании</a></li>
+					</ul>
+				</div>
+				<a href="#"><div class="header__nav-bar__login-button">
+					<span class="header__nav-bar__login-button__text">Войти</span>
+				</div></a>
+			</nav>	
+			<nav class="header__inner-nav-bar">
+				<div class="header__inner-nav-bar-block">
+					<ul class="header__inner-nav-bar__navs header__inner-nav-bar__navs--black-text">
+						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link inner-nav-bar__navs-item__link--active">Все товары</a></li>
+						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Фитнес ленты</a></li>
+						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Эспандеры</a></li>
+						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Фитбол</a></li>
+						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Наборы</a></li>
+						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Питание</a></li>
+						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Дневник тренировок</a></li>
+					</ul>			
+				</div>
+				<div class="header__nav-bar__cart-block">
+					<a href="#" class="header__nav-bar__cart-block-link">	
+						<img src="assets/cart.svg" alt="" class="header__nav-bar__cart-block__cart-icon">
+						<span class="header__nav-bar__cart-block__cart-text">корзина</span>
+						<span class="header__nav-bar__cart-block__items-counter">(3)</span>
+					</a>
+				</div>
+			</nav>
+
+		</header>
+		<header class="header-mobile">
+			<div class="header__nav-bar__logo" id="popUp_call">
+				<img src="assets/logo-svg.svg" alt="logo" class="header__nav-bar__logo-img">
 			</div>
-			<!-- end of aside block -->
-			<!-- upSlider -->
-			<div class="up-block">
-				<div class="up-slider-wrapper">
-					<div class="owl-carousel up-slider owl-theme">
-						<div class="owl-carousel__up-up-slider-item">
-							<div class="owl-carousel__up-slider-item__slider-content">
-								<p class="owl-carousel__up-slider-item__slider-content__promo-title">Новогодний набор Rakamakafit уже <br> 
-								в продаже</p> 
-								<p class="owl-carousel__up-slider-item__slider-content__slogan">Твой верный шаг к идеальной фигуре в 2019 году</p>
-								<div class="owl-carousel__up-slider__content_bottom">
-									<a href="#"><div class="owl-carousel__slider-item-button">
-										<span class="owl-carousel__slider-item-button__text">Купить</span>
-									</div>
-								</a>
-							</div>
-						</div>
-					</div>
+			<div class="header-right-side">
+				<div class="burger-menu header-right-side-item button-form-grey">меню <span class="burger-menu-icon"></span></div>
+				<div class="cart-mobile header-right-side-item button-form-grey">
+					<img src="assets/white-cart.svg" alt="">
+				</div>
+				<div class="login-block header-right-side-item button-form-grey"><img src="assets/white-login.svg" alt=""></div>
+			</div>
+		</header>
+		<!-- end of header block -->
+		<!-- aside block -->
+		<div class="aside-block">
+			<div class="aside-block__shedule">
+				<p class="aside-block__shedule-text">График работы</p>
+				<img src="assets/calendar.svg" alt="calendar" class="aside-block__shedule-logo">
+			</div>
+			<div class="aside-block__icons">
+				<a href="#" style="background: url(assets/footer-inst.svg)no-repeat center , lightgray ;"class="aside-block__icons-item vk"></a>
+				<a href="#" style="background: url(assets/footer-ytb.svg)no-repeat  center, lightgray;"class="aside-block__icons-item ytb"></a>
+				<a href="#" style="background: url(assets/footer-vk.svg)no-repeat center, lightgray;"class="aside-block__icons-item inst"></a>
+			</div>	
+		</div>
+		<!-- end of aside block -->
+		<!-- upSlider -->
+		<div class="up-block">
+			<div class="up-slider-wrapper">
+				<div class="owl-carousel up-slider owl-theme">
 					<div class="owl-carousel__up-up-slider-item">
 						<div class="owl-carousel__up-slider-item__slider-content">
 							<p class="owl-carousel__up-slider-item__slider-content__promo-title">Новогодний набор Rakamakafit уже 
@@ -157,130 +158,209 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-		<div class="img-wrapper">
-		</div>
-	</div>
-
-	<!-- main sider -->
-	<div class="owl-carousel middle-slider owl-theme">
-		<div class="owl-carousel__slider-item" style="background: url('assets/slider-bg.jpg');background-size: 100% 100%; ">
-			<div class="owl-carousel__slider-item__slider-content">
-				<p class="owl-carousel__slider-item__slider-content__promo-title">Твой фитнес клуб в сумочке</p> 
-				<p class="owl-carousel__slider-item__slider-content__slogan">Прочные и широкие фитнес ленты</p>
-				<p class="owl-carousel__slider-item__slider-content__dicription">легко брать с собой,  комбинировать друг с другом и прорабатывать все группы мышц. С резинками Rakamakafit из натурального латекса заниматься дома или на свежем воздухе можно в любую минуту.</p>
-				<div class="owl-carousel__slider__content_bottom">
-					<a href="#"><div class="owl-carousel__slider-item-button">
-						<span class="owl-carousel__main-slider-item-button__text">Купить</span>
-					</div></a>
-					<a href="#"><div class="owl-carousel__slider-item-more">
-						<span class="owl-carousel__slider-item-more__text">Подробнее</span>
-					</div></a>
-				</div>
-			</div>
-		</div>
-		<div class="owl-carousel__slider-item" style="background: url('assets/slider-bg.jpg');background-size: 100% 100%; ">
-			<div class="owl-carousel__slider-item__slider-content">
-				<p class="owl-carousel__slider-item__slider-content__promo-title">Твой фитнес клуб в сумочке</p> 
-				<p class="owl-carousel__slider-item__slider-content__slogan">Прочные и широкие фитнес ленты</p>
-				<p class="owl-carousel__slider-item__slider-content__dicription">легко брать с собой, комбинировать друг с другом и прорабатывать все группы мышц. С резинками Rakamakafit из натурального латекса заниматься дома или на свежем воздухе можно в любую минуту.</p>
-				<div class="owl-carousel__slider__content_bottom">
-					<a href="#"><div class="owl-carousel__slider-item-button">
-						<span class="owl-carousel__main-slider-item-button__text">Купить</span>
-					</div></a>
-					<a href="#"><div class="owl-carousel__slider-item-more">
-						<span class="owl-carousel__slider-item-more__text">Подробнее</span>
-					</div></a>
-				</div>
-			</div>
-		</div>
-		<div class="owl-carousel__slider-item" style="background: url('assets/slider-bg.jpg');background-size: 100% 100%; ">
-			<div class="owl-carousel__slider-item__slider-content">
-				<p class="owl-carousel__slider-item__slider-content__promo-title">Твой фитнес клуб в сумочке</p> 
-				<p class="owl-carousel__slider-item__slider-content__slogan">Прочные и широкие фитнес ленты</p>
-				<p class="owl-carousel__slider-item__slider-content__dicription">легко брать с собой,  комбинировать друг с другом и прорабатывать все группы мышц. С резинками Rakamakafit из натурального латекса заниматься дома или на свежем воздухе можно в любую минуту.</p>
-				<div class="owl-carousel__slider__content_bottom">
-					<a href="#"><div class="owl-carousel__slider-item-button">
-						<span class="owl-carousel__main-slider-item-button__text">Купить</span>
-					</div></a>
-					<a href="#"><div class="owl-carousel__slider-item-more">
-						<span class="owl-carousel__slider-item-more__text">Подробнее</span>
-					</div></a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- special offer -->
-	<div class="special-offer-block">
-		<div class="special-offer-block__title">
-			<p class="special-offer-block__title__name">спецпредложения</p>
-			<div class="special-offer-block__title__link-to-all">все</div>
-		</div>
-		<div class="special-offer-block__items">
-			<a href="#">
-				<div class="special-offer-block__item">
-					<img src="assets/offer-3.jpg" alt="">
-					<div class="special-offer-block__item__title">Новогодний набор с лентами</div>
-					<div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
-					<div class="special-offer-block__item__prices">
-						<div class="special-offer-block__item__price">5980 ₽</div>
-						<div class="special-offer-block__item__old-price">7980 ₽</div>
-						<div class="special-offer--block__item-cart"></div>
+				<div class="owl-carousel__up-up-slider-item">
+					<div class="owl-carousel__up-slider-item__slider-content">
+						<p class="owl-carousel__up-slider-item__slider-content__promo-title">Новогодний набор Rakamakafit уже 
+						в продаже</p> 
+						<p class="owl-carousel__up-slider-item__slider-content__slogan">Твой верный шаг к идеальной фигуре в 2019 году</p>
+						<div class="owl-carousel__up-slider__content_bottom">
+							<a href="#"><div class="owl-carousel__slider-item-button">
+								<span class="owl-carousel__slider-item-button__text">Купить</span>
+							</div>
+						</a>
 					</div>
 				</div>
-			</a>
-			<a href="#">	<div class="special-offer-block__item">
-				<img src="assets/offer-2.jpg" alt="">
-				<div class="special-offer-block__item__title">Новогодний набор с эспандерами и лентами</div>
-				<div class="special-offer-block__item__desc">Комплексный анализ ситуации разнородно синхронизирует эмпирический контент</div>
-				<div class="special-offer-block__item__prices">
-					<div class="special-offer-block__item__price">7980 ₽</div>
-					<div class="special-offer-block__item__old-price"></div>
-					<div class="special-offer--block__item-cart"></div>
-				</div>
-			</div></a>
-			<a href="#"><div class="special-offer-block__item">
-				<img src="assets/offer-1.jpg" alt="">
-				<div class="special-offer-block__item__title">Новогодний набор с эспандерами, лентами и грифом</div>
-				<div class="special-offer-block__item__desc">Взаимодействие корпорации и клиента спонтанно нейтрализует нишевый проект</div>
-				<div class="special-offer-block__item__prices">
-					<div class="special-offer-block__item__price">5980 ₽</div>
-					<div class="special-offer-block__item__old-price"></div>
-					<div class="special-offer--block__item-cart"></div>
-				</div>
-			</div></a>
+			</div>
 		</div>
 	</div>
-
-	<!-- promo-form-block -->
-	<div class="promo-form-block">
-		<div class="promo-form-block__title">Получи ТОП-5 упражнений для прокачки ягодиц <span class="promo-form-block__title_underline-block">прямо сейчас</span></div>
-		<form class="promo-form-block__form" action="#">
-			<div class="promo-form-block__form__input-wrapper">
-				<label name="mail">
-					<input class="promo-form-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
-				</label>
-				<button class="promo-form-block__form__submit" type="submit">получить</button>
-			</div>
-			<div class="promo-form-block__form__input-checkbox-wrapper">			
-				<input  class="promo-form-block__form__checbox"  type="checkbox" name="" id="promo-checkbox">
-				<label for="promo-checkbox"></label>
-				<p class="promo-form-block__form__checbox-desc">Я согласен с обработкой персональных данных</p>
-			</div>
-		</form>
+	<div class="img-wrapper">
 	</div>
+</div>
 
-	<!--end of promo-form-block -->
-	<!-- pop products-block -->
-	<div class="pop-products-block">
+<!-- main sider -->
+<div class="owl-carousel middle-slider owl-theme">
+	<div class="owl-carousel__slider-item" style="background: url('assets/slider-bg.jpg');background-size: cover; ">
+		<div class="owl-carousel__slider-item__slider-content">
+			<p class="owl-carousel__slider-item__slider-content__promo-title">Твой фитнес клуб в сумочке</p> 
+			<p class="owl-carousel__slider-item__slider-content__slogan">Прочные и широкие фитнес ленты</p>
+			<p class="owl-carousel__slider-item__slider-content__dicription">легко брать с собой,  комбинировать друг с другом и прорабатывать все группы мышц. С резинками Rakamakafit из натурального латекса заниматься дома или на свежем воздухе можно в любую минуту.</p>
+			<div class="owl-carousel__slider__content_bottom">
+				<a href="#"><div class="owl-carousel__slider-item-button">
+					<span class="owl-carousel__main-slider-item-button__text">Купить</span>
+				</div></a>
+				<a href="#"><div class="owl-carousel__slider-item-more">
+					<span class="owl-carousel__slider-item-more__text">Подробнее</span>
+				</div></a>
+			</div>
+		</div>
+	</div>
+	<div class="owl-carousel__slider-item" style="background: url('assets/slider-bg.jpg');background-size: cover; ">
+		<div class="owl-carousel__slider-item__slider-content">
+			<p class="owl-carousel__slider-item__slider-content__promo-title">Твой фитнес клуб в сумочке</p> 
+			<p class="owl-carousel__slider-item__slider-content__slogan">Прочные и широкие фитнес ленты</p>
+			<p class="owl-carousel__slider-item__slider-content__dicription">легко брать с собой, комбинировать друг с другом и прорабатывать все группы мышц. С резинками Rakamakafit из натурального латекса заниматься дома или на свежем воздухе можно в любую минуту.</p>
+			<div class="owl-carousel__slider__content_bottom">
+				<a href="#"><div class="owl-carousel__slider-item-button">
+					<span class="owl-carousel__main-slider-item-button__text">Купить</span>
+				</div></a>
+				<a href="#"><div class="owl-carousel__slider-item-more">
+					<span class="owl-carousel__slider-item-more__text">Подробнее</span>
+				</div></a>
+			</div>
+		</div>
+	</div>
+	<div class="owl-carousel__slider-item" style="background: url('assets/slider-bg.jpg');background-size: cover; ">
+		<div class="owl-carousel__slider-item__slider-content">
+			<p class="owl-carousel__slider-item__slider-content__promo-title">Твой фитнес клуб в сумочке</p> 
+			<p class="owl-carousel__slider-item__slider-content__slogan">Прочные и широкие фитнес ленты</p>
+			<p class="owl-carousel__slider-item__slider-content__dicription">легко брать с собой,  комбинировать друг с другом и прорабатывать все группы мышц. С резинками Rakamakafit из натурального латекса заниматься дома или на свежем воздухе можно в любую минуту.</p>
+			<div class="owl-carousel__slider__content_bottom">
+				<a href="#"><div class="owl-carousel__slider-item-button">
+					<span class="owl-carousel__main-slider-item-button__text">Купить</span>
+				</div></a>
+				<a href="#"><div class="owl-carousel__slider-item-more">
+					<span class="owl-carousel__slider-item-more__text">Подробнее</span>
+				</div></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- special offer -->
+<div class="special-offer-block">
+	<div class="special-offer-block__title">
+		<p class="special-offer-block__title__name">спецпредложения</p>
+		<div class="special-offer-block__title__link-to-all">все</div>
+	</div>
+	<div class="special-offer-block__items">
+		<a href="#">
+			<div class="special-offer-block__item">
+				<img src="assets/offer-3.jpg" alt="">
+				<div class="special-offer-block__item__title">Новогодний набор с лентами</div>
+				<div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
+				<div class="special-offer-block__item__prices">
+					<div class="special-offer-block__item__price">5980 ₽</div>
+					<div class="special-offer-block__item__old-price">7980 ₽</div>
+					<div class="special-offer--block__item-cart"></div>
+				</div>
+			</div>
+		</a>
+		<a href="#">	<div class="special-offer-block__item">
+			<img src="assets/offer-2.jpg" alt="">
+			<div class="special-offer-block__item__title">Новогодний набор с эспандерами и лентами</div>
+			<div class="special-offer-block__item__desc">Комплексный анализ ситуации разнородно синхронизирует эмпирический контент</div>
+			<div class="special-offer-block__item__prices">
+				<div class="special-offer-block__item__price">7980 ₽</div>
+				<div class="special-offer-block__item__old-price"></div>
+				<div class="special-offer--block__item-cart"></div>
+			</div>
+		</div></a>
+		<a href="#"><div class="special-offer-block__item">
+			<img src="assets/offer-1.jpg" alt="">
+			<div class="special-offer-block__item__title">Новогодний набор с эспандерами, лентами и грифом</div>
+			<div class="special-offer-block__item__desc">Взаимодействие корпорации и клиента спонтанно нейтрализует нишевый проект</div>
+			<div class="special-offer-block__item__prices">
+				<div class="special-offer-block__item__price">5980 ₽</div>
+				<div class="special-offer-block__item__old-price"></div>
+				<div class="special-offer--block__item-cart"></div>
+			</div>
+		</div></a>
+	</div>
+</div>
+
+<!-- promo-form-block -->
+<div class="promo-form-block">
+	<div class="promo-form-block__title">Получи ТОП-5 упражнений для прокачки ягодиц <span class="promo-form-block__title_underline-block">прямо сейчас</span></div>
+	<form class="promo-form-block__form" action="#">
+		<div class="promo-form-block__form__input-wrapper">
+			<label name="mail">
+				<input class="promo-form-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
+			</label>
+			<button class="promo-form-block__form__submit" type="submit">получить</button>
+		</div>
+		<div class="promo-form-block__form__input-checkbox-wrapper">			
+			<input  class="promo-form-block__form__checbox"  type="checkbox" name="" id="promo-checkbox">
+			<label for="promo-checkbox"></label>
+			<p class="promo-form-block__form__checbox-desc">Я согласен с обработкой персональных данных</p>
+		</div>
+	</form>
+</div>
+
+<!--end of promo-form-block -->
+
+<!-- pop products-block -->
+<div class="pop-products-block desktop">
+	<div class="pop-products-block__title">
+		<p class="pop-products-block__title__name">Популярные товары</p>
+		<div class="pop-products-block__title__link-to-all">все</div>
+	</div>
+	<div class="pop-products-block__items">
+		<div class="pop-products-block__item">
+			<div class="pop-products-block__item__img-block">
+				<img src="assets/ipad-03.jpg" alt="">
+			</div>
+			<div class="pop-products-block__item__title"><span class="title-span">Программа тренировок Rakamakafit Online</span></div>
+			<div class="pop-products-block__item__prices">
+				<div class="pop-products-block__item__price">5980 ₽</div>
+				<div class="pop-products-block__item__old-price">7980 ₽</div>
+				<a href="#"><div class="pop-products-block__item-cart"></div></a>
+			</div>
+		</div>
+		<div class="pop-products-block__item">
+			<div class="pop-products-block__item__img-block">
+				<img src="assets/fitball-01.jpg" alt="">
+			</div>
+			<div class="pop-products-block__item__title"><span class="title-span">Фитбол Rakamakafit</span></div>
+			<div class="pop-products-block__item__prices">
+				<div class="pop-products-block__item__price">1370 ₽</div>
+				<div class="pop-products-block__item__old-price"></div>
+				<a href="#"><div class="pop-products-block__item-cart"></div></a>
+			</div>
+		</div>
+		<div class="pop-products-block__item">
+			<div class="pop-products-block__item__img-block">
+				<img src="assets/lenti-tubus.jpg" alt="">
+			</div>
+			<div class="pop-products-block__item__title"><span class="title-span">5 фитнес лент в удобной упаковке</span></div>
+			<div class="pop-products-block__item__prices">
+				<div class="pop-products-block__item__price">5980 ₽</div>
+				<div class="pop-products-block__item__old-price"></div>
+				<a href="#"><div class="pop-products-block__item-cart"></div></a>
+			</div>
+		</div>
+		<div class="pop-products-block__item">
+			<div class="pop-products-block__item__img-block">
+				<img src="assets/diary.jpg" alt="">
+			</div>
+			<div class="pop-products-block__item__title"><span class="title-span">Дневник питания</span></div>
+			<div class="pop-products-block__item__prices">
+				<div class="pop-products-block__item__price">680 ₽</div>
+				<div class="pop-products-block__item__old-price"></div>
+				<a href="#"><div class="pop-products-block__item-cart"></div></a>
+			</div>
+		</div>
+		<div class="pop-products-block__item">
+			<div class="pop-products-block__item__img-block">
+				<img src="assets/grif-01.jpg" alt="">
+			</div>
+			<div class="pop-products-block__item__title"><span class="title-span">Фитнес гриф Rakamakafit</span></div>
+			<div class="pop-products-block__item__prices">
+				<div class="pop-products-block__item__price">7980 ₽</div>
+				<div class="pop-products-block__item__old-price"></div>
+				<a href="#"><div class="pop-products-block__item-cart"></div></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- pop products-block -->
+	<div class="pop-products-block ">
 		<div class="pop-products-block__title">
 			<p class="pop-products-block__title__name">Популярные товары</p>
 			<div class="pop-products-block__title__link-to-all">все</div>
 		</div>
-		<div class="pop-products-block__items">
-			<div class="pop-products-block__item">
+<div class="pop-products owl-carousel slider-tablet">
+				<div class="pop-products-block__item">
 				<div class="pop-products-block__item__img-block">
 					<img src="assets/ipad-03.jpg" alt="">
 				</div>
@@ -291,292 +371,355 @@
 					<a href="#"><div class="pop-products-block__item-cart"></div></a>
 				</div>
 			</div>
-			<div class="pop-products-block__item">
+						<div class="pop-products-block__item">
 				<div class="pop-products-block__item__img-block">
-					<img src="assets/fitball-01.jpg" alt="">
+					<img src="assets/ipad-03.jpg" alt="">
 				</div>
-				<div class="pop-products-block__item__title"><span class="title-span">Фитбол Rakamakafit</span></div>
-				<div class="pop-products-block__item__prices">
-					<div class="pop-products-block__item__price">1370 ₽</div>
-					<div class="pop-products-block__item__old-price"></div>
-					<a href="#"><div class="pop-products-block__item-cart"></div></a>
-				</div>
-			</div>
-			<div class="pop-products-block__item">
-				<div class="pop-products-block__item__img-block">
-					<img src="assets/lenti-tubus.jpg" alt="">
-				</div>
-				<div class="pop-products-block__item__title"><span class="title-span">5 фитнес лент в удобной упаковке</span></div>
+				<div class="pop-products-block__item__title"><span class="title-span">Программа тренировок Rakamakafit Online</span></div>
 				<div class="pop-products-block__item__prices">
 					<div class="pop-products-block__item__price">5980 ₽</div>
-					<div class="pop-products-block__item__old-price"></div>
+					<div class="pop-products-block__item__old-price">7980 ₽</div>
 					<a href="#"><div class="pop-products-block__item-cart"></div></a>
 				</div>
 			</div>
-			<div class="pop-products-block__item">
+						<div class="pop-products-block__item">
 				<div class="pop-products-block__item__img-block">
-					<img src="assets/diary.jpg" alt="">
+					<img src="assets/ipad-03.jpg" alt="">
 				</div>
-				<div class="pop-products-block__item__title"><span class="title-span">Дневник питания</span></div>
+				<div class="pop-products-block__item__title"><span class="title-span">Программа тренировок Rakamakafit Online</span></div>
 				<div class="pop-products-block__item__prices">
-					<div class="pop-products-block__item__price">680 ₽</div>
-					<div class="pop-products-block__item__old-price"></div>
+					<div class="pop-products-block__item__price">5980 ₽</div>
+					<div class="pop-products-block__item__old-price">7980 ₽</div>
 					<a href="#"><div class="pop-products-block__item-cart"></div></a>
 				</div>
 			</div>
-			<div class="pop-products-block__item">
+						<div class="pop-products-block__item">
 				<div class="pop-products-block__item__img-block">
-					<img src="assets/grif-01.jpg" alt="">
+					<img src="assets/ipad-03.jpg" alt="">
 				</div>
-				<div class="pop-products-block__item__title"><span class="title-span">Фитнес гриф Rakamakafit</span></div>
+				<div class="pop-products-block__item__title"><span class="title-span">Программа тренировок Rakamakafit Online</span></div>
 				<div class="pop-products-block__item__prices">
-					<div class="pop-products-block__item__price">7980 ₽</div>
-					<div class="pop-products-block__item__old-price"></div>
+					<div class="pop-products-block__item__price">5980 ₽</div>
+					<div class="pop-products-block__item__old-price">7980 ₽</div>
 					<a href="#"><div class="pop-products-block__item-cart"></div></a>
 				</div>
 			</div>
-		</div>
-	</div>
-
-	<!-- advantages-block -->
-	<div class="advantages-block">
-		<div class="advantages-block__item">
-			<div class="advantages-block__logo"><img src="assets/cloud.svg" alt=""></div>
-			<div class="advantages-block_disc">Тренируйся где угодно</div>
-
-		</div>
-		<div class="advantages-block__item">
-			<div class="advantages-block__logo"><img src="assets/fire.svg" alt=""></div>
-			<div class="advantages-block_disc">Самые горячие упражнения</div>
-		</div>
-		<div class="advantages-block__item">
-			<div class="advantages-block__logo"><img src="assets/diamond.svg" alt=""></div>
-			<div class="advantages-block_disc">Гарантия 90 дней <br>и простой возврат</div>
-		</div>
-		<div class="advantages-block__item">
-			<div class="advantages-block__logo"><img src="assets/heart.svg" alt=""></div>
-			<div class="advantages-block_disc">Безопасный двусторонний латекс</div>
-		</div>
-	</div>
-
-
-	<!-- promo-train-block -->
-
-	<div class="promo-train-block__slider-item" >
-		<div class="promo-train-block__slider-item__slider-content">
-			<p class="promo-train-block__slider-item__slider-content__promo-title">программа тренировок</p> 
-			<p class="promo-train-block__slider-item__slider-content__slogan">При покупке любого оборудования Rakamakafit - <span class="promo-train-block__title_underline-block-up"> 7-дневный доступ<br> к программе в подарок</span> </p>
-			<p class="promo-train-block__slider-item__slider-content__dicription">Тебя ждет от 4 тренировки в неделю, программа питания на каждый день, мотивационные лекции и статьи, удобное отслеживание результатов.</p>
-			<div class="promo-train-block__slider__content_bottom">
-				<a href="#"><div class="promo-train-block__slider-item-button">
-					<span class="promo-train-block__slider-item-button__text">Купить</span>
-				</div></a>
-				<a href=""><div class="promo-train-block__slider-item-more">
-					<span class="promo-train-block__slider-item-more__text">Подробнее</span>
-				</div></a>
-			</div>
-		</div>
-	</div>
-
-
-	<!--in-the-know-form-block -->
-	<div class="in-the-know-form-block">
-		<div class="in-the-know-form-block__title">Хочешь быть в курсе</div>
-		<div class="in-the-know-form-block__desc">cамых интересный новостей, получать еженедельно вкусные рецепты, советы по питанию и тренировкам от меня лично?</div>
-		<form class="in-the-know-form-block__form" action="#">
-			<div class="in-the-know-form-block__form__input-wrapper">
-				<label name="name">
-					<input class="in-the-know-form-block__form__input" type="text" required pattern="[A-Za-zА-Яа-яЁё]+" placeholder='Имя'>
-				</label>
-				<label name="mail">
-					<input class="in-the-know-form-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
-				</label>
-				<button class="in-the-know-form-block__form__submit" type="submit">подписаться</button>
-			</div>
-			<div class="in-the-know-form-block__form__input-checkbox-wrapper">			
-				<input  class="in-the-know-form-block__form__checkbox"  type="checkbox" name="" id="in-the-know-form-checkbox">
-				<label for="in-the-know-form-checkbox"></label>
-				<p class="in-the-know-form-block__form__checkbox-desc">Я согласен с обработкой персональных данных</p>
-			</div>
-		</form>
-	</div>
-
-	<!-- bottom-slider-block -->
-	<div class="bottom-slider-block">
-		<div class="bottom-slider-block__slider-header">
-			<div class="bottom-slider-block__slider-header_top-content">
-				<div class="bottom-slider-block__slider-header__left-block">
-					<p class="bottom-slider-block__slider-header__left-block__slogan">стань частью <span class="bottom-slider-block__slider-header__left-block__slogan__underline-block-up">@rakamaka.fit</span></p>
-					<img class="bottom-slider-block__slider-header__left-block__logo" src="assets/bottom-slider-inst.svg" alt="">
+						<div class="pop-products-block__item">
+				<div class="pop-products-block__item__img-block">
+					<img src="assets/ipad-03.jpg" alt="">
 				</div>
-				<div class="bottom-slider-block__slider-header__right-block">
-					<div class="bottom-slider-block__slogan-button-wrapper">
-						<p class="bottom-slider-block__slider-header__right-block__slogan">Фото счастливых клиентов RAKAMAKAFIT
-						и участниц марафона трансформации тела RAKAMAKAFON</p>
-						<a href="#"><button class="bottom-slider-block____slider-header__right-block__slogan-button">смотреть</button></a>
-					</div>			
+				<div class="pop-products-block__item__title"><span class="title-span">Программа тренировок Rakamakafit Online</span></div>
+				<div class="pop-products-block__item__prices">
+					<div class="pop-products-block__item__price">5980 ₽</div>
+					<div class="pop-products-block__item__old-price">7980 ₽</div>
+					<a href="#"><div class="pop-products-block__item-cart"></div></a>
 				</div>
 			</div>
-			<a href="" id=""><img class="bottom-slider-block____slider-header__right-block_img" src="assets/bottom-hashtag.svg" alt=""></a>
-		</div>
-		<div class="bottom-slider-block__slider-footer"></div>
-		<div class="bottom-slider-block__slider-wrapper">
-			<div class="slick-slider">
-				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
-				<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+						<div class="pop-products-block__item">
+				<div class="pop-products-block__item__img-block">
+					<img src="assets/ipad-03.jpg" alt="">
+				</div>
+				<div class="pop-products-block__item__title"><span class="title-span">Программа тренировок Rakamakafit Online</span></div>
+				<div class="pop-products-block__item__prices">
+					<div class="pop-products-block__item__price">5980 ₽</div>
+					<div class="pop-products-block__item__old-price">7980 ₽</div>
+					<a href="#"><div class="pop-products-block__item-cart"></div></a>
+				</div>
 			</div>
-			<div class="bottom-slider-nav-buttons"></div>
+						<div class="pop-products-block__item">
+				<div class="pop-products-block__item__img-block">
+					<img src="assets/ipad-03.jpg" alt="">
+				</div>
+				<div class="pop-products-block__item__title"><span class="title-span">Программа тренировок Rakamakafit Online</span></div>
+				<div class="pop-products-block__item__prices">
+					<div class="pop-products-block__item__price">5980 ₽</div>
+					<div class="pop-products-block__item__old-price">7980 ₽</div>
+					<a href="#"><div class="pop-products-block__item-cart"></div></a>
+				</div>
+			</div>
+						<div class="pop-products-block__item">
+				<div class="pop-products-block__item__img-block">
+					<img src="assets/ipad-03.jpg" alt="">
+				</div>
+				<div class="pop-products-block__item__title"><span class="title-span">Программа тренировок Rakamakafit Online</span></div>
+				<div class="pop-products-block__item__prices">
+					<div class="pop-products-block__item__price">5980 ₽</div>
+					<div class="pop-products-block__item__old-price">7980 ₽</div>
+					<a href="#"><div class="pop-products-block__item-cart"></div></a>
+				</div>
+			</div>
+</div>
+	</div>
+<!-- end of thanks for order block -->
+
+<!-- advantages-block -->
+<div class="advantages-block">
+	<div class="advantages-block__item">
+		<div class="advantages-block__logo"><img src="assets/cloud.svg" alt=""></div>
+		<div class="advantages-block_disc">Тренируйся где угодно</div>
+
+	</div>
+	<div class="advantages-block__item">
+		<div class="advantages-block__logo"><img src="assets/fire.svg" alt=""></div>
+		<div class="advantages-block_disc">Самые горячие упражнения</div>
+	</div>
+	<div class="advantages-block__item">
+		<div class="advantages-block__logo"><img src="assets/diamond.svg" alt=""></div>
+		<div class="advantages-block_disc">Гарантия 90 дней <br>и простой возврат</div>
+	</div>
+	<div class="advantages-block__item">
+		<div class="advantages-block__logo"><img src="assets/heart.svg" alt=""></div>
+		<div class="advantages-block_disc">Безопасный двусторонний латекс</div>
+	</div>
+</div>
+
+
+<!-- promo-train-block -->
+
+<div class="promo-train-block__slider-item" >
+	<div class="promo-train-block__slider-item__slider-content">
+		<p class="promo-train-block__slider-item__slider-content__promo-title">программа тренировок</p> 
+		<p class="promo-train-block__slider-item__slider-content__slogan">При покупке любого оборудования Rakamakafit - <span class="promo-train-block__title_underline-block-up"> 7-дневный доступ<br> к программе в подарок</span> </p>
+		<p class="promo-train-block__slider-item__slider-content__dicription">Тебя ждет от 4 тренировки в неделю, программа питания на каждый день, мотивационные лекции и статьи, удобное отслеживание результатов.</p>
+		<div class="promo-train-block__slider__content_bottom">
+			<a href="#"><div class="promo-train-block__slider-item-button">
+				<span class="promo-train-block__slider-item-button__text">Купить</span>
+			</div></a>
+			<a href=""><div class="promo-train-block__slider-item-more">
+				<span class="promo-train-block__slider-item-more__text">Подробнее</span>
+			</div></a>
 		</div>
 	</div>
-	<script>
-		
-		$(document).ready(function(){
+</div>
 
 
-			$('.owl-carousel.up-slider').owlCarousel({
-				items:1,
+<!--in-the-know-form-block -->
+<div class="in-the-know-form-block">
+	<div class="in-the-know-form-block__title">Хочешь быть в курсе</div>
+	<div class="in-the-know-form-block__desc">cамых интересный новостей, получать еженедельно вкусные рецепты, советы по питанию и тренировкам от меня лично?</div>
+	<form class="in-the-know-form-block__form" action="#">
+		<div class="in-the-know-form-block__form__input-wrapper">
+			<label name="name">
+				<input class="in-the-know-form-block__form__input" type="text" required pattern="[A-Za-zА-Яа-яЁё]+" placeholder='Имя'>
+			</label>
+			<label name="mail">
+				<input class="in-the-know-form-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
+			</label>
+			<button class="in-the-know-form-block__form__submit" type="submit">подписаться</button>
+		</div>
+		<div class="in-the-know-form-block__form__input-checkbox-wrapper">			
+			<input  class="in-the-know-form-block__form__checkbox"  type="checkbox" name="" id="in-the-know-form-checkbox">
+			<label for="in-the-know-form-checkbox"></label>
+			<p class="in-the-know-form-block__form__checkbox-desc">Я согласен с обработкой персональных данных</p>
+		</div>
+	</form>
+</div>
+
+<!-- bottom-slider-block -->
+<div class="bottom-slider-block">
+	<div class="bottom-slider-block__slider-header">
+		<div class="bottom-slider-block__slider-header_top-content">
+			<div class="bottom-slider-block__slider-header__left-block">
+				<p class="bottom-slider-block__slider-header__left-block__slogan">стань частью <span class="bottom-slider-block__slider-header__left-block__slogan__underline-block-up">@rakamaka.fit</span></p>
+				<img class="bottom-slider-block__slider-header__left-block__logo" src="assets/bottom-slider-inst.svg" alt="">
+			</div>
+			<div class="bottom-slider-block__slider-header__right-block">
+				<div class="bottom-slider-block__slogan-button-wrapper">
+					<p class="bottom-slider-block__slider-header__right-block__slogan">Фото счастливых клиентов RAKAMAKAFIT
+					и участниц марафона трансформации тела RAKAMAKAFON</p>
+					<a href="#"><button class="bottom-slider-block____slider-header__right-block__slogan-button">смотреть</button></a>
+				</div>			
+			</div>
+		</div>
+		<a href="" id=""><img class="bottom-slider-block____slider-header__right-block_img" src="assets/bottom-hashtag.svg" alt=""></a>
+	</div>
+	<div class="bottom-slider-block__slider-footer"></div>
+	<div class="bottom-slider-block__slider-wrapper">
+		<div class="slick-slider">
+			<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+			<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+			<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+			<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+			<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+			<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+			<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+			<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+			<div style="background: url(assets/bottom-slider-img-1.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+			<div style="background: url(assets/bottom-slider-img-2.jpg); background-size: 50%;background-position: right;background-repeat: no-repeat;"></div>
+		</div>
+		<div class="bottom-slider-nav-buttons"></div>
+	</div>
+</div>
+<script>
+
+	$(document).ready(function(){
+
+			$('.owl-carousel.slider-tablet').owlCarousel({
+				items:3,
 				lazyLoad:true,
 				loop:true,
-				margin:10,
+				margin:5,
 				dots: false,
-				nav:true,
-				navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
+				smartSpeed: 800,
+				nav:false,
+				stagePadding: 36,
+				mergeFit: true
+			
+
 			});
 
-			$('.owl-carousel.middle-slider').owlCarousel({
-				items:1,
-				lazyLoad:true,
-				loop:true,
-				margin:10,
-				dots: true,
-				nav:true,
-				smartSpeed: 800,
-				navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
-			});
-			$('.slick-slider').slick({
-				slidesToShow:4,
-				slidesToScroll: 1,
-				arrows: true,
-				appendArrows: $('.bottom-slider-nav-buttons'),
-				prevArrow: `<img src="assets/arrow-white-left.svg">`,
-				nextArrow: `<img src="assets/arrow-white-right.svg">`,
-				swipe:true,
-				draggable: true,
-				speed: 1000,
-				variableWidth: true,
-				easing: 'ease-in-out',
-				cssEase: 'ease-in-out',
+
+		$('.owl-carousel.up-slider').owlCarousel({
+			items:1,
+			lazyLoad:true,
+			loop:true,
+			margin:10,
+			smartSpeed: 800,
+			dots: false,
+			navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`],
+			responsive: {
+				1360:{
+					nav:true
+				},
+				320: {
+					nav:false
+				}
+			}
+		});
+
+		$('.owl-carousel.middle-slider').owlCarousel({
+			items:1,
+			lazyLoad:true,
+			loop:true,
+			margin:10,
+			dots: true,
+			smartSpeed: 800,
+			navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`],
+			responsive: {
+				1360:{
+					nav:true
+				},
+				320: {
+					nav:false
+				}
+			}
+		});
+		$('.slick-slider').slick({
+			slidesToShow:4,
+			slidesToScroll: 1,
+			arrows: true,
+			appendArrows: $('.bottom-slider-nav-buttons'),
+			prevArrow: `<img src="assets/arrow-white-left.svg">`,
+			nextArrow: `<img src="assets/arrow-white-right.svg">`,
+			swipe:true,
+			draggable: true,
+			speed: 1000,
+			variableWidth: true,
+			easing: 'ease-in-out',
+			cssEase: 'ease-in-out',
 				// autoplay: true,
 				infinite: true
 			});
 
-			$(window).scroll(function() {
-				if($(window).scrollTop() > 200) {
-					$('.aside-block__shedule *').fadeOut();
-					$('.aside-block__shedule').css({background:'transparent'});
+		$(window).scroll(function() {
+			if($(window).scrollTop() > 200) {
+				$('.aside-block__shedule *').fadeOut();
+				$('.aside-block__shedule').css({background:'transparent'});
+			}
+			else{
+				$('.aside-block__shedule *').fadeIn();
+				$('.aside-block__shedule').css({background:'#f7f7fb'});	
+			};
+
+			if($(window).scrollTop() >= $('.in-the-know-form-block').offset().top) {
+				$('.aside-block__icons *').fadeOut();
+			}
+			else {
+				$('.aside-block__icons *').fadeIn();
+			}
+		});
+
+		($('.pass').next()).click(function(){
+			($(this).prev()).toggleClass('pass-visible');
+			$('.pass').each(function() {
+				if($(this).hasClass('pass-visible')) {
+					$(this).attr('type','text')
 				}
 				else{
-					$('.aside-block__shedule *').fadeIn();
-					$('.aside-block__shedule').css({background:'#f7f7fb'});	
-				};
-
-				if($(window).scrollTop() >= $('.in-the-know-form-block').offset().top) {
-					$('.aside-block__icons *').fadeOut();
-				}
-				else {
-					$('.aside-block__icons *').fadeIn();
+					$(this).attr('type','password');
 				}
 			});
-
-			($('.pass').next()).click(function(){
-				($(this).prev()).toggleClass('pass-visible');
-				$('.pass').each(function() {
-					if($(this).hasClass('pass-visible')) {
-						$(this).attr('type','text')
-					}
-					else{
-						$(this).attr('type','password');
-					}
-				});
-			});
-
-
-			const form = $('.auth-block-form'); 
-
-			form.find('.reg__form__input').addClass('empty_field');
-			function checkInput(){
-				form.find('.registration_field').each(function(){
-
-					
-					if($(this).val() != ''){       
-						$(this).removeClass('empty_field');
-					}else {
-						$(this).addClass('empty_field');
-					}
-				});
-			}
-
-			setInterval(function(){
-				checkInput();
-				const sizeEmpty = form.find('.empty_field').length;
-
-				if(sizeEmpty > 0 || !$('#reg-checkbox').prop('checked')){
-
-					$('.promo-form-block__form__submit.continue').attr('disabled','disabled');
-					
-				} else {
-					$('.promo-form-block__form__submit.continue').removeAttr('disabled');
-				}
-
-			},500);
-
-
-
-
-			$('.header__nav-bar__login-button').click(function(){
-				$('body').css('overflow-y','hidden');
-				$('.page_content').css('filter', 'blur(10px)');
-				$('.auth-container').fadeIn().css('display','flex');
-				$('.auth-block').animate({'right': 0},500);
-			});
-
-
-			$('.reg-button').click(function(){
-				$('.LogIn-block, .registr-block').toggleClass('hidden-block');
-			});
-			$('.promo-form-block__form__submit.continue').click(function(){
-				$('.registr-block, .greetings-block').toggleClass('hidden-block');
-			});
-
-			function closeAsideForm(click_block) {
-				$(click_block).click(function(){
-					$('.auth-block').animate({'right': -500},500);
-					$('body').css('overflow-y','inherit');
-					$('.page_content').css('filter', 'none')
-					$('.auth-container').fadeOut();
-					setTimeout(function(){
-						$('.registr-block, .greetings-block').addClass('hidden-block');
-						$('.LogIn-block').removeClass('hidden-block');
-
-					},1000);
-				});
-			}
-
-			closeAsideForm('.close-button');
-			closeAsideForm('.login-block__form__submit');
-
 		});
-	</script>
-	<!-- end of bottom-slider-block  -->
-	<!-- footer -->
+
+
+		const form = $('.auth-block-form'); 
+
+		form.find('.reg__form__input').addClass('empty_field');
+		function checkInput(){
+			form.find('.registration_field').each(function(){
+
+
+				if($(this).val() != ''){       
+					$(this).removeClass('empty_field');
+				}else {
+					$(this).addClass('empty_field');
+				}
+			});
+		}
+
+		setInterval(function(){
+			checkInput();
+			const sizeEmpty = form.find('.empty_field').length;
+
+			if(sizeEmpty > 0 || !$('#reg-checkbox').prop('checked')){
+
+				$('.promo-form-block__form__submit.continue').attr('disabled','disabled');
+
+			} else {
+				$('.promo-form-block__form__submit.continue').removeAttr('disabled');
+			}
+
+		},500);
+
+
+
+
+		$('.header__nav-bar__login-button').click(function(){
+			$('body').css('overflow-y','hidden');
+			$('.page_content').css('filter', 'blur(10px)');
+			$('.auth-container').fadeIn().css('display','flex');
+			$('.auth-block').animate({'right': 0},500);
+		});
+
+
+		$('.reg-button').click(function(){
+			$('.LogIn-block, .registr-block').toggleClass('hidden-block');
+		});
+		$('.promo-form-block__form__submit.continue').click(function(){
+			$('.registr-block, .greetings-block').toggleClass('hidden-block');
+		});
+
+		function closeAsideForm(click_block) {
+			$(click_block).click(function(){
+				$('.auth-block').animate({'right': -500},500);
+				$('body').css('overflow-y','inherit');
+				$('.page_content').css('filter', 'none')
+				$('.auth-container').fadeOut();
+				setTimeout(function(){
+					$('.registr-block, .greetings-block').addClass('hidden-block');
+					$('.LogIn-block').removeClass('hidden-block');
+
+				},1000);
+			});
+		}
+
+		closeAsideForm('.close-button');
+		closeAsideForm('.login-block__form__submit');
+
+	});
+</script>
+<!-- end of bottom-slider-block  -->
+<!-- footer -->
 </div>
 <footer class="footer">
 	<div class="footer__line"></div>
