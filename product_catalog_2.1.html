@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
 	<link rel="stylesheet" href="libs/ion.rangeSlider-master/css/ion.rangeSlider.min.css">
 	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="mobile.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<script src="libs/jquery.min.js"></script>
 	<script src="libs/owl.carousel2/dist/owl.carousel.min.js"></script>
@@ -58,6 +59,18 @@
 						</a>
 					</div>
 				</nav>
+			</header>
+			<header class="header-mobile">
+				<div class="header__nav-bar__logo" id="popUp_call">
+					<img src="assets/logo-svg.svg" alt="logo" class="header__nav-bar__logo-img">
+				</div>
+				<div class="header-right-side">
+					<div class="burger-menu header-right-side-item button-form-grey">меню <span class="burger-menu-icon"></span></div>
+					<div class="cart-mobile header-right-side-item button-form-grey">
+						<img src="assets/white-cart.svg" alt="">
+					</div>
+					<div class="login-block header-right-side-item button-form-grey"><img src="assets/white-login.svg" alt=""></div>
+				</div>
 			</header>
 
 			<!-- main sider -->
@@ -109,48 +122,48 @@
 
 					<!-- product-catalog block -->
 					<div class="product_catalog_block">
-						<div class="filters_block">
+						<div class="filters_block desktop">
 							<div class="filters_block-title">Фильтры по параметрам</div>
-<div class="filters__blok__items">
-	<div class="filters_block__filter">
-		<div class="filters_block__filter__title">Цена</div>
-		<div class="filters_block__filter__item-list inline">
-			<input class="valueFrom" type="text" name="" id=""  >
-			<input class="valueTo"type="text" name="" id=""  >
-		</div>
-		<input type="text" class="js-range-slider" name="my_range" value="" />
-	</div>
-	<div class="filters_block__filter width-block">
-		<div class="filters_block__filter__title">Материал</div>
-		<div class="filters_block__filter__item-list">
-			<ul>
-				<li><input id="filter_id-1" type="checkbox"><label for="filter_id-1">100% Латекс</label></li>
-				<li><input id="filter_id-2" type="checkbox"><label  for="filter_id-2">Латекс, полипропилен, неопрен</label></li>
-				<li><input id="filter_id-3" type="checkbox"><label  for="filter_id-3">Латекс, полипропилен</label></li>
-			</ul>
-		</div>
-	</div>
-	<div class="filters_block__filter">
-		<div class="filters_block__filter__title">Длина, см (по окружности)</div>
-		<div class="filters_block__filter__item-list">
-			<ul>
-				<li><input id="filter-2_id-1" type="checkbox"><label for="filter-2_id-1">30</label></li>
-				<li><input id="filter-2_id-2" type="checkbox"><label  for="filter-2_id-2">30 - 60</label></li>
-				<li><input id="filter-2_id-3" type="checkbox"><label  for="filter-2_id-3">64</label></li>
-				<li><input id="filter-2_id-4" type="checkbox"><label  for="filter-2_id-4">74</label></li>
-				<li><input id="filter-2_id-5" type="checkbox"><label  for="filter-2_id-5">84</label></li>
-			</ul>
-		</div>
-	</div>
-	<div class="filters_block__filter">
-		<div class="filters_block__filter__title">Вес, кг</div>
-	
-		<div class="filters_block__filter__item-list inline">
-			<input type="text" name="" id="" pattern="[0-9]+">
-			<input type="text" name="" id="" pattern="[0-9]+">
-		</div>
-	</div>
-</div>
+							<div class="filters__blok__items">
+								<div class="filters_block__filter">
+									<div class="filters_block__filter__title">Цена</div>
+									<div class="filters_block__filter__item-list inline">
+										<input class="valueFrom" type="text" name="" id=""  >
+										<input class="valueTo"type="text" name="" id=""  >
+									</div>
+									<input type="text" class="js-range-slider" name="my_range" value="" />
+								</div>
+								<div class="filters_block__filter width-block">
+									<div class="filters_block__filter__title">Материал</div>
+									<div class="filters_block__filter__item-list">
+										<ul>
+											<li><input id="filter_id-1" type="checkbox"><label for="filter_id-1">100% Латекс</label></li>
+											<li><input id="filter_id-2" type="checkbox"><label  for="filter_id-2">Латекс, полипропилен, неопрен</label></li>
+											<li><input id="filter_id-3" type="checkbox"><label  for="filter_id-3">Латекс, полипропилен</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="filters_block__filter">
+									<div class="filters_block__filter__title">Длина, см (по окружности)</div>
+									<div class="filters_block__filter__item-list">
+										<ul>
+											<li><input id="filter-2_id-1" type="checkbox"><label for="filter-2_id-1">30</label></li>
+											<li><input id="filter-2_id-2" type="checkbox"><label  for="filter-2_id-2">30 - 60</label></li>
+											<li><input id="filter-2_id-3" type="checkbox"><label  for="filter-2_id-3">64</label></li>
+											<li><input id="filter-2_id-4" type="checkbox"><label  for="filter-2_id-4">74</label></li>
+											<li><input id="filter-2_id-5" type="checkbox"><label  for="filter-2_id-5">84</label></li>
+										</ul>
+									</div>
+								</div>
+								<div class="filters_block__filter">
+									<div class="filters_block__filter__title">Вес, кг</div>
+
+									<div class="filters_block__filter__item-list inline">
+										<input type="text" name="" id="" pattern="[0-9]+">
+										<input type="text" name="" id="" pattern="[0-9]+">
+									</div>
+								</div>
+							</div>
 							<button class="promo-form-block__form__submit" type="submit">показать</button>
 							<div class="reset-filters">
 								<a href="#"><span>Сбросить фильтры</span></a>
@@ -159,11 +172,14 @@
 
 						</div>
 						<div class="catalog_block">
-							<div class="catalog__block__tabs">
-								<div class="catalog__block__tabs__title">Сортировать</div>
-								<a href="#">по полуярности</a>
-								<a href="#">по цене</a>
-								<a href="#">по наличию</a>
+							<div class="catalog__block__tabs__header">
+								<div class="filters_block-title tablet"><span class="burger-menu-icon"></span><span>Фильтр</span></div>
+								<div class="catalog__block__tabs">
+									<div class="catalog__block__tabs__title">Сортировать</div>
+									<a href="#">по полуярности</a>
+									<a href="#">по цене</a>
+									<a href="#">по наличию</a>
+								</div>
 							</div>
 							<div class="pop-products-block__items">
 								<div class="pop-products-block__item">
@@ -210,37 +226,13 @@
 										<a href="#"><div class="pop-products-block__item-cart"></div></a>
 									</div>
 								</div>
-							</div>
-														<div class="pop-products-block__items">
 								<div class="pop-products-block__item">
 									<div class="pop-products-block__item__img-block">
-										<img src="assets/ipad-03.jpg" alt="">
+										<img src="assets/diary.jpg" alt="">
 									</div>
-									<div class="pop-products-block__item__title"><span class="title-span">Программа тренировок Rakamakafit Online</span></div>
+									<div class="pop-products-block__item__title"><span class="title-span">Дневник питания</span></div>
 									<div class="pop-products-block__item__prices">
-										<div class="pop-products-block__item__price">5980 ₽</div>
-										<div class="pop-products-block__item__old-price">7980 ₽</div>
-										<a href="#"><div class="pop-products-block__item-cart"></div></a>
-									</div>
-								</div>
-								<div class="pop-products-block__item">
-									<div class="pop-products-block__item__img-block">
-										<img src="assets/fitball-01.jpg" alt="">
-									</div>
-									<div class="pop-products-block__item__title"><span class="title-span">Фитбол Rakamakafit</span></div>
-									<div class="pop-products-block__item__prices">
-										<div class="pop-products-block__item__price">1370 ₽</div>
-										<div class="pop-products-block__item__old-price"></div>
-										<a href="#"><div class="pop-products-block__item-cart"></div></a>
-									</div>
-								</div>
-								<div class="pop-products-block__item">
-									<div class="pop-products-block__item__img-block">
-										<img src="assets/lenti-tubus.jpg" alt="">
-									</div>
-									<div class="pop-products-block__item__title"><span class="title-span">5 фитнес лент в удобной упаковке</span></div>
-									<div class="pop-products-block__item__prices">
-										<div class="pop-products-block__item__price">5980 ₽</div>
+										<div class="pop-products-block__item__price">680 ₽</div>
 										<div class="pop-products-block__item__old-price"></div>
 										<a href="#"><div class="pop-products-block__item-cart"></div></a>
 									</div>
@@ -256,7 +248,39 @@
 										<a href="#"><div class="pop-products-block__item-cart"></div></a>
 									</div>
 								</div>
-
+								<div class="pop-products-block__item">
+									<div class="pop-products-block__item__img-block">
+										<img src="assets/diary.jpg" alt="">
+									</div>
+									<div class="pop-products-block__item__title"><span class="title-span">Дневник питания</span></div>
+									<div class="pop-products-block__item__prices">
+										<div class="pop-products-block__item__price">680 ₽</div>
+										<div class="pop-products-block__item__old-price"></div>
+										<a href="#"><div class="pop-products-block__item-cart"></div></a>
+									</div>
+								</div>
+								<div class="pop-products-block__item">
+									<div class="pop-products-block__item__img-block">
+										<img src="assets/diary.jpg" alt="">
+									</div>
+									<div class="pop-products-block__item__title"><span class="title-span">Дневник питания</span></div>
+									<div class="pop-products-block__item__prices">
+										<div class="pop-products-block__item__price">680 ₽</div>
+										<div class="pop-products-block__item__old-price"></div>
+										<a href="#"><div class="pop-products-block__item-cart"></div></a>
+									</div>
+								</div>
+								<div class="pop-products-block__item">
+									<div class="pop-products-block__item__img-block">
+									
+									</div>
+									<div class="pop-products-block__item__title"><span class="title-span"></span></div>
+									<div class="pop-products-block__item__prices">
+										<div class="pop-products-block__item__price"></div>
+										<div class="pop-products-block__item__old-price"></div>
+										
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -307,10 +331,18 @@
 							items:1,
 							lazyLoad:true,
 							loop:true,
-							margin:10,
+							margin:10,					
+							
 							dots: true,
-							nav:true,
-							navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`]
+							navText: [`<img src="assets/nav-arrow-left.svg">`,`<img src="assets/nav-arrow-right.svg">`],
+							responsive: {
+								1360: {
+									nav:true
+								},
+								1240: {
+									nav:false
+								}
+							}
 						});
 						$(".js-range-slider").ionRangeSlider({
 							type: "double",
@@ -321,15 +353,15 @@
 							grid: false,
 							skin: 'round'
 						});
-							$('.irs-handle.from').mouseup(function() {
-										$('.valueFrom').val($('.irs-from').text());
-							});
-							$('.irs-handle.to').mouseup(function() {
-										$('.valueTo').val($('.irs-to').text());
-							});
-								
-							
-							
+						$('.irs-handle.from').mouseup(function() {
+							$('.valueFrom').val($('.irs-from').text());
+						});
+						$('.irs-handle.to').mouseup(function() {
+							$('.valueTo').val($('.irs-to').text());
+						});
+
+
+
 
 
 
@@ -337,7 +369,7 @@
 					</script>
 					<!-- footer block -->
 				</div>
-				<footer class="footer-padding-top footer">
+				<footer class="footer-padding-top footer footer-desktop">
 					<div class="footer__footer-wrapper">
 
 						<div class="footer__nav">
@@ -386,6 +418,60 @@
 						</div>
 						<div class="footer__brand">
 							© 2019. RAKAMAKAFIT
+						</div>
+					</div>
+				</footer>
+				<footer class="footer tablet">
+					<div class="footer__line"></div>
+					<div class="footer__footer-wrapper">
+
+						<div class="footer__nav">
+							<div class="footer__nav__logo">
+								<img src="assets/logo-svg.svg" alt="">
+							</div>
+							<div class="footer__footer-credits__icons">
+								<a href="#"><img src="assets/vk-color-tablet.svg" alt=""></a>
+								<a href="#"><img src="assets/ytb-color-tablet.svg" alt=""></a>
+								<a href="#"><img src="assets/inst-color-tablet.svg" alt=""></a>
+							</div>
+						</div>
+						<div class="footer__nav-bar-block">
+							<ul class="footer__nav-bar__navs">
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитнес ленты</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Эспандеры</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитбол</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Наборы</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Питание</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Дневник тренировок</a></li>
+								<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Программа тренировок</a></li>
+							</ul>
+						</div>
+						<div class="footer__footer-credits">
+							<div class="footer__footer-credits__official-info">			
+								<ul>
+									<li><a href="#">Доставка </a></li>
+									<li><a href="#">Oплата</a></li>
+									<li><a href="#">Полезная информация</a></li>
+									<li><a href="#">О компании</a></li>
+									<li><a href="#">Контакты</a></li>
+								</ul>
+							</div>
+							<div class="footer__footer-credits__phones">
+								<ul>
+									<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
+									<li><nobr><a href="tel:88001234573 ">8 (800) 123 45 73 </a></nobr></li>
+									<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
+								</ul>
+							</div>
+							<div class="footer__footer-credits__requisites">
+								ИП Чирченко А.И. 119261, <br>
+								Москва, Ленинский проспект 85 <br>	
+								ИНН 770970317833 / <br>
+								ОГРНИП 316774600448261	
+								<div class="footer__brand">
+									© 2019. RAKAMAKAFIT
+								</div>	
+							</div>
 						</div>
 					</div>
 				</footer>

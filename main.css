@@ -772,7 +772,6 @@ h2{
 .mixit,
 .mixit .owl-carousel__slider-item {
 	height: 200px;
-	width: 100%;
 	max-width: 1346px;
 	margin: 23px auto 99px;
 }
@@ -2965,7 +2964,6 @@ h2{
 /*exercises-tabs-block*/
 .exercises-tabs-block,
 .product_catalog_block{
-	width: 100%;
 	max-width: 1346px;
 	margin:0 auto;
 }
@@ -3641,11 +3639,11 @@ h2{
 	background-color: #e1fa61;
 	color: #000;
 }
-.catalog_block .pop-products-block__item {
+.catalog_block .pop-products-block__item:not(:last-child) {
 	border: solid 1px #e5e5e5;
 }
 .catalog_block .pop-products-block__items {
-	width: 900px;
+	max-width: 900px;
 	margin-bottom: 20px;
 	margin-top: 0;
 }
