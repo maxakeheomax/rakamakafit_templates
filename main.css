@@ -108,6 +108,7 @@ h2{
   font-size: 16px;
   font-weight: bold;
 }
+
 /*index page styles*/
 .header {
 	font-family: 'Roboto', sans-serif;
@@ -5134,6 +5135,9 @@ h2{
 .footer-padding-top {
 	padding-top: 30px;
 }
+/*.footer-desktop {
+		display: block;
+	}*/
 .footer{
 	flex: 0 0 auto;
 	background-color: #353535;
@@ -5144,7 +5148,7 @@ h2{
 	padding-top:26px;
 }
 .footer__footer-wrapper{
-	width: 1331px;
+	max-width: 1331px;
 	margin: 0 auto;
 }
 .footer__line {
@@ -5227,7 +5231,7 @@ h2{
 	align-items: flex-start;
 }
 .footer__footer-credits__official-info {
-	margin-left: 132px;
+	margin-left: 172px;
 }
 .footer__footer-credits__official-info a:hover {
 	color:#52d5ff;
@@ -5239,6 +5243,7 @@ h2{
 .footer__footer-credits__phones ul{
 	list-style: none;
 	margin: 0;
+	padding: 0;
 }
 .footer__footer-credits__official-info ul li,
 .footer__footer-credits__phones ul li{
@@ -5284,5 +5289,8 @@ h2{
 	color: #ffffff;
 	margin-bottom: 38px;
 }
-
 /*end of footer */
+.mobile,
+.tablet {
+		display: none;
+	}
