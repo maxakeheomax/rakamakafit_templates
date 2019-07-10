@@ -1157,6 +1157,7 @@ h2{
 .training .special-offer-block__item__prices {
 	align-items: center;
 	margin-top: 27px;
+	position: relative;
 }
 .training-slider .special-offer-block__item__prices {
 	margin-top: 0;
@@ -1594,7 +1595,7 @@ h2{
 /*end of pop products-block*/
 /*hello-block*/
 .hello-block__content {
-	margin: 78px 0 111px 0;
+	margin: 78px 0 111px;
 }
 .hello-block__content__up-items {
 	display: flex;
@@ -1652,17 +1653,13 @@ h2{
 	margin: 0;
 
 }
-.hello-block__content__hello .hello-block__content__hello__img,
-.hello-block__content__hello .hello-block__content__hello__desc
-{
-	width: 50%;
-}
 .hello-block__content__hello .hello-block__content__hello__desc {
 	min-height: 601px;
 }
 .hello-block__content__hello__img img {
 	display: block;
 	margin: 0 auto;
+	width: 100%;
 }
 .hello-block__content__hello__desc__title {
 	margin-bottom: 49px;
@@ -1982,7 +1979,6 @@ h2{
 }
 .blue-bg .promo-train-block__slider-item__slider-content__dicription{
 	margin-top: 26px;
-	width: 430px;
 }
 .promo-train-block__slider__content_bottom {
 	display: flex;
