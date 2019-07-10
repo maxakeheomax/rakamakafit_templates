@@ -265,7 +265,7 @@
 		padding:0 16px ;
 	}
 	.in-the-know-form-block {
-		margin: 56px  0;
+		margin-top: 56px;
 	}
 	.in-the-know-form-block__form__input {
 		width: 214px;
@@ -462,15 +462,15 @@
 		margin: 0 16px 40px;
 		padding: 30px 41px;
 	}
-	.bottom-slider-block__slider-header_top-content {
+	.before-after .bottom-slider-block__slider-header_top-content {
 		flex-flow: row-reverse;
 	}
-	.bottom-slider-block__slider-header__left-block {
+	.before-after .bottom-slider-block__slider-header__left-block {
 		flex-flow: column;
 		align-items: flex-start;
 		margin-left: 0;
 	}
-	.bottom-slider-block__slider-header__left-block__slogan {
+	.before-after .bottom-slider-block__slider-header__left-block__slogan {
 		margin: 0 0 16px 0;
 	}
 }
