@@ -502,12 +502,15 @@
 @media(max-width:768px) {
 	.promo-train-block__slider-item__slider-content
 	{
-    width: 48%;
-}
-	.owl-carousel__slider-item__slider-content,
+		width: 48%;
+	}
+	.owl-carousel__slider-item__slider-content {
+		width: 50%;
+	}
+
 	.blue-bg .promo-train-block__slider-item__slider-content {
-    width: 50%;
-}
+		width: 60%;
+	}
 	.left-side.promo-train-block__slider-item {
 		height: 337px;
 		background: url('assets/ipad-green-bg-tablet.jpg') no-repeat;
