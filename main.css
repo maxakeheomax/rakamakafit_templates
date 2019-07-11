@@ -22,6 +22,7 @@
 html,
 body {
 	height: 100%;
+	-webkit-text-size-adjust: none;
 }
 .page_wrapper {
 	display: flex;
@@ -37,7 +38,6 @@ body {
 	margin: 0;
 	font-family: 'Roboto', sans-serif;
 	width:100%;
-	overflow-x:hidden;
 	transition: .3s;
 }
 a {
@@ -754,7 +754,6 @@ h2{
 }
 .img-wrapper {
 	width: 50%;
-	min-width: 710px;
 	background-image: url('assets/img-3775.jpg');
 	background-size: cover;
 }
@@ -2341,8 +2340,8 @@ h2{
 	z-index: 999;
 	height: 549px;
 	bottom: 59px;
-	width: 100%;
-	padding: 0 30px;
+	width: calc(100% - 47px);
+	margin-left: 47px;
 	align-items: center;
 }
 .before-after .bottom-slider-block__slider-wrapper  {
