@@ -290,7 +290,7 @@
 	.bottom-slider-block__slider-wrapper {
 		bottom: 44px;
 		height: auto;
-		padding: 0 16px;
+		padding: 0 0 0 16px;
 	}
 	.bottom-slider-block__slider-header {
 		height: 281px;
