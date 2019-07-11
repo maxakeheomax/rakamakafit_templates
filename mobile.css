@@ -500,6 +500,9 @@
 	}
 }
 @media(max-width:768px) {
+	.owl-carousel__slider-item__slider-content {
+    width: 50%;
+}
 	.left-side.promo-train-block__slider-item {
 		height: 337px;
 		background: url('assets/ipad-green-bg-tablet.jpg') no-repeat;
@@ -541,9 +544,13 @@
 		line-height: 1.45;
 		letter-spacing: normal;
 	}
-	.blue-bg .promo-train-block__slider-item-button {
+	.blue-bg .promo-train-block__slider-item-button,
+	.middle-slider .owl-carousel__slider-item-button {
 		width: 121px;
 		height: 48px;
+	}
+	.middle-slider .owl-carousel__main-slider-item-button__text {
+		margin: 16px 0;
 	}
 	.left-side .promo-train-block__slider-item__slider-content__slogan {
 		font-size: 26px;
