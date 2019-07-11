@@ -500,11 +500,12 @@
 	}
 }
 @media(max-width:768px) {
-	.promo-train-block__slider-item__slider-content,
-	.blue-bg .promo-train-block__slider-item__slider-content{
+	.promo-train-block__slider-item__slider-content
+	{
     width: 48%;
 }
-	.owl-carousel__slider-item__slider-content {
+	.owl-carousel__slider-item__slider-content,
+	.blue-bg .promo-train-block__slider-item__slider-content {
     width: 50%;
 }
 	.left-side.promo-train-block__slider-item {
