@@ -500,6 +500,9 @@
 	}
 }
 @media(max-width:768px) {
+	.promo-train-block__slider-item__slider-content {
+    width: 50%;
+}
 	.owl-carousel__slider-item__slider-content {
     width: 50%;
 }
