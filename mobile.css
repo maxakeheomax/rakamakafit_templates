@@ -499,6 +499,9 @@
 	}
 }
 @media(max-width:768px) {
+	.hello-block__content__hello div {
+		width: 337px;
+	}
 	.promo-train-block__slider-item__slider-content{
 		width: 48%;
 	}
