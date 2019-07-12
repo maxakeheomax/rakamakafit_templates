@@ -189,7 +189,7 @@
 	}
 	.promo-train-block__slider-item__slider-content {
 		margin-top: 29px;
-		margin-inline-end: 35px;
+		margin-right: 35px;
 		width: 45%;
 	}
 	.owl-carousel__slider-item__slider-content__promo-title,
@@ -507,7 +507,8 @@
 	}
 
 	.blue-bg .promo-train-block__slider-item__slider-content {
-		width: 50%;
+		max-width: 100%;
+		width: 320px;
 		margin-right: 80px;
 	}
 	.left-side.promo-train-block__slider-item {
