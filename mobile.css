@@ -48,10 +48,9 @@
 		display: none;
 	}
 	.footer-tablet {
-		disply: block;
+		display: block;
 		padding: 0 16px;
 	}
-
 	.footer__nav-bar-block {
 		padding-left: 0;
 	}
@@ -500,8 +499,7 @@
 	}
 }
 @media(max-width:768px) {
-	.promo-train-block__slider-item__slider-content
-	{
+	.promo-train-block__slider-item__slider-content{
 		width: 48%;
 	}
 	.owl-carousel__slider-item__slider-content {
@@ -510,6 +508,7 @@
 
 	.blue-bg .promo-train-block__slider-item__slider-content {
 		width: 60%;
+		margin-right: 40px;
 	}
 	.left-side.promo-train-block__slider-item {
 		height: 337px;
