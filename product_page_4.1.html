@@ -147,11 +147,9 @@
 							</a>
 							<a href="#">
 								<div class="product-block__description__add-to-cart"><span
-										class="product-block__description__add-to-cart__text">добавить в корзину</span></div>
+										class="product-block__description__add-to-cart__text">в корзину</span></div>
 							</a>
 						</div>
-						<p class="product-block__description__credit_link"><a class="how-start-block__help-link" href="#">Купить в
-								рассрочку</a></p>
 					</div>
 				</div>
 				<script>
@@ -657,7 +655,7 @@
 	</div>
 	<script>
 		$('.special-offer.owl-carousel.middle-slider').owlCarousel({
-			
+
 			lazyLoad: true,
 			loop: true,
 			smartSpeed: 800,
@@ -672,7 +670,7 @@
 				1024: {
 					nav: false,
 					items: 2,
-					dots:true
+					dots: true
 				}
 			}
 		});
@@ -691,11 +689,18 @@
 			items: 1,
 			lazyLoad: true,
 			loop: true,
-			smartSpeed: 800,
 			margin: 10,
 			dots: true,
-			nav: true,
-			navText: [`<img src="assets/nav-arrow-left.svg">`, `<img src="assets/nav-arrow-right.svg">`]
+			smartSpeed: 800,
+			navText: [`<img src="assets/nav-arrow-left.svg">`, `<img src="assets/nav-arrow-right.svg">`],
+			responsive: {
+				1360: {
+					nav: true
+				},
+				320: {
+					nav: false
+				}
+			}
 		});
 
 		function toggleTabs(clickBlock, toggleBlock) {
@@ -709,7 +714,7 @@
 
 				$(toggleBlock).each(function () {
 					a = $(this).attr('id');
-					if (b == a) {
+					if (b === a) {
 						$(toggleBlock).addClass('hidden-block');
 						$(this).removeClass('hidden-block');
 					}
