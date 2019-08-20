@@ -1,233 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>RAKAMAKAFIT</title>
-	<link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" href="libs/owl.carousel2/dist/assets/owl.carousel.min.css">
-	<link rel="stylesheet" href="libs/owl.carousel2/dist/assets/owl.theme.default.min.css">
-	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick-theme.css">
-	<link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
-	<link rel="stylesheet" href="main.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-	<script src="libs/jquery.min.js"></script>
-	<script src="libs/owl.carousel2/dist/owl.carousel.min.js"></script>
-	<script src="libs/slick-1.8.1/slick/slick.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>RAKAMAKAFIT</title>
+    <link rel="stylesheet" href="libs/bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="libs/owl.carousel2/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="libs/owl.carousel2/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="libs/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="libs/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="libs/jquery.min.js"></script>
+    <script src="libs/owl.carousel2/dist/owl.carousel.min.js"></script>
+    <script src="libs/slick-1.8.1/slick/slick.min.js"></script>
 </head>
+
 <body>
-	<div class="page_wrapper">
-		<div class="page_content">
-			<!-- header block -->
-			<header class="header">
-				<nav class="header__nav-bar">
-					<div class="header__nav-bar__logo">
-						<img src="assets/logo-svg.svg" alt="logo" class="header__nav-bar__logo-img">
-					</div>
-					<div class="header__nav-bar-block">
-						<ul class="header__nav-bar__navs">
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link nav-bar__navs-item__link--active">Оборудование</a></li>
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Тренировки</a></li>
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Оплата</a></li>
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Доставка</a></li>
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Полезная информация</a></li>
-							<li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">О компании</a></li>
-						</ul>
-					</div>
-					<a href="#"><div class="header__nav-bar__login-button">
-						<span class="header__nav-bar__login-button__text">Войти</span>
-					</div>
-				</a>
-			</nav>	
-			<nav class="header__inner-nav-bar">
-				<div class="header__inner-nav-bar-block">
-					<ul class="header__inner-nav-bar__navs header__inner-nav-bar__navs--black-text">
-						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link inner-nav-bar__navs-item__link--active">Все товары</a></li>
-						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Программа тренировок</a></li>
-						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Бесплатный марафон</a></li>
-						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Упражения</a></li>
-						<li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Статьи</a></li>
-					</ul>			
-				</div>
-				<div class="header__nav-bar__cart-block">
-					<a href="#" class="header__nav-bar__cart-block-link">	
-						<img src="assets/cart.svg" alt="" class="header__nav-bar__cart-block__cart-icon">
-						<span class="header__nav-bar__cart-block__cart-text">корзина</span>
-						<span class="header__nav-bar__cart-block__items-counter">(3)</span>
-					</a>
-				</div>
-			</nav>
-		</header>
-		<!-- end of header block -->
-		<!-- 	breadcrumbs block -->
-		<div class="breadcrumbs">
-			<div class="breadcrumbs-content">
-				<div class="breadcrumbs__item">Главная </div>
-				<div class="breadcrumbs__separator"> / </div>	
-				<div class="breadcrumbs__item">Тренировки </div>
-				<div class="breadcrumbs__separator"> / </div>	
-				<div class="breadcrumbs__item active">Статьи</div>
-			</div>
-		</div>
-		<!-- 	 end of breadcrumbs block -->
-		<!-- aside block -->
-			<div class="aside-block">
-				<div class="aside-block__shedule">
-					<p class="aside-block__shedule-text">График работы</p>
-					<img src="assets/calendar.svg" alt="calendar" class="aside-block__shedule-logo">
-				</div>
-				<div class="aside-block__icons">
-					<a href="#" style="background: url(assets/footer-inst.svg)no-repeat center , lightgray ;"class="aside-block__icons-item vk"></a>
-				<a href="#" style="background: url(assets/footer-ytb.svg)no-repeat  center, lightgray;"class="aside-block__icons-item ytb"></a>
-				<a href="#" style="background: url(assets/footer-vk.svg)no-repeat center, lightgray;"class="aside-block__icons-item inst"></a>
-			</div>	
-			</div>
-				<!-- end of aside block -->
-		<!-- up-hello-block -->
-		<div class="up-hello-block">
-			<div class="up-hello-block__left-side">
-				<div class="up-hello-block__left-side__decor-item"></div>
-				<div class="up-hello-block__left-side__title-block">
-					<div class="up-hello-block__left-side__title">Привет! <br>
-					Я - Настя #RAKAMAKAFIT</div>
-					<div class="up-hello-block__left-side__desc">Приветствую тебя в своем блоге!</div>
-				</div>
-			</div>
-			<div class="up-hello-block__right-side">
-				<div class="up-hello-block__right-side__down-decor-item"></div>
-				<div class="up-hello-block__right-side__img"><img src="assets/up-hello-block.png" alt=""></div>
-				<div class="up-hello-block__right-side__up-decor-item"></div>
-			</div>
-		</div>
+    <div class="page_wrapper">
+        <div class="page_content">
+            <!-- header block -->
+            <header class="header">
+                <nav class="header__nav-bar">
+                    <div class="header__nav-bar__logo">
+                        <img src="assets/logo-svg.svg" alt="logo" class="header__nav-bar__logo-img">
+                    </div>
+                    <div class="header__nav-bar-block">
+                        <ul class="header__nav-bar__navs">
+                            <li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link nav-bar__navs-item__link--active">Оборудование</a></li>
+                            <li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Тренировки</a></li>
+                            <li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Оплата</a></li>
+                            <li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Доставка</a></li>
+                            <li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">Полезная информация</a></li>
+                            <li class="header__nav-bar__navs-item"><a href="#" class="header__nav-bar__navs-item__link">О компании</a></li>
+                        </ul>
+                    </div>
+                    <a href="#">
+                        <div class="header__nav-bar__login-button">
+                            <span class="header__nav-bar__login-button__text">Войти</span>
+                        </div>
+                    </a>
+                </nav>
+                <nav class="header__inner-nav-bar">
+                    <div class="header__inner-nav-bar-block">
+                        <ul class="header__inner-nav-bar__navs header__inner-nav-bar__navs--black-text">
+                            <li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link inner-nav-bar__navs-item__link--active">Все товары</a></li>
+                            <li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Программа тренировок</a></li>
+                            <li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Бесплатный марафон</a></li>
+                            <li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Упражения</a></li>
+                            <li class="header__inner-nav-bar__navs-item"><a href="#" class="header__inner-nav-bar__navs-item__link">Статьи</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__nav-bar__cart-block">
+                        <a href="#" class="header__nav-bar__cart-block-link">
+                            <img src="assets/cart.svg" alt="" class="header__nav-bar__cart-block__cart-icon">
+                            <span class="header__nav-bar__cart-block__cart-text">корзина</span>
+                            <span class="header__nav-bar__cart-block__items-counter">(3)</span>
+                        </a>
+                    </div>
+                </nav>
+            </header>
+            <header class="header-mobile">
+                <div class="header__nav-bar__logo" id="popUp_call">
+                    <img src="assets/logo-svg.svg" alt="logo" class="header__nav-bar__logo-img">
+                </div>
+                <div class="header-right-side">
+                    <div class="burger-menu header-right-side-item button-form-grey">меню <span class="burger-menu-icon"></span></div>
+                    <div class="cart-mobile header-right-side-item button-form-grey">
+                        <img src="assets/white-cart.svg" alt="">
+                    </div>
+                    <div class="login-block header-right-side-item button-form-grey"><img src="assets/white-login.svg" alt=""></div>
+                </div>
+            </header>
+            <!-- end of header block -->
+            <!-- 	breadcrumbs block -->
+            <div class="breadcrumbs">
+                <div class="breadcrumbs-content">
+                    <div class="breadcrumbs__item">Главная </div>
+                    <div class="breadcrumbs__separator"> / </div>
+                    <div class="breadcrumbs__item">Тренировки </div>
+                    <div class="breadcrumbs__separator"> / </div>
+                    <div class="breadcrumbs__item active">Статьи</div>
+                </div>
+            </div>
+            <!-- 	 end of breadcrumbs block -->
+            <!-- aside block -->
+            <div class="aside-block">
+                <div class="aside-block__shedule">
+                    <p class="aside-block__shedule-text">График работы</p>
+                    <img src="assets/calendar.svg" alt="calendar" class="aside-block__shedule-logo">
+                </div>
+                <div class="aside-block__icons">
+                    <a href="#" style="background: url(assets/footer-inst.svg)no-repeat center , lightgray ;" class="aside-block__icons-item vk"></a>
+                    <a href="#" style="background: url(assets/footer-ytb.svg)no-repeat  center, lightgray;" class="aside-block__icons-item ytb"></a>
+                    <a href="#" style="background: url(assets/footer-vk.svg)no-repeat center, lightgray;" class="aside-block__icons-item inst"></a>
+                </div>
+            </div>
+            <!-- end of aside block -->
+            <!-- up-hello-block -->
+            <div class="up-hello-block">
+                <div class="up-hello-block__left-side">
+                    <div class="up-hello-block__left-side__decor-item"></div>
+                    <div class="up-hello-block__left-side__title-block">
+                        <div class="up-hello-block__left-side__title">Привет! Я - Настя #RAKAMAKAFIT</div>
+                        <div class="up-hello-block__left-side__desc">Приветствую тебя в своем блоге!</div>
+                    </div>
+                </div>
+                <div class="up-hello-block__right-side">
+                    <div class="up-hello-block__right-side__down-decor-item"></div>
+                    <div class="up-hello-block__right-side__img"><img src="assets/up-hello-block.png" alt=""></div>
+                    <div class="up-hello-block__right-side__up-decor-item"></div>
+                </div>
+            </div>
 
-		<!-- aside block -->
-		<div class="aside-block">
-			<div class="aside-block__shedule">
-				<p class="aside-block__shedule-text">График работы</p>
-				<img src="assets/calendar.svg" alt="calendar" class="aside-block__shedule-logo">
-			</div>
-			<div class="aside-block__icons">
-				<a href="#" class="aside-block__icons_link"><img src="assets/vk.svg" alt="" class="aside-block__icons-item"></a>
-				<a href="#" class="aside-block__icons_link"><img src="assets/ytb.svg" alt="" class="aside-block__icons-item"></a>
-				<a href="#" class="aside-block__icons_link"><img src="assets/inst.svg" alt="" class="aside-block__icons-item"></a>
-			</div>
-		</div>
-		<!-- end of aside block -->
+            <!-- aside block -->
+            <div class="aside-block">
+                <div class="aside-block__shedule">
+                    <p class="aside-block__shedule-text">График работы</p>
+                    <img src="assets/calendar.svg" alt="calendar" class="aside-block__shedule-logo">
+                </div>
+                <div class="aside-block__icons">
+                    <a href="#" class="aside-block__icons_link"><img src="assets/vk.svg" alt="" class="aside-block__icons-item"></a>
+                    <a href="#" class="aside-block__icons_link"><img src="assets/ytb.svg" alt="" class="aside-block__icons-item"></a>
+                    <a href="#" class="aside-block__icons_link"><img src="assets/inst.svg" alt="" class="aside-block__icons-item"></a>
+                </div>
+            </div>
+            <!-- end of aside block -->
 
-		<!-- special offer -->
-		<div class="grey-bg articles special-offer-block">
-			<div class="special-offer-block__title">
-				<p class="special-offer-block__title__name">статьи</p>
-			</div>
-			<div class="special-offer-block__items">
-				<a href="#"><div class="special-offer-block__item">
-					<img src="assets/offer-3.jpg" alt="">
-					<div class="special-offer-block__item__title">Новогодний набор с лентами</div>
-					<div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
-				</div></a>
-				<a href="#"><div class="special-offer-block__item">
-					<img src="assets/offer-2.jpg" alt="">
-					<div class="special-offer-block__item__title">Новогодний набор с эспандерами и лентами</div>
-					<div class="special-offer-block__item__desc">Комплексный анализ ситуации разнородно синхронизирует эмпирический контент</div>				
-				</div></a>
-				<a href="#"><div class="special-offer-block__item">
-					<img src="assets/offer-1.jpg" alt="">
-					<div class="special-offer-block__item__title">Новогодний набор с эспандерами, лентами и грифом</div>
-					<div class="special-offer-block__item__desc">Взаимодействие корпорации и клиента спонтанно нейтрализует нишевый проект</div>
-				</div></a>
-				<a href="#"><div class="special-offer-block__item">
-					<img src="assets/offer-3.jpg" alt="">
-					<div class="special-offer-block__item__title">Новогодний набор с лентами</div>
-					<div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
-				</div></a>
-				<a href=""><div class="special-offer-block__item">
-					<img src="assets/offer-2.jpg" alt="">
-					<div class="special-offer-block__item__title">Новогодний набор с эспандерами и лентами</div>
-					<div class="special-offer-block__item__desc">Комплексный анализ ситуации разнородно синхронизирует эмпирический контент</div>
-				</div></a>
-				<a href="#"><div class="special-offer-block__item">
-					<img src="assets/offer-1.jpg" alt="">
-					<div class="special-offer-block__item__title">Новогодний набор с эспандерами, лентами и грифом</div>
-					<div class="special-offer-block__item__desc">Взаимодействие корпорации и клиента спонтанно нейтрализует нишевый проект</div>
-				</div></a>
-			</div>
-			<a href="#"><div class="more-articles" style="background: url(assets/more-articles.svg)"></div></a>
-		</div>
-		<!-- end of special offer -->
-		<!-- promo-form-block -->
-		<div class="promo-form-block">
-			<div class="promo-form-block__title"><span class="promo-form-block__title_underline-block">Подпишись, </span><br>
-			чтобы не пропустить что-то важное </div>
-			<form class="promo-form-block__form" action="#">
-				<div class="promo-form-block__form__input-wrapper">
-					<label name="mail">
+            <!-- special offer -->
+            <div class="grey-bg articles special-offer-block">
+                <div class="special-offer-block__title">
+                    <p class="special-offer-block__title__name">статьи</p>
+                </div>
+                <div class="special-offer-block__items">
+                    <a href="#">
+                        <div class="special-offer-block__item">
+                            <img src="assets/offer-3.jpg" alt="">
+                            <div class="special-offer-block__item__title">Новогодний набор с лентами</div>
+                            <div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="special-offer-block__item">
+                            <img src="assets/offer-2.jpg" alt="">
+                            <div class="special-offer-block__item__title">Новогодний набор с эспандерами и лентами</div>
+                            <div class="special-offer-block__item__desc">Комплексный анализ ситуации разнородно синхронизирует эмпирический контент</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="special-offer-block__item">
+                            <img src="assets/offer-1.jpg" alt="">
+                            <div class="special-offer-block__item__title">Новогодний набор с эспандерами, лентами и грифом</div>
+                            <div class="special-offer-block__item__desc">Взаимодействие корпорации и клиента спонтанно нейтрализует нишевый проект</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="special-offer-block__item">
+                            <img src="assets/offer-3.jpg" alt="">
+                            <div class="special-offer-block__item__title">Новогодний набор с лентами</div>
+                            <div class="special-offer-block__item__desc">Таким образом рамки и место обучения кадров позволяет оценить значение дальнейших направлений развития.</div>
+                        </div>
+                    </a>
+                    <a href="">
+                        <div class="special-offer-block__item">
+                            <img src="assets/offer-2.jpg" alt="">
+                            <div class="special-offer-block__item__title">Новогодний набор с эспандерами и лентами</div>
+                            <div class="special-offer-block__item__desc">Комплексный анализ ситуации разнородно синхронизирует эмпирический контент</div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="special-offer-block__item">
+                            <img src="assets/offer-1.jpg" alt="">
+                            <div class="special-offer-block__item__title">Новогодний набор с эспандерами, лентами и грифом</div>
+                            <div class="special-offer-block__item__desc">Взаимодействие корпорации и клиента спонтанно нейтрализует нишевый проект</div>
+                        </div>
+                    </a>
+                </div>
+                <a href="#">
+                    <div class="more-articles" style="background: url(assets/more-articles.svg)"></div>
+                </a>
+            </div>
+            <!-- end of special offer -->
+            <!-- promo-form-block -->
+            <div class="promo-form-block">
+                <div class="promo-form-block__title"><span class="promo-form-block__title_underline-block">Подпишись, </span><br> чтобы не пропустить что-то важное </div>
+                <form class="promo-form-block__form" action="#">
+                    <div class="promo-form-block__form__input-wrapper">
+                        <label name="mail">
 						<input class="promo-form-block__form__input" type="email" required pattern="\S+@[a-z]+.[a-z]+" placeholder='Email'>
 					</label>
-					<button class="promo-form-block__form__submit" type="submit">подписаться</button>
-				</div>
-				<div class="promo-form-block__form__input-checkbox-wrapper">			
-					<input  class="promo-form-block__form__checbox"  type="checkbox" name="" id="promo-checkbox">
-					<label for="promo-checkbox"></label>
-					<p class="promo-form-block__form__checbox-desc">Я согласен с обработкой персональных данных</p>
-				</div>
-			</form>
-		</div>
+                        <button class="promo-form-block__form__submit" type="submit">подписаться</button>
+                    </div>
+                    <div class="promo-form-block__form__input-checkbox-wrapper">
+                        <input class="promo-form-block__form__checbox" type="checkbox" name="" id="promo-checkbox">
+                        <label for="promo-checkbox"></label>
+                        <p class="promo-form-block__form__checbox-desc">Я согласен с обработкой персональных данных</p>
+                    </div>
+                </form>
+            </div>
 
-		<!--end of promo-form-block -->
-		<!-- footer -->
-	</div>
-	<footer class="articles footer">
-		<div class="footer__footer-wrapper">
-			
-			<div class="footer__nav">
-				<div class="footer__nav__logo">
-					<img src="assets/logo-svg.svg" alt="">
-				</div>
-				<div class="footer__nav-bar-block">
-					<ul class="footer__nav-bar__navs">
-						<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитнес ленты</a></li>
-						<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Эспандеры</a></li>
-						<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитбол</a></li>
-						<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Наборы</a></li>
-						<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Питание</a></li>
-						<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Дневник тренировок</a></li>
-						<li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Программа тренировок</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer__footer-credits">
-				<div class="footer__footer-credits__icons">
-					<a href="#"><img src="assets/footer-inst.svg" alt=""></a>
-					<a href="#"><img src="assets/footer-ytb.svg" alt=""></a>
-					<a href="#"><img src="assets/footer-vk.svg" alt=""></a>
-				</div>
-				<div class="footer__footer-credits__official-info">			
-					<ul>
-						<li><a href="#">Доставка и оплата</a></li>
-						<li><a href="#">Полезная информация</a></li>
-						<li><a href="#">О компании</a></li>
-						<li><a href="#">Контакты</a></li>
-					</ul>
-				</div>
-				<div class="footer__footer-credits__phones">
-					<ul>
-						<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
-						<li><nobr><a href="tel:88001234573 ">8 (800) 123 45 73 </a></nobr></li>
-						<li><nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr></li>
-					</ul>
-				</div>
-				<div class="footer__footer-credits__requisites">
-					ИП Чирченко А.И. 119261, <br>
-					Москва, Ленинский проспект 85 <br>	
-					ИНН 770970317833 / <br>
-					ОГРНИП 316774600448261		
-				</div>
-			</div>
-			<div class="footer__brand">
-				© 2019. RAKAMAKAFIT
-			</div>
-		</div>
-	</footer>
-</div>
+            <!--end of promo-form-block -->
+            <!-- footer -->
+        </div>
+        <footer class="articles footer footer-desktop">
+            <div class="footer__footer-wrapper">
+
+                <div class="footer__nav">
+                    <div class="footer__nav__logo">
+                        <img src="assets/logo-svg.svg" alt="">
+                    </div>
+                    <div class="footer__nav-bar-block">
+                        <ul class="footer__nav-bar__navs">
+                            <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитнес ленты</a></li>
+                            <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Эспандеры</a></li>
+                            <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитбол</a></li>
+                            <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Наборы</a></li>
+                            <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Питание</a></li>
+                            <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Дневник тренировок</a></li>
+                            <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Программа тренировок</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__footer-credits">
+                    <div class="footer__footer-credits__icons">
+                        <a href="#"><img src="assets/footer-inst.svg" alt=""></a>
+                        <a href="#"><img src="assets/footer-ytb.svg" alt=""></a>
+                        <a href="#"><img src="assets/footer-vk.svg" alt=""></a>
+                    </div>
+                    <div class="footer__footer-credits__official-info">
+                        <ul>
+                            <li><a href="#">Доставка и оплата</a></li>
+                            <li><a href="#">Полезная информация</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__footer-credits__phones">
+                        <ul>
+                            <li>
+                                <nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr>
+                            </li>
+                            <li>
+                                <nobr><a href="tel:88001234573
+">8 (800) 123 45 73
+</a></nobr>
+                            </li>
+                            <li>
+                                <nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__footer-credits__requisites">
+                        ИП Чирченко А.И. 119261,
+                        <br> Москва, Ленинский проспект 85 <br> ИНН 770970317833 /
+                        <br> ОГРНИП 316774600448261
+                    </div>
+                </div>
+                <div class="footer__brand">
+                    © 2019. RAKAMAKAFIT
+                </div>
+            </div>
+        </footer>
+        <footer class="footer footer-tablet">
+            <div class="footer__footer-wrapper">
+
+                <div class="footer__nav">
+                    <div class="footer__nav__logo">
+                        <img src="assets/logo-svg.svg" alt="">
+                    </div>
+                    <div class="footer__footer-credits__icons">
+                        <a href="#"><img src="assets/vk-color-tablet.svg" alt=""></a>
+                        <a href="#"><img src="assets/ytb-color-tablet.svg" alt=""></a>
+                        <a href="#"><img src="assets/inst-color-tablet.svg" alt=""></a>
+                    </div>
+                </div>
+                <div class="footer__nav-bar-block">
+                    <ul class="footer__nav-bar__navs">
+                        <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитнес ленты</a>
+                        </li>
+                        <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Эспандеры</a></li>
+                        <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Фитбол</a></li>
+                        <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Наборы</a></li>
+                        <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Питание</a></li>
+                        <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Дневник
+							тренировок</a></li>
+                        <li class="footer__nav-bar__navs-item"><a href="#" class="footer__nav-bar__navs-item__link">Программа
+							тренировок</a></li>
+                    </ul>
+                </div>
+                <div class="footer__footer-credits">
+                    <div class="footer__footer-credits__official-info">
+                        <ul>
+                            <li><a href="#">Доставка </a></li>
+                            <li><a href="#">Oплата</a></li>
+                            <li><a href="#">Полезная информация</a></li>
+                            <li><a href="#">О компании</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__footer-credits__phones">
+                        <ul>
+                            <li>
+                                <nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr>
+                            </li>
+                            <li>
+                                <nobr><a href="tel:88001234573
+">8 (800) 123 45 73
+</a></nobr>
+                            </li>
+                            <li>
+                                <nobr><a href="tel:88003331363">8 (800) 333 13 63</a></nobr>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__footer-credits__requisites">
+                        ИП Чирченко А.И. 119261,
+                        <br> Москва, Ленинский проспект 85 <br> ИНН 770970317833 /
+                        <br> ОГРНИП 316774600448261
+                        <div class="footer__brand">
+                            © 2019. RAKAMAKAFIT
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 
 </body>
+
 </html>

@@ -534,6 +534,7 @@ h2{
 	color: #000000;
 }
 .up-hello-block__left-side__title-block {
+	width: 50%;
 	margin-left: 99px;
 	position: relative;
 	bottom: 4px;
