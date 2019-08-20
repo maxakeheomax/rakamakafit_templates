@@ -2573,6 +2573,7 @@ h2{
 /*exercises-promo-block*/
 .exercises-promo-block_row {
 	margin: 0;
+	justify-content: space-around;
 }
 .exercises-promo-block * {
 	box-sizing: border-box;
@@ -2922,6 +2923,7 @@ h2{
 .delivery-block__content img {
 	display: block;
 	margin: 46px auto 0;
+	width:100%;
 }
 /*end of delivery-block*/
 /*difference-block*/
@@ -2953,6 +2955,10 @@ h2{
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
+}
+.difference-block__item img {
+	max-width: 280px;
+	width: 100%;
 }
 /*end of difference-block*/
 /*exercises-tabs-block*/

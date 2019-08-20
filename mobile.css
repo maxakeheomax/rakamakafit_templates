@@ -154,6 +154,9 @@
 	.slider-nav-block {
 		display: none;
 	}
+  .product-description-block {
+    width: auto;
+  }
 }
 
 @media(max-width:1024px) {
@@ -620,8 +623,6 @@
     margin: 0 0 16px 0;
   }
 
-  
-
   .slider-product-view {
     max-width: 361px;
   }
@@ -658,12 +659,23 @@
 	.product_catalog_block {
 		margin: 0 auto;
 	}
+  .exercises-promo-block_row{
+    justify-content: flex-start;
+  }
 	.exercises-promo-block__left-side {
-		display: none;
+		padding: 89px 0 0 16px;
+    max-width: 300px;
 	}
-	.exercises-promo-block_row {
-		justify-content: center;
-	}
+  .exercises-promo-block__left-side__title {
+    font-size: 26px;
+  }
+  .exercises-promo-block__left-side__desc {
+    font-size: 11px;
+  }
+  .exercises-promo-block__left-side__title::after{
+    display: none;
+  }
+
 	.exercises-promo-block__right-side .img-block {
 		left: auto;
 	}
@@ -722,6 +734,13 @@
 .advantages-block.mini .advantages-block_disc {
 	text-align: center;
 	margin-left: 0;
+}
+.training-slider .owl-carousel__slider-item {
+height: 350px;
+}
+.feedback.difference-block__title {
+  width: auto;
+  padding: 0 16px;
 }
 
 }
@@ -825,5 +844,11 @@
 		.product-block__description__desc {
 			font-size: 11px;
 		}
+    .difference-block {
+      margin: 0 16px 67px;
+    }
+    .difference-block__item img {
+      width: 209px;
+    }
 
 }

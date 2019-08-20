@@ -680,10 +680,17 @@
 			loop: true,
 			smartSpeed: 800,
 			margin: 10,
-			dots: false,
-			nav: true,
+			dots: false,			
 			center: true,
-			navText: [`<img src="assets/nav-arrow-left.svg">`, `<img src="assets/nav-arrow-right.svg">`]
+			navText: [`<img src="assets/nav-arrow-left.svg">`, `<img src="assets/nav-arrow-right.svg">`],
+			responsive: {
+				1360: {
+					nav: true
+				},
+				320: {
+					nav: false
+				}
+			}
 		});
 		$('.mixit.owl-carousel.middle-slider').owlCarousel({
 			items: 1,
