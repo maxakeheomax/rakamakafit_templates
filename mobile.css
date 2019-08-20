@@ -410,7 +410,7 @@
     .left-side .promo-train-block__slider-item-button__text {
         margin: 15px 0;
     }
-    .how-start-block {
+    .white-bg.how-start-block {
         min-height: 300px;
         padding-top: 0;
     }
@@ -636,6 +636,19 @@
     .up-hello-block__right-side__img img {
         width: 100%;
     }
+    .how-start-block__help-link {
+        border: none;
+        font-size: 11px;
+    }
+    .hello-block__content__title {
+        font-size: 26px;
+    }
+    .hello-block__content__desc {
+        font-size: 11px;
+    }
+    .hello-block__content__item {
+        width: 234px;
+    }
 }
 
 @media(max-width:768px) {
@@ -736,5 +749,11 @@
     }
     .articles.special-offer-block {
         padding: 141px 16px 98px;
+    }
+    .hello-block__content__up-items {
+        padding: 0 16px;
+    }
+    .hello-block__content__hello {
+        justify-content: space-between;
     }
 }
