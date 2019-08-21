@@ -1252,7 +1252,6 @@ h2 {
 
 .grey-bg .special-offer-block__items {
     width: 100%;
-    max-width: 1140px;
     justify-content: space-between;
     margin: 39px auto 97px;
 }
@@ -2066,8 +2065,8 @@ h2 {
     height: 345px;
     background: url('assets/personal-programm.jpg') no-repeat;
     background-color: #ffd2d8;
-    width: 92.5%;
-    margin: 39px auto;
+    margin: 39px 47px;
+    background-position-x: 80%!important;
 }
 
 .tapes.promo-train-block__slider-item {
@@ -3092,6 +3091,7 @@ h2 {
 .exercises-list-block {
     margin-top: 73px;
     margin-bottom: 48px;
+    padding: 0 16px;
 }
 
 .exercises-list-block__item {
@@ -3433,6 +3433,7 @@ h2 {
     justify-content: space-between;
     margin-top: 28px;
     margin-bottom: 110px;
+    flex-flow: row wrap;
 }
 
 .exercises-tabs-block__tabs__item {
@@ -3477,6 +3478,7 @@ h2 {
     max-width: 1120px;
     margin: 0 auto 37px;
     display: flex;
+    justify-content: center;
 }
 
 .exercise-demos-list-block__right-side {
@@ -3672,11 +3674,14 @@ h2 {
 }
 
 .discount.product-block {
-    justify-content: flex-start;
+    justify-content: center;
     margin: 0 65px 0 44px;
 }
 
-.product-block__product-slider {
+.discount.product-block .slider-product-view img{
+    width: auto;
+}
+ .product-block__product-slider {
     display: flex;
 }
 
@@ -3687,7 +3692,6 @@ h2 {
 }
 
 .discount .product-block__description {
-    width: 100%;
     max-width: 842px;
 }
 
@@ -4474,7 +4478,7 @@ h2 {
 
 .bottom-text-block {
     margin-left: 274px;
-    width: 665px;
+    max-width: 770px;
     margin-bottom: 172px;
     font-size: 16px;
     font-weight: normal;
@@ -4482,6 +4486,7 @@ h2 {
     font-stretch: normal;
     line-height: 1.63;
     letter-spacing: normal;
+    padding: 0 16px;
 }
 
 .divide-line {
@@ -5189,7 +5194,7 @@ h2 {
     z-index: 99999999999;
     top: 50%;
     left: 50%;
-    width: 100%;
+    width: 90%;
     min-height: 100%;
 }
 
@@ -5342,7 +5347,6 @@ h2 {
 }
 
 .wholesale .in-the-know-form-block__title {
-   
     font-size: 32px;
     font-weight: normal;
     font-style: normal;
@@ -5353,7 +5357,6 @@ h2 {
 }
 
 .wholesale .in-the-know-form-block__desc {
-   
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -5533,6 +5536,7 @@ h2 {
     color: #000000;
     background-color: #e1fa61;
 }
+
 
 /* .big-width-block .img-container {
     margin-top: 0;
